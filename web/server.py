@@ -25,6 +25,7 @@ import concurrent.futures
 import io
 import json
 import os
+import re
 import sys
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 from pathlib import Path
@@ -41,39 +42,19 @@ if _env_file.exists():
 PORT = 4318
 REPO_ROOT = Path(__file__).resolve().parents[1]
 DOCTRINES_DIR = REPO_ROOT / "doctrines"
-PLAYBOOKS_JSON_DIR = DOCTRINES_DIR / "_playbooks_json"
-
-JSON_STEM_TO_PID = {
-    "altman":     "sam_altman",
-    "andreessen": "marc_andreessen",
-    "balaji":     "balaji_srinivasan",
-    "buffett":    "warren_buffett",
-    "cathie":     "cathie_wood",
-    "dalio":      "ray_dalio",
-    "graham":     "paul_graham",
-    "hamming":    "richard_hamming",
-    "jensen":     "jensen_huang",
-    "karpathy":   "andrej_karpathy",
-    "marks":      "howard_marks",
-    "munger":     "charlie_munger",
-    "musk":       "elon_musk",
-    "naval":      "naval_ravikant",
-    "rand":       "ayn_rand",
-    "soros":      "george_soros",
-    "taleb":      "nassim_taleb",
-    "thiel":      "peter_thiel",
-}
 
 MODEL = "claude-sonnet-4-6"
 MAX_TOKENS = 350
 
 VERDICT_ORDER = {"strong_yes": 0, "yes": 1, "neutral": 2, "no": 3, "strong_no": 4}
 
+
 def _claude(api_key: str, messages: list, max_tokens: int = MAX_TOKENS) -> str:
     import anthropic as _anthropic
     client = _anthropic.Anthropic(api_key=api_key)
     resp = client.messages.create(model=MODEL, max_tokens=max_tokens, messages=messages)
     return resp.content[0].text.strip()
+
 
 COMPARE_PROMPT = """\
 You are channeling {name}'s perspective. Their {label}:
@@ -89,42 +70,58 @@ Return JSON only — no preamble or fences:
 {{"winner": "<single label letter>", "ranking": ["<best>", "<second>", ...], "verdicts": {{"<label>": "one punchy sentence in their voice for each idea"}}}}"""
 
 
+def _parse_light_doctrine(text: str) -> tuple[str, list[str]]:
+    """Extract bio and priors from a doctrine-light.md file."""
+    bio = ""
+    priors = []
+    in_priors = False
+    for line in text.splitlines():
+        bio_m = re.match(r'\*\*Bio:\*\*\s*(.+)', line)
+        if bio_m:
+            bio = bio_m.group(1).strip()
+            in_priors = False
+            continue
+        if re.match(r'\*\*Priors:\*\*', line):
+            in_priors = True
+            continue
+        if in_priors and re.match(r'^[-*]\s+(.+)', line):
+            priors.append(re.match(r'^[-*]\s+(.+)', line).group(1).strip())
+        elif in_priors and line.strip() and not line.startswith("#"):
+            in_priors = False
+    return bio, priors
+
+
 def load_personas() -> dict[str, dict]:
     personas: dict[str, dict] = {}
 
     for pdir in sorted(DOCTRINES_DIR.iterdir()):
-        if not pdir.is_dir() or pdir.name.startswith("_"):
+        # Only process hyphen-named persona dirs (skip _playbooks, _playbooks_json, README, etc.)
+        if not pdir.is_dir() or pdir.name.startswith("_") or "_" in pdir.name:
             continue
-        prof_file = pdir / "profile.json"
-        if not prof_file.exists():
+
+        light_file = pdir / "doctrine-light.md"
+        if not light_file.exists():
             continue
-        p = json.loads(prof_file.read_text())
-        pid = p["persona_id"]
+
+        distilled_file = pdir / "doctrine-distilled.md"
+        has_rich = distilled_file.exists()
+
+        # Derive persona_id (underscores) and display name from folder name (hyphens)
+        pid = pdir.name.replace("-", "_")
+        name = " ".join(w.capitalize() for w in pdir.name.split("-"))
+
+        bio, priors = _parse_light_doctrine(light_file.read_text())
+        profile_text = distilled_file.read_text() if has_rich else light_file.read_text()
+
         personas[pid] = {
             "persona_id": pid,
-            "name": p["name"],
-            "bio": p.get("bio", ""),
-            "priors": p.get("priors", []),
-            "has_rich_doctrine": False,
-            "format": "json",
-            "profile_text": json.dumps(p, indent=2),
+            "name": name,
+            "bio": bio,
+            "priors": priors,
+            "has_rich_doctrine": has_rich,
+            "format": "markdown",
+            "profile_text": profile_text,
         }
-
-    # Load structured JSON playbooks (preferred over markdown)
-    for jfile in sorted(PLAYBOOKS_JSON_DIR.glob("*.json")):
-        pid = JSON_STEM_TO_PID.get(jfile.stem)
-        if pid and pid in personas:
-            doctrine = json.loads(jfile.read_text())
-            personas[pid]["doctrine_json"] = doctrine
-            personas[pid]["has_rich_doctrine"] = True
-            # Build a plain-text profile for the LLM prompts
-            parts = [f"{personas[pid]['name']} — {doctrine.get('summary', '')}"]
-            for layer in doctrine.get("layers", []):
-                parts.append(f"\n{layer['name']}:")
-                for d in layer.get("doctrines", [])[:8]:
-                    parts.append(f"  • {d['name']}: {d['rule']}")
-            personas[pid]["profile_text"] = "\n".join(parts)
-            personas[pid]["format"] = "json"
 
     return personas
 
@@ -145,6 +142,7 @@ def extract_pdf_text(b64_data: str) -> str:
         return "\n\n".join(pages) if pages else "[PDF had no extractable text]"
     except Exception as exc:
         return f"[PDF extraction failed: {exc}]"
+
 
 EVAL_PROMPT = """\
 You are channeling {name}'s perspective to evaluate an idea. Use their priors and voice — be direct and specific.
@@ -216,6 +214,13 @@ class Handler(SimpleHTTPRequestHandler):
         ]
         self._json(200, safe)
 
+    def _handle_doctrine(self, pid: str):
+        persona = PERSONAS.get(pid)
+        if not persona or not persona.get("has_rich_doctrine"):
+            self._json(404, {"error": "No doctrine found"})
+            return
+        self._json(200, {"format": "markdown", "markdown": persona["profile_text"]})
+
     def _handle_patch_persona(self, pid: str):
         try:
             length = int(self.headers.get("Content-Length", 0))
@@ -224,31 +229,28 @@ class Handler(SimpleHTTPRequestHandler):
             if not persona:
                 self._json(404, {"error": "Persona not found"})
                 return
-            prof_file = DOCTRINES_DIR / pid / "profile.json"
-            if not prof_file.exists():
-                self._json(404, {"error": "Profile file not found"})
+
+            folder_name = pid.replace("_", "-")
+            light_file = DOCTRINES_DIR / folder_name / "doctrine-light.md"
+            if not light_file.exists():
+                self._json(404, {"error": "Light doctrine file not found"})
                 return
-            profile = json.loads(prof_file.read_text())
+
             if "bio" in body:
-                profile["bio"] = body["bio"]
                 persona["bio"] = body["bio"]
             if "priors" in body:
-                profile["priors"] = [p for p in body["priors"] if p.strip()]
-                persona["priors"] = profile["priors"]
-            prof_file.write_text(json.dumps(profile, indent=2))
+                persona["priors"] = [p for p in body["priors"] if p.strip()]
+
+            # Rebuild the light doctrine file
+            lines = [
+                f"# {persona['name']} — Light Doctrine\n",
+                f"**Bio:** {persona['bio']}\n",
+                "**Priors:**",
+            ] + [f"- {p}" for p in persona["priors"]]
+            light_file.write_text("\n".join(lines) + "\n")
             self._json(200, {"ok": True})
         except Exception as exc:
             self._json(500, {"error": str(exc)})
-
-    def _handle_doctrine(self, pid: str):
-        persona = PERSONAS.get(pid)
-        if not persona or not persona.get("has_rich_doctrine"):
-            self._json(404, {"error": "No doctrine found"})
-            return
-        if "doctrine_json" in persona:
-            self._json(200, {"format": "json", "data": persona["doctrine_json"]})
-        else:
-            self._json(200, {"format": "markdown", "markdown": persona["profile_text"]})
 
     def _handle_evaluate(self):
         try:
@@ -279,10 +281,9 @@ class Handler(SimpleHTTPRequestHandler):
                 persona = PERSONAS.get(pid)
                 if not persona:
                     return None
-                label = "playbook" if persona["format"] == "markdown" else "profile"
                 prompt = EVAL_PROMPT.format(
                     name=persona["name"],
-                    label=label,
+                    label="playbook",
                     profile=persona["profile_text"],
                     idea=idea,
                     context_block=context_block,
@@ -325,7 +326,6 @@ class Handler(SimpleHTTPRequestHandler):
             pdf_b64s = body.get("pdf_b64s", [])
             requested = body.get("personas", list(PERSONAS.keys()))
 
-            # Append extracted PDF text to each idea that has one
             ideas = []
             for i, txt in enumerate(raw_ideas):
                 txt = txt.strip()
@@ -355,7 +355,6 @@ class Handler(SimpleHTTPRequestHandler):
                 if not persona:
                     return None
 
-                # Randomise presentation order to eliminate position bias
                 shuffled = list(range(len(ideas)))
                 random.shuffle(shuffled)
                 prompt_labels = ["A", "B", "C", "D", "E"][: len(ideas)]
@@ -363,13 +362,11 @@ class Handler(SimpleHTTPRequestHandler):
                     f"Idea {prompt_labels[j]}:\n{ideas[shuffled[j]]}"
                     for j in range(len(ideas))
                 )
-                # Map prompt label → canonical label
                 prompt_to_canonical = {prompt_labels[j]: labels[shuffled[j]] for j in range(len(ideas))}
 
-                label = "playbook" if persona["format"] == "markdown" else "profile"
                 prompt = COMPARE_PROMPT.format(
                     name=persona["name"],
-                    label=label,
+                    label="playbook",
                     labels=", ".join(prompt_labels),
                     profile=persona["profile_text"],
                     idea_blocks=idea_blocks,
@@ -398,7 +395,6 @@ class Handler(SimpleHTTPRequestHandler):
                 if not winner:
                     winner = labels[0]
 
-                # Remap verdicts back to canonical labels
                 verdicts = {
                     prompt_to_canonical.get(k.strip().upper(), k): v
                     for k, v in parsed.get("verdicts", {}).items()
@@ -419,7 +415,6 @@ class Handler(SimpleHTTPRequestHandler):
                     if r:
                         results.append(r)
 
-            # Build tally: first-place votes per idea
             vote_counts = {lbl: [] for lbl in labels}
             for r in results:
                 vote_counts.get(r["winner"], vote_counts[labels[0]]).append(r["persona_name"])

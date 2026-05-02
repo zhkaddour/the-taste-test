@@ -177,6 +177,121 @@
     .reasoning-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--dim); margin-bottom: 4px; }
     .reasoning-text { font-style: italic; font-size: 15px; line-height: 1.55; color: #444; }
 
+    /* ── EXPLORE — side-by-side leaderboard ─────────── */
+    .explore-intro { font-size: 16px; color: var(--muted); font-style: italic; max-width: 720px; line-height: 1.6; margin-bottom: 36px; }
+    .explore-intro strong { color: var(--ink); font-style: normal; font-weight: 500; }
+
+    .lb-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; margin-bottom: 12px; }
+    .lb-col { min-width: 0; }
+    .lb-col-head { display: flex; align-items: baseline; justify-content: space-between; padding-bottom: 10px; border-bottom: 1px solid var(--ink); margin-bottom: 8px; }
+    .lb-col-title { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); }
+    .lb-col-sub { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.06em; color: var(--dim); }
+
+    .lb-vanilla-line { display: flex; align-items: baseline; gap: 10px; padding: 8px 0 6px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted); border-bottom: 1px dashed var(--rule); }
+    .lb-vanilla-line .v-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); display: inline-block; }
+    .lb-vanilla-line .v-name { color: var(--ink); }
+    .lb-vanilla-line .v-score { font-size: 14px; color: var(--sage); margin-left: auto; }
+
+    .lb-mini-row { display: grid; grid-template-columns: 24px 1fr 56px; gap: 10px; align-items: center; padding: 9px 8px; border-bottom: 1px solid var(--rule); cursor: pointer; transition: background 80ms; }
+    .lb-mini-row:hover { background: var(--surf); }
+    .lb-mini-row.is-hovered { background: var(--mint); }
+    .lb-mini-row.is-active { background: var(--mint); }
+    .lb-mini-row .lb-rank { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--dim); text-align: right; }
+    .lb-mini-row .lb-name-wrap { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+    .lb-mini-row .lb-name { font-size: 15px; font-weight: 500; line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .lb-mini-row .lb-tier { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.06em; color: var(--dim); text-transform: uppercase; }
+    .lb-mini-row .lb-bar { height: 5px; background: var(--rule); display: flex; overflow: hidden; }
+    .lb-mini-row .lb-bar-c { background: var(--sage); }
+    .lb-mini-row .lb-bar-i { background: #ccc; }
+    .lb-mini-row .lb-bar-w { background: var(--ox); opacity: 0.45; }
+    .lb-mini-row .lb-score { font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 500; text-align: right; }
+    .lb-mini-row .lb-score.pos { color: var(--sage); }
+    .lb-mini-row .lb-score.neg { color: var(--wrong); }
+    .lb-mini-row .lb-score.zero { color: var(--muted); }
+
+    /* Behavior panel — when persona is selected */
+    .behavior-panel { background: var(--surf); border: 1px solid var(--rule); border-radius: 6px; padding: 24px 28px; margin: 20px 0 32px; }
+    .bp-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid var(--rule); }
+    .bp-name { font-size: 26px; font-weight: 500; }
+    .bp-close { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted); cursor: pointer; padding: 4px 8px; }
+    .bp-close:hover { color: var(--ink); }
+    .bp-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-bottom: 8px; }
+    .bp-stat-block .bp-eval-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+    .bp-stat-row { display: flex; align-items: baseline; gap: 18px; margin-bottom: 8px; }
+    .bp-rank { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--dim); }
+    .bp-score-big { font-family: 'JetBrains Mono', monospace; font-size: 32px; font-weight: 500; }
+    .bp-score-big.pos { color: var(--sage); }
+    .bp-score-big.neg { color: var(--wrong); }
+    .bp-score-big.zero { color: var(--muted); }
+    .bp-comp { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--muted); }
+    .bp-comp .n-c { color: var(--sage); }
+    .bp-comp .n-w { color: var(--wrong); }
+    .bp-bar { height: 7px; background: var(--rule); display: flex; overflow: hidden; margin-top: 6px; }
+    .bp-divergence { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted); padding-top: 14px; border-top: 1px solid var(--rule); }
+    .bp-divergence strong { color: var(--ink); font-weight: 500; }
+
+    .vanilla-footnote { background: var(--surf); border-left: 3px solid var(--gold); padding: 16px 20px; margin-top: 32px; font-size: 14px; color: var(--muted); line-height: 1.55; }
+    .vanilla-footnote strong { color: var(--ink); font-weight: 500; }
+
+    /* ── Best & worst by discipline ─────── */
+    .bw-wrap { margin-top: 8px; }
+    .bw-table { display: flex; flex-direction: column; gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 4px; overflow: hidden; }
+    .bw-head, .bw-row { display: grid; grid-template-columns: 160px 1fr 1fr 90px; align-items: center; background: var(--paper); }
+    .bw-head { background: var(--surf); }
+    .bw-h { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); padding: 12px 16px; }
+    .bw-h-vanilla { text-align: right; }
+    .bw-row { padding: 4px 0; }
+    .bw-dom { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.06em; color: var(--ink); padding: 14px 16px; text-transform: uppercase; }
+    .bw-cell { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 14px 18px; cursor: pointer; transition: background 80ms; border-left: 3px solid transparent; }
+    .bw-cell:hover { background: var(--surf); }
+    .bw-cell.bw-best { border-left-color: var(--sage); }
+    .bw-cell.bw-worst { border-left-color: var(--ox); opacity: 0.85; }
+    .bw-name { font-size: 15px; font-weight: 500; }
+    .bw-pct { font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 500; }
+    .bw-pct-best { color: var(--sage); }
+    .bw-pct-worst { color: var(--wrong); }
+    .bw-vanilla { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--dim); padding: 14px 16px; text-align: right; }
+
+    /* ── Closest / divergent pairs ─────── */
+    .agree-wrap { }
+    .agree-tabs { display: flex; gap: 4px; margin-bottom: 18px; }
+    .agree-tab { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; padding: 7px 14px; background: var(--paper); border: 1px solid var(--rule); cursor: pointer; color: var(--muted); }
+    .agree-tab:hover { color: var(--ink); }
+    .agree-tab.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+    .agree-host { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
+    .agree-block { }
+    .agree-block-title { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); padding-bottom: 10px; margin-bottom: 8px; border-bottom: 1px solid var(--rule); }
+    .agree-block-title.top { color: var(--sage); }
+    .agree-block-title.bot { color: var(--wrong); }
+    .agree-list { display: flex; flex-direction: column; gap: 14px; }
+    .agree-pair { display: grid; grid-template-columns: 1fr 80px 50px; gap: 14px; align-items: center; }
+    .agree-pair-names { font-size: 14px; line-height: 1.3; }
+    .agree-name { font-weight: 500; cursor: pointer; }
+    .agree-name:hover { color: var(--sage); text-decoration: underline; }
+    .agree-vs { color: var(--dim); margin: 0 4px; }
+    .agree-bar-wrap { background: var(--rule); height: 6px; position: relative; }
+    .agree-bar { position: absolute; top: 0; bottom: 0; left: 0; }
+    .agree-bar.top { background: var(--sage); }
+    .agree-bar.bot { background: var(--ox); opacity: 0.6; }
+    .agree-pct { font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 500; text-align: right; color: var(--ink); }
+
+    /* ── Examples (papers + HN) ─────── */
+    .examples-wrap { }
+    .examples-h3 { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); font-weight: 500; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--ink); }
+    .examples-grid { display: flex; flex-direction: column; gap: 14px; }
+    .ex-card { background: var(--paper); border: 1px solid var(--rule); border-radius: 4px; padding: 16px 18px; }
+    .ex-meta { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+    .ex-pair-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .ex-side { padding-left: 12px; }
+    .ex-side.winner { border-left: 3px solid var(--sage); }
+    .ex-side.loser  { border-left: 3px solid var(--rule); opacity: 0.85; }
+    .ex-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--dim); margin-bottom: 6px; }
+    .ex-title { font-size: 15px; font-weight: 500; line-height: 1.3; margin-bottom: 6px; }
+    .ex-stat { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted); margin-bottom: 8px; }
+    .ex-stat-num { color: var(--ink); }
+    .ex-stat-num.high { color: var(--sage); }
+    .ex-abstract { font-size: 13.5px; line-height: 1.5; color: #444; }
+
     /* HN section */
     .hn-intro { font-size: 16px; color: var(--muted); font-style: italic; margin-bottom: 28px; max-width: 600px; line-height: 1.6; }
     .hn-pairs-grid { display: flex; flex-direction: column; gap: 1px; background: var(--rule); border: 1px solid var(--rule); }
@@ -776,15 +891,20 @@
 // ── Paths ────────────────────────────────────────────────────────
 const B = '../';
 const API = {
-  results:  B + 'evals/papers/results/eval_results.json',
-  pairsLog: B + 'evals/papers/results/eval_pairs_log.json',
-  papers:   B + 'evals/papers/data/eval_papers.json',
-  hnPairs:  B + 'evals/hn/data/pairs.jsonl',
-  personas: '/api/personas',
-  evaluate: '/api/evaluate',
-  compare:  '/api/compare',
-  doctrine: pid => `/api/doctrine/${pid}`,
-  persona:  pid => `/api/persona/${pid}`,
+  results:        B + 'evals/papers/results/eval_results.json',
+  pairsLog:       B + 'evals/papers/results/eval_pairs_log.json',
+  papers:         B + 'evals/papers/data/eval_papers.json',
+  hnPairs:        B + 'evals/hn/data/pairs.jsonl',
+  hnAbstracts:    B + 'evals/hn/data/abstracts.jsonl',
+  hnResults:      B + 'evals/hn/results/eval_results.json',
+  hnPairsLog:     B + 'evals/hn/results/eval_pairs_log.json',
+  papersAgree:    B + 'evals/papers/results/agreement_matrix.csv',
+  hnAgree:        B + 'evals/hn/results/agreement_matrix.csv',
+  personas:       '/api/personas',
+  evaluate:       '/api/evaluate',
+  compare:        '/api/compare',
+  doctrine:       pid => `/api/doctrine/${pid}`,
+  persona:        pid => `/api/persona/${pid}`,
 };
 
 // ── State ────────────────────────────────────────────────────────
@@ -807,6 +927,31 @@ const fmtScore = n => n > 0 ? '+' + n : String(n);
 const fmtNum = n => n?.toLocaleString('en-GB') ?? '?';
 const scoreClass = n => n > 0 ? 'pos' : n < 0 ? 'neg' : 'zero';
 
+// Score expressed as % of n_pairs — consistency-weighted accuracy, range -100% to +100%, random=0%
+const pctOf = (score, n) => n ? (score / n) * 100 : 0;
+const fmtPct = (score, n) => {
+  const v = pctOf(score, n);
+  const sign = v > 0 ? '+' : '';
+  return `${sign}${v.toFixed(0)}%`;
+};
+// Standard accuracy: correctly-ordered judgments out of all (consistency partial credit)
+const accPct = (plus, zero, n) => n ? ((2 * plus + zero) / (2 * n)) * 100 : 0;
+
+function parseAgreementCsv(text) {
+  const rows = text.trim().split('\n').map(r => r.split(','));
+  if (rows.length < 2) return null;
+  const ids = rows[0].slice(1);
+  const matrix = {};
+  for (let i = 1; i < rows.length; i++) {
+    const id = rows[i][0];
+    matrix[id] = {};
+    for (let j = 0; j < ids.length; j++) {
+      matrix[id][ids[j]] = parseFloat(rows[i][j + 1]);
+    }
+  }
+  return { ids, matrix };
+}
+
 function el(tag, attrs = {}, ...kids) {
   const e = document.createElement(tag);
   for (const [k, v] of Object.entries(attrs)) {
@@ -827,25 +972,43 @@ async function loadAll() {
   const get = url => fetch(url).then(r => { if (!r.ok) throw new Error(`${r.status} ${url}`); return r.json(); });
   const getText = url => fetch(url).then(r => { if (!r.ok) throw new Error(`${r.status} ${url}`); return r.text(); });
 
-  const [results, pairsLog, papersFile, personas, hnText] = await Promise.allSettled([
+  const [results, pairsLog, papersFile, personas, hnText, hnResults, hnPairsLog, hnAbsText, papersAgreeText, hnAgreeText] = await Promise.allSettled([
     get(API.results), get(API.pairsLog), get(API.papers), get(API.personas), getText(API.hnPairs),
+    get(API.hnResults), get(API.hnPairsLog),
+    getText(API.hnAbstracts), getText(API.papersAgree), getText(API.hnAgree),
   ]);
 
-  DATA.results  = results.status === 'fulfilled'  ? results.value  : null;
-  DATA.pairsLog = pairsLog.status === 'fulfilled' ? pairsLog.value : null;
-  DATA.papers   = papersFile.status === 'fulfilled' ? papersFile.value.papers : [];
-  DATA.personas = personas.status === 'fulfilled' ? personas.value : [];
-  DATA.hnPairs  = hnText.status === 'fulfilled'
+  DATA.results    = results.status === 'fulfilled'    ? results.value    : null;
+  DATA.pairsLog   = pairsLog.status === 'fulfilled'   ? pairsLog.value   : null;
+  DATA.papers     = papersFile.status === 'fulfilled' ? papersFile.value.papers : [];
+  DATA.personas   = personas.status === 'fulfilled'   ? personas.value   : [];
+  DATA.hnPairs    = hnText.status === 'fulfilled'
     ? hnText.value.trim().split('\n').map(l => JSON.parse(l))
     : [];
+  DATA.hnResults  = hnResults.status === 'fulfilled'  ? hnResults.value  : null;
+  DATA.hnPairsLog = hnPairsLog.status === 'fulfilled' ? hnPairsLog.value : null;
+
+  // HN abstracts: keyed by gh_owner/gh_repo
+  DATA.hnAbstracts = {};
+  if (hnAbsText.status === 'fulfilled') {
+    for (const line of hnAbsText.value.trim().split('\n')) {
+      try { const d = JSON.parse(line); DATA.hnAbstracts[`${d.gh_owner}/${d.gh_repo}`] = d.abstract; } catch {}
+    }
+  }
+  DATA.papersAgree = papersAgreeText.status === 'fulfilled' ? parseAgreementCsv(papersAgreeText.value) : null;
+  DATA.hnAgree     = hnAgreeText.status === 'fulfilled'     ? parseAgreementCsv(hnAgreeText.value)     : null;
 
   // Build indexes
   DATA.paperById = Object.fromEntries((DATA.papers || []).map(p => [p.paper_id, p]));
   DATA.pairMeta = {};
   for (const p of DATA.results?.pair_index ?? []) {
-    const pa = DATA.paperById[p.paper_a_id];
-    const pb = DATA.paperById[p.paper_b_id];
-    DATA.pairMeta[p.pair_id] = { ...p, good_id: pa?.tier === 'good' ? p.paper_a_id : p.paper_b_id, paper_a: pa, paper_b: pb };
+    const aId = p.side_a_id ?? p.paper_a_id;
+    const bId = p.side_b_id ?? p.paper_b_id;
+    const pa = DATA.paperById[aId];
+    const pb = DATA.paperById[bId];
+    const good_id = p.correct_side === 'A' ? aId : (p.correct_side === 'B' ? bId : (pa?.tier === 'good' ? aId : bId));
+    const cohort = p.cohort_key || p.cohort || '';
+    DATA.pairMeta[p.pair_id] = { ...p, paper_a_id: aId, paper_b_id: bId, good_id, paper_a: pa, paper_b: pb, cohort };
   }
   DATA.judgments = {};
   for (const j of DATA.pairsLog?.judgments ?? []) {
@@ -927,201 +1090,534 @@ function renderExplore() {
   const pane = document.getElementById('pane-explore');
   pane.innerHTML = '';
 
-  // ── Papers section ──
-  const papersLabel = el('p', { className: 'section-label' }, 'Academic papers eval — arXiv · NeurIPS · citation signal · 2010–2020 cohorts');
-  pane.appendChild(papersLabel);
-
-  if (!DATA.results) {
-    pane.appendChild(el('p', { className: 'status-msg err' }, 'Could not load eval results.',
-      el('code', {}, 'Serve from repo root: python web/server.py')
+  if (!DATA.results || !DATA.hnResults) {
+    pane.appendChild(el('p', { className: 'status-msg err' }, 'Could not load eval results. ',
+      el('code', {}, 'Run: python web/server.py')
     ));
-  } else {
-    pane.appendChild(buildLeaderboard());
+    return;
   }
 
-  pane.appendChild(el('hr', { className: 'section-divider' }));
+  // ── Intro ──
+  const totalJudgments = (DATA.results.metadata.n_judgments || 0) + (DATA.hnResults.metadata.n_judgments || 0);
+  const totalPairs = (DATA.results.metadata.n_pairs || 0) + (DATA.hnResults.metadata.n_pairs || 0);
+  const nDoctrine = DATA.results.leaderboard.filter(r => r.kind === 'doctrine').length;
 
-  // ── Show HN section ──
-  pane.appendChild(el('p', { className: 'section-label' }, 'Show HN eval — Hacker News · GitHub star signal · 2020 Q1 cohort'));
-  pane.appendChild(el('p', { className: 'hn-intro' },
-    'Can a thinker\'s taste predict what the tech community bets on? ' +
-    'We took Show HN submissions from early 2020 and measured which projects ' +
-    'accumulated the most GitHub stars over five years. Below: a sample of the pairs used.'
+  pane.appendChild(el('p', { className: 'section-label' }, 'Leaderboard — two evaluations, one comparison'));
+  pane.appendChild(el('p', { className: 'explore-intro' },
+    'Each persona ran ', el('strong', {}, `${totalPairs} forced-choice pairs`), ' across two domains — ',
+    el('strong', {}, 'academic papers '), '(citation signal) and ', el('strong', {}, 'Show HN posts '), '(GitHub-star signal). ',
+    `That's ${fmtNum(totalJudgments)} judgments from ${nDoctrine} distilled thinkers. `,
+    'Click a persona to see how their taste behaves on each.'
   ));
 
-  if (DATA.hnPairs.length) {
-    pane.appendChild(buildHNPairs());
-  } else {
-    pane.appendChild(el('p', { className: 'status-msg' }, 'HN pairs data not loaded.'));
-  }
-}
+  // ── Side-by-side leaderboard ──
+  pane.appendChild(buildSideBySideLeaderboard());
 
-function buildLeaderboard() {
-  const leaderboard = DATA.results.leaderboard;
-  const nPairs = leaderboard[0]?.n_pairs ?? 20;
-  const baseline = { persona_id: '__baseline__', persona_name: 'random baseline', score: 0,
-    plus_one: Math.round(nPairs*0.25), zero: Math.round(nPairs*0.5), minus_one: Math.round(nPairs*0.25), n_pairs: nPairs };
+  // ── Best / worst by discipline (papers) ──
+  pane.appendChild(el('hr', { className: 'section-divider' }));
+  pane.appendChild(el('p', { className: 'section-label' }, 'Best & worst by discipline — academic papers'));
+  pane.appendChild(el('p', { className: 'explore-intro' },
+    'For each of the seven subfields, who has the sharpest taste — and whose lens fits worst? Among the distilled personas only.'
+  ));
+  pane.appendChild(buildBestWorstByDomain());
 
-  const wrap = el('div');
-  const table = el('table', { className: 'leaderboard' });
-  const thead = el('thead');
-  const hr = el('tr');
-  [['#',''],['Persona',''],['Score','ar'],['Composition',''],['  +1 · ∅ · −1',''],[' ','']].forEach(([t,c]) => {
-    hr.appendChild(el('th', c ? { className: c } : {}, t));
-  });
-  thead.appendChild(hr); table.appendChild(thead);
-  const tbody = el('tbody');
-  table.appendChild(tbody); wrap.appendChild(table);
+  // ── Closest / most divergent persona pairs ──
+  pane.appendChild(el('hr', { className: 'section-divider' }));
+  pane.appendChild(el('p', { className: 'section-label' }, 'Who thinks alike — and who doesn\'t'));
+  pane.appendChild(el('p', { className: 'explore-intro' },
+    'For every pair of personas, the share of decisions where they made the same call. Top three on each side.'
+  ));
+  pane.appendChild(buildAgreementTopBottom());
 
-  function refresh() {
-    tbody.innerHTML = '';
-    leaderboard.forEach((row, i) => {
-      tbody.appendChild(buildDataRow(row, i+1));
-      if (expandedPersonaId === row.persona_id) tbody.appendChild(buildDetailRow(row));
-    });
-    tbody.appendChild(buildBaselineRow(baseline));
-  }
-
-  function buildDataRow(row, rank) {
-    const tr = el('tr', { className: 'data-row' + (expandedPersonaId === row.persona_id ? ' is-expanded' : '') });
-    tr.appendChild(el('td', {}, el('span', { className: 'rank' }, String(rank))));
-
-    const nameEl = el('span', { className: 'persona-name' }, row.persona_name.replace(/-OurPlaybook$/, ''));
-    if (row.persona_id.endsWith('_ourplaybook')) nameEl.appendChild(el('span', { className: 'rich-mark', title: 'Rich doctrine' }, '·'));
-    tr.appendChild(el('td', { className: 'col-name' }, nameEl));
-
-    tr.appendChild(el('td', { className: 'col-score' }, el('span', { className: `score-val ${scoreClass(row.score)}` }, fmtScore(row.score))));
-
-    const bar = el('div', { className: 'bar' });
-    [['bar-correct', row.plus_one], ['bar-incons', row.zero], ['bar-wrong', row.minus_one]].forEach(([cls, n]) => {
-      const seg = el('div', { className: cls }); seg.style.width = (n/row.n_pairs*100)+'%'; bar.appendChild(seg);
-    });
-    tr.appendChild(el('td', { className: 'col-bar' }, bar));
-
-    const bd = el('td', { className: 'col-bd' });
-    bd.innerHTML = `<span class="n-c">+${row.plus_one}</span>&nbsp;·&nbsp;${row.zero}&nbsp;·&nbsp;<span class="n-w">−${row.minus_one}</span>`;
-    tr.appendChild(bd);
-    tr.appendChild(el('td', { className: 'col-chev' }, expandedPersonaId === row.persona_id ? '↑' : '↓'));
-
-    tr.addEventListener('click', () => {
-      expandedPersonaId = expandedPersonaId === row.persona_id ? null : row.persona_id;
-      refresh();
-      if (expandedPersonaId) tr.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    });
-    return tr;
-  }
-
-  function buildBaselineRow(row) {
-    const tr = el('tr', { className: 'baseline-row' });
-    tr.appendChild(el('td', {}, el('span', { className: 'rank' }, '—')));
-    tr.appendChild(el('td', { className: 'col-name' }, el('span', { className: 'persona-name baseline' }, row.persona_name)));
-    tr.appendChild(el('td', { className: 'col-score' }, el('span', { className: 'score-val zero' }, fmtScore(row.score))));
-    const bar = el('div', { className: 'bar' });
-    [['bar-correct', row.plus_one], ['bar-incons', row.zero], ['bar-wrong', row.minus_one]].forEach(([cls, n]) => {
-      const seg = el('div', { className: cls }); seg.style.width = (n/row.n_pairs*100)+'%'; bar.appendChild(seg);
-    });
-    tr.appendChild(el('td', { className: 'col-bar' }, bar));
-    const bd = el('td', { className: 'col-bd' });
-    bd.innerHTML = `<span class="n-c">+${row.plus_one}</span>&nbsp;·&nbsp;${row.zero}&nbsp;·&nbsp;<span class="n-w">−${row.minus_one}</span>`;
-    tr.appendChild(bd); tr.appendChild(el('td', { className: 'col-chev' }));
-    return tr;
-  }
-
-  function buildDetailRow(row) {
-    const tr = el('tr', { className: 'detail-row' });
-    const td = el('td', { colspan: '6' });
-    const panel = el('div', { className: 'detail-panel' });
-
-    const crossPairs = (DATA.results.pair_index || []).filter(p => p.kind === 'cross');
-    const pairResults = crossPairs.map(pair => ({ pair, result: pairResult(row.persona_id, pair.pair_id) })).filter(x => x.result);
-    const ord = { correct: 0, inconsistent: 1, wrong: 2 };
-    pairResults.sort((a, b) => {
-      const ka = a.result.incons ? 'inconsistent' : (a.result.correct ? 'correct' : 'wrong');
-      const kb = b.result.incons ? 'inconsistent' : (b.result.correct ? 'correct' : 'wrong');
-      return (ord[ka]??9) - (ord[kb]??9);
-    });
-    const counts = pairResults.reduce((a, {result}) => {
-      const k = result.incons ? 'inconsistent' : (result.correct ? 'correct' : 'wrong');
-      a[k] = (a[k]||0)+1; return a;
-    }, {});
-    panel.appendChild(el('div', { className: 'detail-header' },
-      `${pairResults.length} cross-tier pairs — ${counts.correct||0} correct · ${counts.inconsistent||0} inconsistent · ${counts.wrong||0} wrong`
+  // ── Vanilla footnote ──
+  const vSonnetHN = DATA.hnResults.leaderboard.find(r => r.persona_id === 'vanilla_sonnet_4_6');
+  const vSonnetP  = DATA.results.leaderboard.find(r => r.persona_id === 'vanilla_sonnet_4_6');
+  if (vSonnetHN && vSonnetP) {
+    pane.appendChild(el('div', { className: 'vanilla-footnote' },
+      el('strong', {}, 'On the baselines. '),
+      `Vanilla Claude Sonnet 4.6 with no doctrine attached scores ${fmtPct(vSonnetHN.score, vSonnetHN.n_pairs)} on Show HN and ${fmtPct(vSonnetP.score, vSonnetP.n_pairs)} on academic papers. `,
+      'Random baseline = 0%. The personas that match or beat vanilla have captured something the raw model lacks.'
     ));
-
-    for (const { result } of pairResults) {
-      const { incons, correct, chosen_id, ab_reasoning, ba_reasoning, pair } = result;
-      const kind = incons ? 'inconsistent' : (correct ? 'correct' : 'wrong');
-      const badge = incons ? '~' : (correct ? '✓' : '✗');
-      const verdictText = incons ? 'inconsistent' : (correct ? 'picked higher-cited' : 'picked lower-cited');
-      const entry = el('div', { className: 'pair-entry' });
-      entry.appendChild(el('div', { className: `pair-badge ${kind}` }, badge));
-      const body = el('div');
-      const meta = el('div', { className: 'pair-meta' });
-      meta.appendChild(el('span', { className: 'pair-cohort' }, pair.cohort));
-      meta.appendChild(el('span', { className: `pair-verdict ${kind}` }, verdictText));
-      body.appendChild(meta);
-      const grid = el('div', { className: 'papers-grid' });
-      const paIsChosen = !incons && chosen_id === pair.paper_a_id;
-      [{p: pair.paper_a, chosen: paIsChosen}, {p: pair.paper_b, chosen: !paIsChosen && !incons && chosen_id === pair.paper_b_id}].forEach(({p, chosen}) => {
-        if (!p) return;
-        const card = el('div', { className: `paper-card${chosen ? ' chosen' : ''}` });
-        const stat = el('div', { className: 'paper-stat' });
-        stat.appendChild(el('span', { className: `cite-val${p.tier==='good'?' high':''}` }, fmtNum(p.citation_count)));
-        stat.appendChild(document.createTextNode(' citations'));
-        stat.appendChild(el('span', { className: `tier-pip ${p.tier}` }, p.tier));
-        if (chosen) stat.appendChild(el('span', { className: 'picked-lbl' }, '← picked'));
-        card.appendChild(stat);
-        card.appendChild(el('p', { className: 'paper-text' }, trunc(p.anonymized_problem, 155)));
-        grid.appendChild(card);
-      });
-      body.appendChild(grid);
-      const reasoning = incons ? ba_reasoning : ab_reasoning;
-      if (reasoning) {
-        const rb = el('div', { className: 'reasoning-block' });
-        rb.appendChild(el('div', { className: 'reasoning-label' }, incons ? 'reasoning varied by ordering' : 'reasoning'));
-        rb.appendChild(el('p', { className: 'reasoning-text' }, '"' + reasoning + '"'));
-        body.appendChild(rb);
-      }
-      entry.appendChild(body);
-      panel.appendChild(entry);
-    }
-    td.appendChild(panel); tr.appendChild(td);
-    return tr;
   }
 
-  refresh();
+  // ── Examples (at the very end) ──
+  pane.appendChild(el('hr', { className: 'section-divider' }));
+  pane.appendChild(el('p', { className: 'section-label' }, 'Sample pairs — what the personas actually saw'));
+  pane.appendChild(el('p', { className: 'explore-intro' },
+    'Five pairs from each eval, anonymized for the personas. They were shown only the abstract — no titles, authors, or metrics — and forced to pick.'
+  ));
+  pane.appendChild(buildExamplesSection());
+}
+
+// ── Side-by-side leaderboard ──────────────────────────────
+let hoveredPersonaId = null;
+
+function buildSideBySideLeaderboard() {
+  const wrap = el('div');
+
+  const cols = el('div', { className: 'lb-cols' });
+  cols.appendChild(buildLeaderboardColumn('hn',     DATA.hnResults));
+  cols.appendChild(buildLeaderboardColumn('papers', DATA.results));
+  wrap.appendChild(cols);
+
+  // Behavior panel placeholder — re-rendered when persona is selected
+  const panelHost = el('div', { id: 'behavior-panel-host' });
+  wrap.appendChild(panelHost);
+  refreshBehaviorPanel();
+
   return wrap;
 }
 
-function buildHNPairs() {
-  const wrap = el('div');
-  const grid = el('div', { className: 'hn-pairs-grid' });
+function buildLeaderboardColumn(domain, results) {
+  const isHN = domain === 'hn';
+  const board = results.leaderboard.filter(r => r.kind !== 'vanilla');
+  const vanilla = results.leaderboard.find(r => r.persona_id === 'vanilla_sonnet_4_6');
+  const meta = results.metadata;
 
-  function renderPairs(count) {
-    grid.innerHTML = '';
-    const sample = DATA.hnPairs.slice(0, count);
-    for (const pair of sample) {
-      const row = el('div', { className: 'hn-pair' });
-      [['winner', pair.winner], ['loser', pair.loser]].forEach(([side, proj]) => {
-        const div = el('div', { className: `hn-side ${side}` });
-        div.appendChild(el('div', { className: 'hn-label' }, side === 'winner' ? '↑ won' : '↓ lost'));
-        div.appendChild(el('div', { className: 'hn-title' }, proj.hn_title));
-        const stars = el('span', { className: `hn-stars${proj.stars > 500 ? ' high' : ''}` }, `${fmtNum(proj.stars)} stars`);
-        div.appendChild(stars);
-        row.appendChild(div);
-      });
-      grid.appendChild(row);
-    }
-    if (count < DATA.hnPairs.length) {
-      const more = el('div', { className: 'hn-show-more', text: `Show more pairs (${DATA.hnPairs.length - count} remaining)` });
-      more.addEventListener('click', () => { hnShowCount += 12; renderPairs(hnShowCount); });
-      grid.appendChild(more);
-    }
+  const col = el('div', { className: 'lb-col' });
+
+  // Header
+  const head = el('div', { className: 'lb-col-head' });
+  head.appendChild(el('span', { className: 'lb-col-title' }, isHN ? 'Show HN' : 'Academic Papers'));
+  head.appendChild(el('span', { className: 'lb-col-sub' }, `${meta.n_pairs} pairs · ${fmtNum(meta.n_judgments)} judgments`));
+  col.appendChild(head);
+
+  // Vanilla threshold line
+  if (vanilla) {
+    const v = el('div', { className: 'lb-vanilla-line' });
+    v.appendChild(el('span', { className: 'v-dot' }));
+    v.appendChild(el('span', {}, 'raw-model baseline · '));
+    v.appendChild(el('span', { className: 'v-name' }, 'Vanilla Sonnet 4.6'));
+    v.appendChild(el('span', { className: 'v-score' }, fmtPct(vanilla.score, vanilla.n_pairs)));
+    col.appendChild(v);
   }
 
-  renderPairs(hnShowCount);
-  wrap.appendChild(grid);
+  // Rows
+  for (let i = 0; i < board.length; i++) {
+    col.appendChild(buildMiniRow(board[i], i + 1, domain));
+  }
+
+  return col;
+}
+
+function buildMiniRow(row, rank, domain) {
+  const isActive = expandedPersonaId === row.persona_id;
+  const isHovered = hoveredPersonaId === row.persona_id;
+  const tr = el('div', {
+    className: 'lb-mini-row' + (isActive ? ' is-active' : '') + (isHovered && !isActive ? ' is-hovered' : ''),
+    'data-pid': row.persona_id,
+    'data-domain': domain,
+  });
+
+  tr.appendChild(el('span', { className: 'lb-rank' }, String(rank)));
+
+  const nameWrap = el('div', { className: 'lb-name-wrap' });
+  const cleanName = cleanPersonaName(row.persona_name);
+  nameWrap.appendChild(el('span', { className: 'lb-name' }, cleanName));
+
+  // Mini bar inside the name cell
+  const bar = el('div', { className: 'lb-bar' });
+  [['lb-bar-c', row.plus_one], ['lb-bar-i', row.zero], ['lb-bar-w', row.minus_one]].forEach(([cls, n]) => {
+    const seg = el('div', { className: cls }); seg.style.width = (n / row.n_pairs * 100) + '%'; bar.appendChild(seg);
+  });
+  nameWrap.appendChild(bar);
+  tr.appendChild(nameWrap);
+
+  tr.appendChild(el('span', { className: `lb-score ${scoreClass(row.score)}` }, fmtPct(row.score, row.n_pairs)));
+
+  tr.addEventListener('mouseenter', () => { hoveredPersonaId = row.persona_id; syncRowHighlight(); });
+  tr.addEventListener('mouseleave', () => { hoveredPersonaId = null; syncRowHighlight(); });
+  tr.addEventListener('click', () => {
+    expandedPersonaId = expandedPersonaId === row.persona_id ? null : row.persona_id;
+    syncRowHighlight();
+    refreshBehaviorPanel();
+    if (expandedPersonaId) {
+      const host = document.getElementById('behavior-panel-host');
+      if (host) host.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  });
+
+  return tr;
+}
+
+function cleanPersonaName(name) {
+  return name.replace(/-OurPlaybook$/, '').replace(/^The /, '').replace(/ Doctrine.*/, '');
+}
+
+function syncRowHighlight() {
+  document.querySelectorAll('.lb-mini-row').forEach(r => {
+    const pid = r.dataset.pid;
+    r.classList.toggle('is-active',  pid === expandedPersonaId);
+    r.classList.toggle('is-hovered', pid === hoveredPersonaId && pid !== expandedPersonaId);
+  });
+}
+
+// ── Behavior panel ───────────────────────────────────────
+function refreshBehaviorPanel() {
+  const host = document.getElementById('behavior-panel-host');
+  if (!host) return;
+  host.innerHTML = '';
+  if (!expandedPersonaId) return;
+
+  const pid = expandedPersonaId;
+  const hnRow = DATA.hnResults.leaderboard.find(r => r.persona_id === pid);
+  const pRow  = DATA.results.leaderboard.find(r => r.persona_id === pid);
+  if (!hnRow && !pRow) return;
+
+  const board = (lb, id) => lb.filter(r => r.kind !== 'vanilla').findIndex(r => r.persona_id === id) + 1;
+  const hnRank = hnRow ? board(DATA.hnResults.leaderboard, pid) : null;
+  const pRank  = pRow  ? board(DATA.results.leaderboard,   pid) : null;
+
+  const panel = el('div', { className: 'behavior-panel' });
+
+  const head = el('div', { className: 'bp-head' });
+  head.appendChild(el('div', { className: 'bp-name' }, cleanPersonaName((hnRow || pRow).persona_name)));
+  const closeBtn = el('span', { className: 'bp-close' }, '✕ close');
+  closeBtn.addEventListener('click', () => {
+    expandedPersonaId = null; syncRowHighlight(); refreshBehaviorPanel();
+  });
+  head.appendChild(closeBtn);
+  panel.appendChild(head);
+
+  const stats = el('div', { className: 'bp-stats' });
+  stats.appendChild(buildStatBlock('Show HN',          hnRow, hnRank));
+  stats.appendChild(buildStatBlock('Academic Papers',  pRow,  pRank));
+  panel.appendChild(stats);
+
+  // Divergence note
+  if (hnRank && pRank) {
+    const diff = Math.abs(hnRank - pRank);
+    const better = hnRank < pRank ? 'Show HN' : 'Academic Papers';
+    const worse  = hnRank < pRank ? 'Academic Papers' : 'Show HN';
+    let line;
+    if (diff >= 8) {
+      line = el('div', { className: 'bp-divergence' },
+        'Strong domain split — ranks ', el('strong', {}, `#${Math.min(hnRank,pRank)} on ${better}`),
+        ' but ', el('strong', {}, `#${Math.max(hnRank,pRank)} on ${worse}`),
+        `. This taste maps onto one signal much more than the other.`
+      );
+    } else if (diff <= 2) {
+      line = el('div', { className: 'bp-divergence' },
+        'Consistent across domains — ranks ', el('strong', {}, `#${hnRank} / #${pRank}`),
+        '. This taste generalises.'
+      );
+    } else {
+      line = el('div', { className: 'bp-divergence' },
+        `Ranks `, el('strong', {}, `#${hnRank} on Show HN`), ' and ',
+        el('strong', {}, `#${pRank} on Academic Papers`), `.`
+      );
+    }
+    panel.appendChild(line);
+  }
+
+  host.appendChild(panel);
+}
+
+function buildStatBlock(label, row, rank) {
+  const block = el('div', { className: 'bp-stat-block' });
+  block.appendChild(el('div', { className: 'bp-eval-label' }, label));
+  if (!row) {
+    block.appendChild(el('div', { className: 'bp-comp' }, '— not evaluated —'));
+    return block;
+  }
+  const statRow = el('div', { className: 'bp-stat-row' });
+  statRow.appendChild(el('span', { className: `bp-score-big ${scoreClass(row.score)}` }, fmtPct(row.score, row.n_pairs)));
+  statRow.appendChild(el('span', { className: 'bp-rank' }, `rank #${rank}`));
+  block.appendChild(statRow);
+
+  const cPct = ((row.plus_one / row.n_pairs) * 100).toFixed(0);
+  const iPct = ((row.zero / row.n_pairs) * 100).toFixed(0);
+  const wPct = ((row.minus_one / row.n_pairs) * 100).toFixed(0);
+  const compHTML = `<span class="n-c">${cPct}%</span> correct &nbsp;·&nbsp; ${iPct}% inconsistent &nbsp;·&nbsp; <span class="n-w">${wPct}%</span> wrong &nbsp; <span style="color:var(--dim)">(${row.n_pairs} pairs)</span>`;
+  block.appendChild(el('div', { className: 'bp-comp', html: compHTML }));
+
+  const bar = el('div', { className: 'bp-bar' });
+  [['lb-bar-c', row.plus_one], ['lb-bar-i', row.zero], ['lb-bar-w', row.minus_one]].forEach(([cls, n]) => {
+    const seg = el('div', { className: cls }); seg.style.width = (n / row.n_pairs * 100) + '%'; bar.appendChild(seg);
+  });
+  block.appendChild(bar);
+
+  return block;
+}
+
+// ── Best & worst by discipline ──────────────────────────
+function buildBestWorstByDomain() {
+  // Compute per-persona per-domain accuracy (excluding vanilla)
+  const stats = {};
+  const allDomains = new Set();
+  for (const j of (DATA.pairsLog?.judgments || [])) {
+    if (j.error) continue;
+    if ((j.persona_id || '').startsWith('vanilla_')) continue;
+    const dom = (j.cohort_key || '').split('__')[0];
+    if (!dom) continue;
+    allDomains.add(dom);
+    if (!stats[dom]) stats[dom] = {};
+    if (!stats[dom][j.persona_id]) stats[dom][j.persona_id] = { correct: 0, total: 0 };
+    stats[dom][j.persona_id].total += 1;
+    if (j.preference_normalized === j._correct_side) stats[dom][j.persona_id].correct += 1;
+  }
+  const domains = [...allDomains].sort();
+
+  // Vanilla baseline per domain (for footnote line)
+  const vStats = {};
+  for (const j of (DATA.pairsLog?.judgments || [])) {
+    if (j.error || j.persona_id !== 'vanilla_sonnet_4_6') continue;
+    const dom = (j.cohort_key || '').split('__')[0];
+    if (!dom) continue;
+    if (!vStats[dom]) vStats[dom] = { correct: 0, total: 0 };
+    vStats[dom].total += 1;
+    if (j.preference_normalized === j._correct_side) vStats[dom].correct += 1;
+  }
+
+  const board = DATA.results.leaderboard;
+  const nameOf = pid => cleanPersonaName(personaNameById(pid, board));
+
+  const wrap = el('div', { className: 'bw-wrap' });
+  const tbl = el('div', { className: 'bw-table' });
+
+  const head = el('div', { className: 'bw-head' });
+  head.appendChild(el('div', { className: 'bw-h bw-h-dom' }, 'discipline'));
+  head.appendChild(el('div', { className: 'bw-h bw-h-best' }, 'best'));
+  head.appendChild(el('div', { className: 'bw-h bw-h-worst' }, 'worst'));
+  head.appendChild(el('div', { className: 'bw-h bw-h-vanilla' }, 'vanilla baseline'));
+  tbl.appendChild(head);
+
+  for (const dom of domains) {
+    const ranked = Object.entries(stats[dom])
+      .filter(([_, s]) => s.total >= 5)  // ignore sparse personas
+      .map(([pid, s]) => ({ pid, acc: s.correct / s.total, total: s.total }))
+      .sort((a, b) => b.acc - a.acc);
+    if (!ranked.length) continue;
+    const best  = ranked[0];
+    const worst = ranked[ranked.length - 1];
+    const vacc = vStats[dom] && vStats[dom].total ? vStats[dom].correct / vStats[dom].total : null;
+
+    const row = el('div', { className: 'bw-row' });
+    row.appendChild(el('div', { className: 'bw-dom' }, shortDomain(dom)));
+
+    row.appendChild(buildBwCell(best, 'best', nameOf));
+    row.appendChild(buildBwCell(worst, 'worst', nameOf));
+    row.appendChild(el('div', { className: 'bw-vanilla' }, vacc != null ? `${(vacc * 100).toFixed(0)}%` : '—'));
+
+    tbl.appendChild(row);
+  }
+  wrap.appendChild(tbl);
   return wrap;
+}
+
+function buildBwCell(entry, kind, nameOf) {
+  const cell = el('div', { className: `bw-cell bw-${kind}`, 'data-pid': entry.pid });
+  cell.appendChild(el('span', { className: 'bw-name' }, nameOf(entry.pid)));
+  cell.appendChild(el('span', { className: `bw-pct bw-pct-${kind}` }, `${(entry.acc * 100).toFixed(0)}%`));
+  cell.addEventListener('click', () => {
+    expandedPersonaId = expandedPersonaId === entry.pid ? null : entry.pid;
+    syncRowHighlight();
+    refreshBehaviorPanel();
+  });
+  return cell;
+}
+
+function shortDomain(d) {
+  const map = {
+    'Biology / Life Sciences': 'Biology',
+    'Chemistry & Materials Science': 'Chem/Mat',
+    'Economics': 'Econ',
+    'Machine Learning': 'ML',
+    'Mechanical & Aerospace Engineering': 'Mech/Aero',
+    'Medicine': 'Medicine',
+    'Physics': 'Physics',
+  };
+  return map[d] || d;
+}
+
+// Heatmap color scale: pale (low) → sage (high). Random baseline = 0.5 → mid.
+function heatColor(v) {
+  if (v == null) return '#f0f0ec';
+  // Clamp 0.3 → 0.9 to spread the visible range
+  const t = Math.max(0, Math.min(1, (v - 0.3) / 0.6));
+  // Mix from cream → sage (#3D5585)
+  const c1 = [238, 238, 232]; // cream
+  const c2 = [61, 85, 133];   // sage
+  const r = Math.round(c1[0] + t * (c2[0] - c1[0]));
+  const g = Math.round(c1[1] + t * (c2[1] - c1[1]));
+  const b = Math.round(c1[2] + t * (c2[2] - c1[2]));
+  return `rgb(${r},${g},${b})`;
+}
+
+// ── Closest / most divergent persona pairs ──────────────
+function buildAgreementTopBottom() {
+  const wrap = el('div', { className: 'agree-wrap' });
+
+  const tabs = el('div', { className: 'agree-tabs' });
+  const tabHN = el('button', { className: 'agree-tab active', 'data-which': 'hn' }, 'Show HN');
+  const tabP  = el('button', { className: 'agree-tab', 'data-which': 'papers' }, 'Academic Papers');
+  tabs.appendChild(tabHN);
+  tabs.appendChild(tabP);
+  wrap.appendChild(tabs);
+
+  const host = el('div', { className: 'agree-host' });
+  wrap.appendChild(host);
+
+  function topPairs(ag, board) {
+    if (!ag) return null;
+    const ranked = board.filter(r => r.kind !== 'vanilla').map(r => r.persona_id).filter(id => ag.ids.includes(id));
+    const seen = new Set();
+    const pairs = [];
+    for (const a of ranked) {
+      for (const b of ranked) {
+        if (a === b) continue;
+        const key = [a, b].sort().join('|');
+        if (seen.has(key)) continue;
+        seen.add(key);
+        const v = ag.matrix[a]?.[b];
+        if (v == null) continue;
+        pairs.push({ a, b, v });
+      }
+    }
+    pairs.sort((x, y) => y.v - x.v);
+    return pairs;
+  }
+
+  function render(which) {
+    host.innerHTML = '';
+    const ag = which === 'hn' ? DATA.hnAgree : DATA.papersAgree;
+    const board = which === 'hn' ? DATA.hnResults.leaderboard : DATA.results.leaderboard;
+    const all = topPairs(ag, board);
+    if (!all) {
+      host.appendChild(el('p', { className: 'status-msg' }, 'Agreement matrix not loaded.'));
+      return;
+    }
+    const top    = all.slice(0, 3);
+    const bottom = all.slice(-3).reverse();
+    const maxV = top[0]?.v ?? 1;
+    const minV = bottom[bottom.length - 1]?.v ?? 0;
+
+    host.appendChild(buildPairList('Most aligned', top, true, board, maxV, minV));
+    host.appendChild(buildPairList('Most divergent', bottom, false, board, maxV, minV));
+  }
+
+  tabHN.addEventListener('click', () => { tabHN.classList.add('active'); tabP.classList.remove('active'); render('hn'); });
+  tabP.addEventListener('click',  () => { tabP.classList.add('active'); tabHN.classList.remove('active'); render('papers'); });
+  render('hn');
+  return wrap;
+}
+
+function buildPairList(title, pairs, isTop, board, maxV, minV) {
+  const block = el('div', { className: 'agree-block' });
+  block.appendChild(el('div', { className: `agree-block-title ${isTop ? 'top' : 'bot'}` }, title));
+  const list = el('div', { className: 'agree-list' });
+  for (const { a, b, v } of pairs) {
+    const row = el('div', { className: 'agree-pair' });
+    row.appendChild(el('span', { className: 'agree-pair-names' },
+      el('span', { className: 'agree-name', 'data-pid': a }, cleanPersonaName(personaNameById(a, board))),
+      el('span', { className: 'agree-vs' }, ' ↔ '),
+      el('span', { className: 'agree-name', 'data-pid': b }, cleanPersonaName(personaNameById(b, board)))
+    ));
+    const barWrap = el('div', { className: 'agree-bar-wrap' });
+    const bar = el('div', { className: `agree-bar ${isTop ? 'top' : 'bot'}` });
+    bar.style.width = (v * 100).toFixed(0) + '%';
+    barWrap.appendChild(bar);
+    row.appendChild(barWrap);
+    row.appendChild(el('span', { className: 'agree-pct' }, (v * 100).toFixed(0) + '%'));
+    list.appendChild(row);
+
+    // Click each name → expand persona panel
+    [a, b].forEach(pid => {
+      const span = row.querySelector(`.agree-name[data-pid="${pid}"]`);
+      if (span) span.addEventListener('click', () => {
+        expandedPersonaId = expandedPersonaId === pid ? null : pid;
+        syncRowHighlight();
+        refreshBehaviorPanel();
+      });
+    });
+  }
+  block.appendChild(list);
+  return block;
+}
+
+function personaNameById(pid, board) {
+  const r = board.find(x => x.persona_id === pid);
+  return r ? r.persona_name : pid;
+}
+
+// ── Examples (bottom): 5 papers + 5 HN, with abstracts ──
+function buildExamplesSection() {
+  const wrap = el('div', { className: 'examples-wrap' });
+
+  // Papers — first 5 cross-tier pairs with both abstracts available
+  const papersPairs = Object.values(DATA.pairMeta || {})
+    .filter(p => p.kind === 'cross' && p.paper_a && p.paper_b)
+    .slice(0, 5);
+
+  if (papersPairs.length) {
+    wrap.appendChild(el('h3', { className: 'examples-h3' }, 'Academic papers'));
+    const grid = el('div', { className: 'examples-grid' });
+    for (const pair of papersPairs) {
+      grid.appendChild(buildPaperPairCard(pair));
+    }
+    wrap.appendChild(grid);
+  }
+
+  // HN — 5 with abstracts
+  if (DATA.hnPairs.length) {
+    wrap.appendChild(el('h3', { className: 'examples-h3', style: 'margin-top:32px' }, 'Show HN'));
+    const grid = el('div', { className: 'examples-grid' });
+    for (const pair of DATA.hnPairs.slice(0, 5)) {
+      grid.appendChild(buildHNPairCard(pair));
+    }
+    wrap.appendChild(grid);
+  }
+  return wrap;
+}
+
+function buildPaperPairCard(pair) {
+  const card = el('div', { className: 'ex-card' });
+  const dom = (pair.cohort || '').split('__')[0];
+  card.appendChild(el('div', { className: 'ex-meta' }, `${dom} · ${pair.year || ''}`));
+  const grid = el('div', { className: 'ex-pair-grid' });
+  const goodIsA = pair.paper_a.tier === 'good';
+  const aSide = el('div', { className: 'ex-side ' + (goodIsA ? 'winner' : 'loser') });
+  const bSide = el('div', { className: 'ex-side ' + (!goodIsA ? 'winner' : 'loser') });
+  fillPaperSide(aSide, pair.paper_a, goodIsA);
+  fillPaperSide(bSide, pair.paper_b, !goodIsA);
+  grid.appendChild(aSide); grid.appendChild(bSide);
+  card.appendChild(grid);
+  return card;
+}
+
+function fillPaperSide(node, paper, isWinner) {
+  node.appendChild(el('div', { className: 'ex-label' }, isWinner ? '↑ higher-cited' : '↓ lower-cited'));
+  node.appendChild(el('div', { className: 'ex-stat' },
+    el('span', { className: 'ex-stat-num ' + (isWinner ? 'high' : '') }, fmtNum(paper.citation_count)),
+    ' citations'
+  ));
+  node.appendChild(el('p', { className: 'ex-abstract' }, trunc(paper.anonymized_problem, 360)));
+}
+
+function buildHNPairCard(pair) {
+  const card = el('div', { className: 'ex-card' });
+  card.appendChild(el('div', { className: 'ex-meta' }, `Show HN · ${pair.cohort_quarter} · ${pair.cohort_language}`));
+  const grid = el('div', { className: 'ex-pair-grid' });
+  const w = el('div', { className: 'ex-side winner' });
+  const l = el('div', { className: 'ex-side loser'  });
+  fillHNSide(w, pair.winner, true);
+  fillHNSide(l, pair.loser,  false);
+  grid.appendChild(w); grid.appendChild(l);
+  card.appendChild(grid);
+  return card;
+}
+
+function fillHNSide(node, proj, isWinner) {
+  node.appendChild(el('div', { className: 'ex-label' }, isWinner ? '↑ won' : '↓ lost'));
+  node.appendChild(el('div', { className: 'ex-title' }, proj.hn_title));
+  node.appendChild(el('div', { className: 'ex-stat' },
+    el('span', { className: 'ex-stat-num ' + (isWinner ? 'high' : '') }, fmtNum(proj.stars)),
+    ' GitHub stars'
+  ));
+  const abstract = DATA.hnAbstracts[`${proj.gh_owner}/${proj.gh_repo}`];
+  if (abstract) {
+    node.appendChild(el('p', { className: 'ex-abstract' }, trunc(abstract, 360)));
+  }
 }
 
 // ════════════════════════════════════════════════════════════════
@@ -1694,52 +2190,71 @@ function parsePlaybook(md) {
   const doc = { title: '', subtitle: '', quote: '', about: '', layers: [] };
   let layer = null, item = null, state = 'header';
 
-  for (let i = 0; i < lines.length; i++) {
-    const ln = lines[i];
+  for (const ln of lines) {
+    // Title
     if (ln.startsWith('# ')) { doc.title = ln.slice(2).trim(); continue; }
-    if (ln.startsWith('### ') && state === 'header') { doc.subtitle = ln.slice(4).trim(); continue; }
-    const quoteM = ln.match(/^>\s+\*"(.+)"\*\s*$/);
+
+    // Quote: > "text" or > *"text"*
+    const quoteM = ln.match(/^>\s+\*?"(.+?)"\*?\s*$/);
     if (quoteM) { doc.quote = quoteM[1]; continue; }
-    const aboutM = ln.match(/^\*\*About this playbook:\*\*\s*(.+)/);
+
+    // About: **About:** or **About this playbook:**
+    const aboutM = ln.match(/^\*\*About(?:\s+this\s+playbook)?:\*\*\s*(.+)/);
     if (aboutM) { doc.about = aboutM[1]; state = 'layers'; continue; }
 
-    const layerM = ln.match(/^## Layer (\d+) — (.+)/);
+    // Skip dividers
+    if (ln.match(/^-{3,}$/)) continue;
+
+    // Layer: ## Layer N — Name
+    const layerM = ln.match(/^## Layer\s+(\d+)\s*—\s*(.+)/);
     if (layerM) {
-      if (item) { layer.items.push(item); item = null; }
-      layer = { id: layerM[1], name: layerM[2].trim(), title: '', tagline: '', intro: '', items: [] };
+      if (item && layer) { layer.items.push(item); item = null; }
+      layer = {
+        id: layerM[1],
+        name: layerM[2].replace(/\s*\*\([^)]*\)\*/, '').trim(),
+        tagline: '', intro: '', items: [],
+      };
       doc.layers.push(layer);
       state = 'layer-header';
       continue;
     }
 
-    if (layer) {
-      if (state === 'layer-header' && ln.startsWith('### ')) {
-        layer.title = ln.slice(4).trim(); continue;
-      }
-      if (state === 'layer-header' && ln.match(/^\*.+\*$/)) {
-        layer.tagline = ln.replace(/^\*/, '').replace(/\*$/, '').trim(); state = 'layer-intro'; continue;
-      }
-      if (state === 'layer-intro' && ln.trim() && !ln.startsWith('---') && !ln.match(/^\*\*\d+\.\d+/)) {
-        layer.intro += (layer.intro ? ' ' : '') + ln.trim(); continue;
-      }
+    if (!layer) continue;
 
-      const itemM = ln.match(/^\*\*(\d+\.\d+)\s+·\s+(.+?)\*\*\s*`([^`]+)`/);
-      if (itemM) {
-        if (item) layer.items.push(item);
-        item = { id: itemM[1], title: itemM[2].trim(), tag: itemM[3], rule: '', test: '', source: '' };
-        state = 'item'; continue;
-      }
+    // Tagline: standalone *italic line*
+    if (ln.match(/^\*[^*].+\*$/) && (state === 'layer-header' || state === 'layer-intro')) {
+      layer.tagline = ln.slice(1, -1).trim();
+      state = 'layer-intro';
+      continue;
+    }
 
-      if (item) {
-        const ruleM = ln.match(/^\*\*Rule:\*\*\s*(.+)/);
-        if (ruleM) { item.rule = ruleM[1]; continue; }
-        const testM = ln.match(/^\*\*Test:\*\*\s*(.+)/);
-        if (testM) { item.test = testM[1]; continue; }
-        const srcM = ln.match(/^\*Source:\s*(.+)\*$/);
-        if (srcM) { item.source = srcM[1]; continue; }
-      }
+    // Item: ### Title
+    if (ln.startsWith('### ')) {
+      if (item) layer.items.push(item);
+      item = { id: String(layer.items.length + 1), title: ln.slice(4).trim(), tag: '', rule: '', test: '', source: '' };
+      state = 'item';
+      continue;
+    }
+
+    // Layer intro (non-empty lines before first item)
+    if ((state === 'layer-header' || state === 'layer-intro') && ln.trim() &&
+        !ln.startsWith('**') && !ln.match(/^[-*]\s/)) {
+      layer.intro += (layer.intro ? ' ' : '') + ln.trim();
+      state = 'layer-intro';
+      continue;
+    }
+
+    // Item fields
+    if (item) {
+      const ruleM = ln.match(/^\*\*Rule:\*\*\s*(.+)/);
+      if (ruleM) { item.rule = ruleM[1]; continue; }
+      const testM = ln.match(/^\*\*Test:\*\*\s*(.+)/);
+      if (testM) { item.test = testM[1]; continue; }
+      const srcM = ln.match(/^\*\*Source:\*\*\s*(.+)/) || ln.match(/^\*Source:\s*(.+)\*$/);
+      if (srcM) { item.source = srcM[1]; continue; }
     }
   }
+
   if (item && layer) layer.items.push(item);
   return doc;
 }
@@ -1781,8 +2296,7 @@ function buildPersonaPanel(persona, docData, docFormat, onBack) {
   marker.appendChild(el('span', { className: 'dp-marker-dot' }));
   marker.appendChild(document.createTextNode(
     jsonDoc ? `A Doctrine of ${jsonDoc.subject || persona.name}`
-    : parsedDoc ? parsedDoc.subtitle
-    : `A Doctrine of ${persona.name}`
+    : (parsedDoc?.subtitle || `A Doctrine of ${persona.name}`)
   ));
   wrap.appendChild(marker);
 
