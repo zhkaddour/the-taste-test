@@ -1,0 +1,3828 @@
+{
+  "source": "filtered_pool.json",
+  "seed": 42,
+  "quota": {
+    "Machine Learning": {
+      "good": 10,
+      "bad": 10
+    },
+    "Computer Vision": {
+      "good": 5,
+      "bad": 5
+    },
+    "Natural Language Processing": {
+      "good": 3,
+      "bad": 3
+    }
+  },
+  "papers": [
+    {
+      "paperId": "336097e41c452c53b6f58cd63de6941d093238da",
+      "externalIds": {
+        "DBLP": "conf/nips/0002O14",
+        "MAG": "2950399618",
+        "ArXiv": "1406.2784",
+        "CorpusId": 14205997
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Provable Tensor Factorization with Missing Data",
+      "venue": "Neural Information Processing Systems",
+      "year": 2014,
+      "citationCount": 207,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1406.2784, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Mathematics",
+        "Computer Science"
+      ],
+      "authors": [
+        {
+          "authorId": "48964143",
+          "name": "Prateek Jain"
+        },
+        {
+          "authorId": "34184418",
+          "name": "Sewoong Oh"
+        }
+      ],
+      "abstract": "We study the problem of low-rank tensor factorization in the presence of missing data. We ask the following question: how many sampled entries do we need, to efficiently and exactly reconstruct a tensor with a low-rank orthogonal decomposition? We propose a novel alternating minimization based method which iteratively refines estimates of the singular vectors. We show that under certain standard assumptions, our method can recover a three-mode n \u00d7 n \u00d7 n dimensional rank-r tensor exactly from O(n3/2r5 log4 n) randomly sampled entries. In the process of proving this result, we solve two challenging sub-problems for tensors with missing data. First, in analyzing the initialization step, we prove a generalization of a celebrated result by Szemeredie et al. on the spectrum of random graphs. We show that this initialization step alone is sufficient to achieve the root mean squared error on the parameters bounded by C(r2n3/2(log n)4/|\u03a9|) from |\u03a9| observed entries for some constant C independent of n and r. Next, we prove global convergence of alternating minimization with this good initialization. Simulations suggest that the dependence of the sample size on the dimensionality n is indeed tight.",
+      "arxiv_id": "1406.2784",
+      "arxiv_primary_category": "stat.ML",
+      "subdomain": "Machine Learning",
+      "year_cohort": "2010-2015",
+      "tier": "good",
+      "citation_percentile": 75.06
+    },
+    {
+      "paperId": "0927c7eba740953117ddf3e35ca65dd446955c65",
+      "externalIds": {
+        "DBLP": "conf/nips/RichardM14",
+        "MAG": "2963811132",
+        "ArXiv": "1411.1076",
+        "CorpusId": 15027589
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "A statistical model for tensor PCA",
+      "venue": "Neural Information Processing Systems",
+      "year": 2014,
+      "citationCount": 284,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1411.1076, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Mathematics",
+        "Computer Science"
+      ],
+      "authors": [
+        {
+          "authorId": "144564166",
+          "name": "E. Richard"
+        },
+        {
+          "authorId": "145071265",
+          "name": "A. Montanari"
+        }
+      ],
+      "abstract": "We consider the Principal Component Analysis problem for large tensors of arbitrary order $k$ under a single-spike (or rank-one plus noise) model. On the one hand, we use information theory, and recent results in probability theory, to establish necessary and sufficient conditions under which the principal component can be estimated using unbounded computational resources. It turns out that this is possible as soon as the signal-to-noise ratio $\\beta$ becomes larger than $C\\sqrt{k\\log k}$ (and in particular $\\beta$ can remain bounded as the problem dimensions increase). \nOn the other hand, we analyze several polynomial-time estimation algorithms, based on tensor unfolding, power iteration and message passing ideas from graphical models. We show that, unless the signal-to-noise ratio diverges in the system dimensions, none of these approaches succeeds. This is possibly related to a fundamental limitation of computationally tractable estimators for this problem. \nWe discuss various initializations for tensor power iteration, and show that a tractable initialization based on the spectrum of the matricized tensor outperforms significantly baseline methods, statistically and computationally. Finally, we consider the case in which additional side information is available about the unknown signal. We characterize the amount of side information that allows the iterative algorithms to converge to a good estimate.",
+      "arxiv_id": "1411.1076",
+      "arxiv_primary_category": "cs.LG",
+      "subdomain": "Machine Learning",
+      "year_cohort": "2010-2015",
+      "tier": "good",
+      "citation_percentile": 80.09
+    },
+    {
+      "paperId": "789783016fb708abbc061790612ebe91273c05d3",
+      "externalIds": {
+        "MAG": "2951592473",
+        "DBLP": "conf/nips/OsbandRR13",
+        "ArXiv": "1306.0940",
+        "CorpusId": 674335
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "(More) Efficient Reinforcement Learning via Posterior Sampling",
+      "venue": "Neural Information Processing Systems",
+      "year": 2013,
+      "citationCount": 580,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1306.0940, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Mathematics",
+        "Computer Science"
+      ],
+      "authors": [
+        {
+          "authorId": "2561924",
+          "name": "Ian Osband"
+        },
+        {
+          "authorId": "145751896",
+          "name": "Daniel Russo"
+        },
+        {
+          "authorId": "1731282",
+          "name": "Benjamin Van Roy"
+        }
+      ],
+      "abstract": "Most provably-efficient reinforcement learning algorithms introduce optimism about poorly-understood states and actions to encourage exploration. We study an alternative approach for efficient exploration: posterior sampling for reinforcement learning (PSRL). This algorithm proceeds in repeated episodes of known duration. At the start of each episode, PSRL updates a prior distribution over Markov decision processes and takes one sample from this posterior. PSRL then follows the policy that is optimal for this sample during the episode. The algorithm is conceptually simple, computationally efficient and allows an agent to encode prior knowledge in a natural way. We establish an O(\u03c4S/\u221aAT) bound on expected regret, where T is time, \u03c4 is the episode length and S and A are the cardinalities of the state and action spaces. This bound is one of the first for an algorithm not based on optimism, and close to the state of the art for any reinforcement learning algorithm. We show through simulation that PSRL significantly outperforms existing algorithms with similar regret bounds.",
+      "arxiv_id": "1306.0940",
+      "arxiv_primary_category": "stat.ML",
+      "subdomain": "Machine Learning",
+      "year_cohort": "2010-2015",
+      "tier": "good",
+      "citation_percentile": 87.41
+    },
+    {
+      "paperId": "6640f4e4beae786f301928d82a9f8eb037aa6935",
+      "externalIds": {
+        "DBLP": "conf/nips/HeessWSLET15",
+        "MAG": "1906772730",
+        "ArXiv": "1510.09142",
+        "CorpusId": 53604
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Learning Continuous Control Policies by Stochastic Value Gradients",
+      "venue": "Neural Information Processing Systems",
+      "year": 2015,
+      "citationCount": 594,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1510.09142, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "authors": [
+        {
+          "authorId": "2801204",
+          "name": "N. Heess"
+        },
+        {
+          "authorId": "89504302",
+          "name": "Greg Wayne"
+        },
+        {
+          "authorId": "145824029",
+          "name": "David Silver"
+        },
+        {
+          "authorId": "2542999",
+          "name": "T. Lillicrap"
+        },
+        {
+          "authorId": "1968210",
+          "name": "Tom Erez"
+        },
+        {
+          "authorId": "2109481",
+          "name": "Yuval Tassa"
+        }
+      ],
+      "abstract": "We present a unified framework for learning continuous control policies using backpropagation. It supports stochastic control by treating stochasticity in the Bellman equation as a deterministic function of exogenous noise. The product is a spectrum of general policy gradient algorithms that range from model-free methods with value functions to model-based methods without value functions. We use learned models but only require observations from the environment in- stead of observations from model-predicted trajectories, minimizing the impact of compounded model errors. We apply these algorithms first to a toy stochastic control problem and then to several physics-based control problems in simulation. One of these variants, SVG(1), shows the effectiveness of learning models, value functions, and policies simultaneously in continuous domains.",
+      "arxiv_id": "1510.09142",
+      "arxiv_primary_category": "cs.LG",
+      "subdomain": "Machine Learning",
+      "year_cohort": "2010-2015",
+      "tier": "good",
+      "citation_percentile": 87.87
+    },
+    {
+      "paperId": "5f9ce48983b571aa69706cffc7ace33f352ac59a",
+      "externalIds": {
+        "DBLP": "journals/corr/abs-1112-4394",
+        "ArXiv": "1112.4394",
+        "MAG": "2953110594",
+        "CorpusId": 2273685
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Additive Gaussian Processes",
+      "venue": "Neural Information Processing Systems",
+      "year": 2011,
+      "citationCount": 361,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1112.4394, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Mathematics",
+        "Computer Science"
+      ],
+      "authors": [
+        {
+          "authorId": "1704657",
+          "name": "D. Duvenaud"
+        },
+        {
+          "authorId": "1748758",
+          "name": "H. Nickisch"
+        },
+        {
+          "authorId": "3472959",
+          "name": "C. Rasmussen"
+        }
+      ],
+      "abstract": "We introduce a Gaussian process model of functions which are additive. An additive function is one which decomposes into a sum of low-dimensional functions, each depending on only a subset of the input variables. Additive GPs generalize both Generalized Additive Models, and the standard GP models which use squared-exponential kernels. Hyperparameter learning in this model can be seen as Bayesian Hierarchical Kernel Learning (HKL). We introduce an expressive but tractable parameterization of the kernel function, which allows efficient evaluation of all input interaction terms, whose number is exponential in the input dimension. The additional structure discoverable by this model results in increased interpretability, as well as state-of-the-art predictive power in regression tasks.",
+      "arxiv_id": "1112.4394",
+      "arxiv_primary_category": "stat.ML",
+      "subdomain": "Machine Learning",
+      "year_cohort": "2010-2015",
+      "tier": "good",
+      "citation_percentile": 84.44
+    },
+    {
+      "paperId": "3e3af89047beb407c8fceeac78f2fea1daa0ebc5",
+      "externalIds": {
+        "MAG": "2952173019",
+        "ArXiv": "1304.7717",
+        "DBLP": "conf/nips/Lopez-PazHS13",
+        "CorpusId": 7370527
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "The Randomized Dependence Coefficient",
+      "venue": "Neural Information Processing Systems",
+      "year": 2013,
+      "citationCount": 209,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1304.7717, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Mathematics",
+        "Computer Science"
+      ],
+      "authors": [
+        {
+          "authorId": "1401804750",
+          "name": "David Lopez-Paz"
+        },
+        {
+          "authorId": "2517795",
+          "name": "Philipp Hennig"
+        },
+        {
+          "authorId": "1707625",
+          "name": "B. Scholkopf"
+        }
+      ],
+      "abstract": "We introduce the Randomized Dependence Coefficient (RDC), a measure of nonlinear dependence between random variables of arbitrary dimension based on the Hirschfeld-Gebelein-Renyi Maximum Correlation Coefficient. RDC is defined in terms of correlation of random non-linear copula projections; it is invariant with respect to marginal distribution transformations, has low computational cost and is easy to implement: just five lines of R code, included at the end of the paper.",
+      "arxiv_id": "1304.7717",
+      "arxiv_primary_category": "stat.ML",
+      "subdomain": "Machine Learning",
+      "year_cohort": "2010-2015",
+      "tier": "good",
+      "citation_percentile": 75.51
+    },
+    {
+      "paperId": "309494da0769345cb35ca0b7b0aae8143eee85a2",
+      "externalIds": {
+        "ArXiv": "1306.0186",
+        "MAG": "2140574335",
+        "DBLP": "conf/nips/UriaML13",
+        "CorpusId": 14249325
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "RNADE: The real-valued neural autoregressive density-estimator",
+      "venue": "Neural Information Processing Systems",
+      "year": 2013,
+      "citationCount": 242,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1306.0186, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "authors": [
+        {
+          "authorId": "2825051",
+          "name": "Benigno Uria"
+        },
+        {
+          "authorId": "145797336",
+          "name": "Iain Murray"
+        },
+        {
+          "authorId": "1777528",
+          "name": "H. Larochelle"
+        }
+      ],
+      "abstract": "We introduce RNADE, a new model for joint density estimation of real-valued vectors. Our model calculates the density of a datapoint as the product of one-dimensional conditionals modeled using mixture density networks with shared parameters. RNADE learns a distributed representation of the data, while having a tractable expression for the calculation of densities. A tractable likelihood allows direct comparison with other methods and training by standard gradient-based optimizers. We compare the performance of RNADE on several datasets of heterogeneous and perceptual data, finding it outperforms mixture models in all but one case.",
+      "arxiv_id": "1306.0186",
+      "arxiv_primary_category": "stat.ML",
+      "subdomain": "Machine Learning",
+      "year_cohort": "2010-2015",
+      "tier": "good",
+      "citation_percentile": 77.35
+    },
+    {
+      "paperId": "e4257bc131c36504a04382290cbc27ca8bb27813",
+      "externalIds": {
+        "MAG": "2962841471",
+        "DBLP": "journals/corr/OhGLLS15",
+        "ArXiv": "1507.08750",
+        "CorpusId": 3147510
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Action-Conditional Video Prediction using Deep Networks in Atari Games",
+      "venue": "Neural Information Processing Systems",
+      "year": 2015,
+      "citationCount": 895,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1507.08750, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "authors": [
+        {
+          "authorId": "2894414",
+          "name": "Junhyuk Oh"
+        },
+        {
+          "authorId": "1955964",
+          "name": "Xiaoxiao Guo"
+        },
+        {
+          "authorId": "1697141",
+          "name": "Honglak Lee"
+        },
+        {
+          "authorId": "46328485",
+          "name": "Richard L. Lewis"
+        },
+        {
+          "authorId": "1699868",
+          "name": "Satinder Singh"
+        }
+      ],
+      "abstract": "Motivated by vision-based reinforcement learning (RL) problems, in particular Atari games from the recent benchmark Aracade Learning Environment (ALE), we consider spatio-temporal prediction problems where future (image-)frames are dependent on control variables or actions as well as previous frames. While not composed of natural scenes, frames in Atari games are high-dimensional in size, can involve tens of objects with one or more objects being controlled by the actions directly and many other objects being influenced indirectly, can involve entry and departure of objects, and can involve deep partial observability. We propose and evaluate two deep neural network architectures that consist of encoding, action-conditional transformation, and decoding layers based on convolutional neural networks and recurrent neural networks. Experimental results show that the proposed architectures are able to generate visually-realistic frames that are also useful for control over approximately 100-step action-conditional futures in some games. To the best of our knowledge, this paper is the first to make and evaluate long-term predictions on high-dimensional video conditioned by control inputs.",
+      "arxiv_id": "1507.08750",
+      "arxiv_primary_category": "cs.LG",
+      "subdomain": "Machine Learning",
+      "year_cohort": "2010-2015",
+      "tier": "good",
+      "citation_percentile": 90.16
+    },
+    {
+      "paperId": "2748f4cf250992960c5de0d00a7d57346f0df33d",
+      "externalIds": {
+        "MAG": "2963457235",
+        "ArXiv": "1506.03039",
+        "DBLP": "conf/nips/GorhamM15",
+        "CorpusId": 7424674
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Measuring Sample Quality with Stein's Method",
+      "venue": "Neural Information Processing Systems",
+      "year": 2015,
+      "citationCount": 239,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1506.03039, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "authors": [
+        {
+          "authorId": "39522717",
+          "name": "Jackson Gorham"
+        },
+        {
+          "authorId": "143722101",
+          "name": "Lester W. Mackey"
+        }
+      ],
+      "abstract": "To improve the efficiency of Monte Carlo estimation, practitioners are turning to biased Markov chain Monte Carlo procedures that trade off asymptotic exactness for computational speed. The reasoning is sound: a reduction in variance due to more rapid sampling can outweigh the bias introduced. However, the inexactness creates new challenges for sampler and parameter selection, since standard measures of sample quality like effective sample size do not account for asymptotic bias. To address these challenges, we introduce a new computable quality measure based on Stein's method that quantifies the maximum discrepancy between sample and target expectations over a large class of test functions. We use our tool to compare exact, biased, and deterministic sample sequences and illustrate applications to hyperparameter selection, convergence rate assessment, and quantifying bias-variance tradeoffs in posterior inference.",
+      "arxiv_id": "1506.03039",
+      "arxiv_primary_category": "stat.ML",
+      "subdomain": "Machine Learning",
+      "year_cohort": "2010-2015",
+      "tier": "good",
+      "citation_percentile": 77.12
+    },
+    {
+      "paperId": "bd2cb4546fc01074d55a183a68ce0a0f7be43a43",
+      "externalIds": {
+        "DBLP": "conf/nips/ArjevaniS15",
+        "MAG": "2962897077",
+        "ArXiv": "1506.01900",
+        "CorpusId": 11891276
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Communication Complexity of Distributed Convex Learning and Optimization",
+      "venue": "Neural Information Processing Systems",
+      "year": 2015,
+      "citationCount": 221,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1506.01900, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "authors": [
+        {
+          "authorId": "2864002",
+          "name": "Yossi Arjevani"
+        },
+        {
+          "authorId": "1768909",
+          "name": "Ohad Shamir"
+        }
+      ],
+      "abstract": "We study the fundamental limits to communication-efficient distributed methods for convex learning and optimization, under different assumptions on the information available to individual machines, and the types of functions considered. We identify cases where existing algorithms are already worst-case optimal, as well as cases where room for further improvement is still possible. Among other things, our results indicate that without similarity between the local objective functions (due to statistical data similarity or otherwise) many communication rounds may be required, even if the machines have unbounded computational power.",
+      "arxiv_id": "1506.01900",
+      "arxiv_primary_category": "cs.LG",
+      "subdomain": "Machine Learning",
+      "year_cohort": "2010-2015",
+      "tier": "good",
+      "citation_percentile": 76.2
+    },
+    {
+      "paperId": "23ed0248baa4ec1c114354ba495a16d535312054",
+      "externalIds": {
+        "DBLP": "journals/corr/abs-1211-0439",
+        "MAG": "2100134167",
+        "ArXiv": "1211.0439",
+        "CorpusId": 8214008
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Learning curves for multi-task Gaussian process regression",
+      "venue": "Neural Information Processing Systems",
+      "year": 2012,
+      "citationCount": 6,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1211.0439, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science",
+        "Mathematics",
+        "Physics"
+      ],
+      "authors": [
+        {
+          "authorId": "2613576",
+          "name": "Peter Sollich"
+        },
+        {
+          "authorId": "2076571920",
+          "name": "S. Ashton"
+        }
+      ],
+      "abstract": "We study the average case performance of multi-task Gaussian process (GP) regression as captured in the learning curve, i.e. the average Bayes error for a chosen task versus the total number of examples $n$ for all tasks. For GP covariances that are the product of an input-dependent covariance function and a free-form inter-task covariance matrix, we show that accurate approximations for the learning curve can be obtained for an arbitrary number of tasks $T$. We use these to study the asymptotic learning behaviour for large $n$. Surprisingly, multi-task learning can be asymptotically essentially useless, in the sense that examples from other tasks help only when the degree of inter-task correlation, $\\rho$, is near its maximal value $\\rho=1$. This effect is most extreme for learning of smooth target functions as described by e.g. squared exponential kernels. We also demonstrate that when learning many tasks, the learning curves separate into an initial phase, where the Bayes error on each task is reduced down to a plateau value by \"collective learning\" even though most tasks have not seen examples, and a final decay that occurs once the number of examples is proportional to the number of tasks.",
+      "arxiv_id": "1211.0439",
+      "arxiv_primary_category": "cs.LG",
+      "subdomain": "Machine Learning",
+      "year_cohort": "2010-2015",
+      "tier": "bad",
+      "citation_percentile": 2.97
+    },
+    {
+      "paperId": "22d3a528adda633a17a60b76ab2240a62c58e2e4",
+      "externalIds": {
+        "DBLP": "conf/nips/WangCL15",
+        "MAG": "2951885809",
+        "ArXiv": "1603.08482",
+        "CorpusId": 2070194
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Estimating Mixture Models via Mixtures of Polynomials",
+      "venue": "Neural Information Processing Systems",
+      "year": 2015,
+      "citationCount": 6,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1603.08482, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "authors": [
+        {
+          "authorId": "8729431",
+          "name": "Sida I. Wang"
+        },
+        {
+          "authorId": "2719924",
+          "name": "Arun Tejasvi Chaganty"
+        },
+        {
+          "authorId": "145419642",
+          "name": "Percy Liang"
+        }
+      ],
+      "abstract": "Mixture modeling is a general technique for making any simple model more expressive through weighted combination. This generality and simplicity in part explains the success of the Expectation Maximization (EM) algorithm, in which updates are easy to derive for a wide class of mixture models. However, the likelihood of a mixture model is non-convex, so EM has no known global convergence guarantees. Recently, method of moments approaches offer global guarantees for some mixture models, but they do not extend easily to the range of mixture models that exist. In this work, we present Polymom, an unifying framework based on method of moments in which estimation procedures are easily derivable, just as in EM. Polymom is applicable when the moments of a single mixture component are polynomials of the parameters. Our key observation is that the moments of the mixture model are a mixture of these polynomials, which allows us to cast estimation as a Generalized Moment Problem. We solve its relaxations using semidefinite optimization, and then extract parameters using ideas from computer algebra. This framework allows us to draw insights and apply tools from convex optimization, computer algebra and the theory of moments to study problems in statistical estimation. Simulations show good empirical performance on several models.",
+      "arxiv_id": "1603.08482",
+      "arxiv_primary_category": "stat.ML",
+      "subdomain": "Machine Learning",
+      "year_cohort": "2010-2015",
+      "tier": "bad",
+      "citation_percentile": 2.97
+    },
+    {
+      "paperId": "31e6c52667dc89efcda7840c317c1da8d4425285",
+      "externalIds": {
+        "MAG": "2963068818",
+        "ArXiv": "1510.00452",
+        "DBLP": "conf/nips/BalsubramaniF16",
+        "CorpusId": 2745137
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Optimal Binary Classifier Aggregation for General Losses",
+      "venue": "Neural Information Processing Systems",
+      "year": 2015,
+      "citationCount": 12,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1510.00452, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "authors": [
+        {
+          "authorId": "1693411",
+          "name": "Akshay Balsubramani"
+        },
+        {
+          "authorId": "1703537",
+          "name": "Y. Freund"
+        }
+      ],
+      "abstract": "We address the problem of aggregating an ensemble of predictors with known loss bounds in a semi-supervised binary classification setting, to minimize prediction loss incurred on the unlabeled data. We find the minimax optimal predictions for a very general class of loss functions including all convex and many non-convex losses, extending a recent analysis of the problem for misclassification error. The result is a family of semi-supervised ensemble aggregation algorithms which are as efficient as linear learning by convex optimization, but are minimax optimal without any relaxations. Their decision rules take a form familiar in decision theory -- applying sigmoid functions to a notion of ensemble margin -- without the assumptions typically made in margin-based learning.",
+      "arxiv_id": "1510.00452",
+      "arxiv_primary_category": "cs.LG",
+      "subdomain": "Machine Learning",
+      "year_cohort": "2010-2015",
+      "tier": "bad",
+      "citation_percentile": 7.09
+    },
+    {
+      "paperId": "65ff64208cc59bfa54681b2d34dd834bf17f6957",
+      "externalIds": {
+        "DBLP": "journals/corr/MehtaW14",
+        "MAG": "2950468429",
+        "ArXiv": "1406.3781",
+        "CorpusId": 1414571
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "From Stochastic Mixability to Fast Rates",
+      "venue": "Neural Information Processing Systems",
+      "year": 2014,
+      "citationCount": 15,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1406.3781, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Mathematics",
+        "Computer Science"
+      ],
+      "authors": [
+        {
+          "authorId": "144447714",
+          "name": "Nishant A. Mehta"
+        },
+        {
+          "authorId": "143957317",
+          "name": "R. C. Williamson"
+        }
+      ],
+      "abstract": "Empirical risk minimization (ERM) is a fundamental learning rule for statistical learning problems where the data is generated according to some unknown distribution P and returns a hypothesis f chosen from a fixed class \u2131 with small loss l. In the parametric setting, depending upon (l, \u2131, P) ERM can have slow (1/\u221an) or fast (1/n) rates of convergence of the excess risk as a function of the sample size n. There exist several results that give sufficient conditions for fast rates in terms of joint properties of l, \u2131, and P, such as the margin condition and the Bernstein condition. In the non-statistical prediction with expert advice setting, there is an analogous slow and fast rate phenomenon, and it is entirely characterized in terms of the mixability of the loss l (there being no role there for \u2131 or P). The notion of stochastic mixability builds a bridge between these two models of learning, reducing to classical mixability in a special case. The present paper presents a direct proof of fast rates for ERM in terms of stochastic mixability of (l, \u2131, P), and in so doing provides new insight into the fast-rates phenomenon. The proof exploits an old result of Kemperman on the solution to the general moment problem. We also show a partial converse that suggests a characterization of fast rates for ERM in terms of stochastic mixability is possible.",
+      "arxiv_id": "1406.3781",
+      "arxiv_primary_category": "cs.LG",
+      "subdomain": "Machine Learning",
+      "year_cohort": "2010-2015",
+      "tier": "bad",
+      "citation_percentile": 9.15
+    },
+    {
+      "paperId": "6d7017cc327ac0e5f9e64f0c8739cefc1cfec07e",
+      "externalIds": {
+        "MAG": "2964184370",
+        "DBLP": "journals/corr/abs-1301-4767",
+        "ArXiv": "1301.4767",
+        "CorpusId": 7793608
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "A Linear Time Active Learning Algorithm for Link Classification",
+      "venue": "Neural Information Processing Systems",
+      "year": 2012,
+      "citationCount": 10,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1301.4767, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "authors": [
+        {
+          "authorId": "1388387856",
+          "name": "N. Cesa-Bianchi"
+        },
+        {
+          "authorId": "1895207",
+          "name": "C. Gentile"
+        },
+        {
+          "authorId": "2823120",
+          "name": "Fabio Vitale"
+        },
+        {
+          "authorId": "3024156",
+          "name": "Giovanni Zappella"
+        }
+      ],
+      "abstract": "We present very efficient active learning algorithms for link classification in signed networks. Our algorithms are motivated by a stochastic model in which edge labels are obtained through perturbations of a initial sign assignment consistent with a two-clustering of the nodes. We provide a theoretical analysis within this model, showing that we can achieve an optimal (to whithin a constant factor) number of mistakes on any graph G = (V,E) such that |E| = \\Omega(|V|^{3/2}) by querying O(|V|^{3/2}) edge labels. More generally, we show an algorithm that achieves optimality to within a factor of O(k) by querying at most order of |V| + (|V|/k)^{3/2} edge labels. The running time of this algorithm is at most of order |E| + |V|\\log|V|.",
+      "arxiv_id": "1301.4767",
+      "arxiv_primary_category": "cs.LG",
+      "subdomain": "Machine Learning",
+      "year_cohort": "2010-2015",
+      "tier": "bad",
+      "citation_percentile": 5.49
+    },
+    {
+      "paperId": "d61d5437db34de612c67fe8fe15da39918cec4e5",
+      "externalIds": {
+        "MAG": "2963945875",
+        "DBLP": "journals/corr/FruergaardHH13",
+        "ArXiv": "1311.6976",
+        "CorpusId": 5667612
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Dimensionality reduction for click-through rate prediction: Dense versus sparse representation",
+      "venue": "Neural Information Processing Systems",
+      "year": 2013,
+      "citationCount": 6,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1311.6976, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "authors": [
+        {
+          "authorId": "3113855",
+          "name": "Bjarne \u00d8rum Fruergaard"
+        },
+        {
+          "authorId": "3279651",
+          "name": "Toke Jansen Hansen"
+        },
+        {
+          "authorId": "2280917429",
+          "name": "L. K. Hansen"
+        }
+      ],
+      "abstract": "In online advertising, display ads are increasingly being placed based on real-time auctions where the advertiser who wins gets to serve the ad. This is called real-time bidding (RTB). In RTB, auctions have very tight time constraints on the order of 100ms. Therefore mechanisms for bidding intelligently such as clickthrough rate prediction need to be sufficiently fast. In this work, we propose to use dimensionality reduction of the user-website interaction graph in order to produce simplified features of users and websites that can be used as predictors of clickthrough rate. We demonstrate that the Infinite Relational Model (IRM) as a dimensionality reduction offers comparable predictive performance to conventional dimensionality reduction schemes, while achieving the most economical usage of features and fastest computations at run-time. For applications such as real-time bidding, where fast database I/O and few computations are key to success, we thus recommend using IRM based features as predictors to exploit the recommender effects from bipartite graphs.",
+      "arxiv_id": "1311.6976",
+      "arxiv_primary_category": "stat.ML",
+      "subdomain": "Machine Learning",
+      "year_cohort": "2010-2015",
+      "tier": "bad",
+      "citation_percentile": 2.97
+    },
+    {
+      "paperId": "f68bf910c14842cad3e3c6d050b984bba0d0d1fb",
+      "externalIds": {
+        "MAG": "2184114032",
+        "ArXiv": "1512.00315",
+        "CorpusId": 15364710
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Highly Scalable Tensor Factorization for Prediction of Drug-Protein Interaction Type",
+      "venue": "Neural Information Processing Systems",
+      "year": 2015,
+      "citationCount": 6,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1512.00315, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Mathematics",
+        "Computer Science"
+      ],
+      "authors": [
+        {
+          "authorId": "40528222",
+          "name": "Adam Arany"
+        },
+        {
+          "authorId": "2163489",
+          "name": "J. Simm"
+        },
+        {
+          "authorId": "1874907",
+          "name": "Pooya Zakeri"
+        },
+        {
+          "authorId": "1806102",
+          "name": "Tom Haber"
+        },
+        {
+          "authorId": "34833911",
+          "name": "J. Wegner"
+        },
+        {
+          "authorId": "2683599",
+          "name": "V. Chupakhin"
+        },
+        {
+          "authorId": "4153830",
+          "name": "H. Ceulemans"
+        },
+        {
+          "authorId": "1732750",
+          "name": "Y. Moreau"
+        }
+      ],
+      "abstract": "The understanding of the type of inhibitory interaction plays an important role in drug design. Therefore, researchers are interested to know whether a drug has competitive or non-competitive interaction to particular protein targets. \nMethod: to analyze the interaction types we propose factorization method Macau which allows us to combine different measurement types into a single tensor together with proteins and compounds. The compounds are characterized by high dimensional 2D ECFP fingerprints. The novelty of the proposed method is that using a specially designed noise injection MCMC sampler it can incorporate high dimensional side information, i.e., millions of unique 2D ECFP compound features, even for large scale datasets of millions of compounds. Without the side information, in this case, the tensor factorization would be practically futile. \nResults: using public IC50 and Ki data from ChEMBL we trained a model from where we can identify the latent subspace separating the two measurement types (IC50 and Ki). The results suggest the proposed method can detect the competitive inhibitory activity between compounds and proteins.",
+      "arxiv_id": "1512.00315",
+      "arxiv_primary_category": "stat.ML",
+      "subdomain": "Machine Learning",
+      "year_cohort": "2010-2015",
+      "tier": "bad",
+      "citation_percentile": 2.97
+    },
+    {
+      "paperId": "7bdc0143e92813ea69e61252b4335526bee820ec",
+      "externalIds": {
+        "ArXiv": "1402.5131",
+        "MAG": "2170299295",
+        "DBLP": "conf/nips/SedghiAJ14",
+        "CorpusId": 8387891
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Multi-Step Stochastic ADMM in High Dimensions: Applications to Sparse Optimization and Matrix Decomposition",
+      "venue": "Neural Information Processing Systems",
+      "year": 2014,
+      "citationCount": 13,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1402.5131, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "authors": [
+        {
+          "authorId": "2812848",
+          "name": "Hanie Sedghi"
+        },
+        {
+          "authorId": "2047844",
+          "name": "Anima Anandkumar"
+        },
+        {
+          "authorId": "2121224952",
+          "name": "E. Jonckheere"
+        }
+      ],
+      "abstract": "In this paper, we consider a multi-step version of the stochastic ADMM method with efficient guarantees for high-dimensional problems. We first analyze the simple setting, where the optimization problem consists of a loss function and a single regularizer (e.g. sparse optimization), and then extend to the multi-block setting with multiple regularizers and multiple variables (e.g. matrix decomposition into sparse and low rank components). For the sparse optimization problem, our method achieves the minimax rate of O(s log d/T) for s-sparse problems in d dimensions in T steps, and is thus, unimprovable by any method up to constant factors. For the matrix decomposition problem with a general loss function, we analyze the multi-step ADMM with multiple blocks. We establish O(1/T) rate and efficient scaling as the size of matrix grows. For natural noise models (e.g. independent noise), our convergence rate is minimax-optimal. Thus, we establish tight convergence guarantees for multi-block ADMM in high dimensions. Experiments show that for both sparse optimization and matrix decomposition problems, our algorithm outperforms the state-of-the-art methods.",
+      "arxiv_id": "1402.5131",
+      "arxiv_primary_category": "cs.LG",
+      "subdomain": "Machine Learning",
+      "year_cohort": "2010-2015",
+      "tier": "bad",
+      "citation_percentile": 7.78
+    },
+    {
+      "paperId": "35aa0d972f392b083138aa6834688df77c3720bb",
+      "externalIds": {
+        "MAG": "2962915628",
+        "DBLP": "journals/corr/DomkeL14",
+        "ArXiv": "1407.0749",
+        "CorpusId": 1032820
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Projecting Ising Model Parameters for Fast Mixing",
+      "venue": "Neural Information Processing Systems",
+      "year": 2013,
+      "citationCount": 6,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1407.0749, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Mathematics",
+        "Computer Science"
+      ],
+      "authors": [
+        {
+          "authorId": "1722101",
+          "name": "Justin Domke"
+        },
+        {
+          "authorId": "1740619",
+          "name": "Xianghang Liu"
+        }
+      ],
+      "abstract": "Inference in general Ising models is difficult, due to high treewidth making tree-based algorithms intractable. Moreover, when interactions are strong, Gibbs sampling may take exponential time to converge to the stationary distribution. We present an algorithm to project Ising model parameters onto a parameter set that is guaranteed to be fast mixing, under several divergences. We find that Gibbs sampling using the projected parameters is more accurate than with the original parameters when interaction strengths are strong and when limited time is available for sampling.",
+      "arxiv_id": "1407.0749",
+      "arxiv_primary_category": "cs.LG",
+      "subdomain": "Machine Learning",
+      "year_cohort": "2010-2015",
+      "tier": "bad",
+      "citation_percentile": 2.97
+    },
+    {
+      "paperId": "a2fea25dec39bfec6d71552bd2477cfe85a5d00d",
+      "externalIds": {
+        "MAG": "2963654369",
+        "DBLP": "conf/nips/ArpitNG14",
+        "ArXiv": "1412.2404",
+        "CorpusId": 14179068
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Dimensionality Reduction with Subspace Structure Preservation",
+      "venue": "Neural Information Processing Systems",
+      "year": 2014,
+      "citationCount": 9,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1412.2404, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "authors": [
+        {
+          "authorId": "2309967",
+          "name": "Devansh Arpit"
+        },
+        {
+          "authorId": "1841118",
+          "name": "Ifeoma Nwogu"
+        },
+        {
+          "authorId": "1723877",
+          "name": "V. Govindaraju"
+        }
+      ],
+      "abstract": "Modeling data as being sampled from a union of independent subspaces has been widely applied to a number of real world applications. However, dimensionality reduction approaches that theoretically preserve this independence assumption have not been well studied. Our key contribution is to show that $2K$ projection vectors are sufficient for the independence preservation of any $K$ class data sampled from a union of independent subspaces. It is this non-trivial observation that we use for designing our dimensionality reduction technique. In this paper, we propose a novel dimensionality reduction algorithm that theoretically preserves this structure for a given dataset. We support our theoretical analysis with empirical results on both synthetic and real world data achieving \\textit{state-of-the-art} results compared to popular dimensionality reduction techniques.",
+      "arxiv_id": "1412.2404",
+      "arxiv_primary_category": "cs.LG",
+      "subdomain": "Machine Learning",
+      "year_cohort": "2010-2015",
+      "tier": "bad",
+      "citation_percentile": 4.81
+    },
+    {
+      "paperId": "b38491eee785b6312e386b2fb2090805e4d7ff0f",
+      "externalIds": {
+        "ArXiv": "2010.05627",
+        "DBLP": "journals/corr/abs-2010-05627",
+        "MAG": "3091965439",
+        "CorpusId": 222291751
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Towards Theoretically Understanding Why SGD Generalizes Better Than ADAM in Deep Learning",
+      "venue": "Neural Information Processing Systems",
+      "year": 2020,
+      "citationCount": 291,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2010.05627, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "authors": [
+        {
+          "authorId": "2109890021",
+          "name": "Pan Zhou"
+        },
+        {
+          "authorId": "33221685",
+          "name": "Jiashi Feng"
+        },
+        {
+          "authorId": "144905350",
+          "name": "Chao Ma"
+        },
+        {
+          "authorId": "2228109",
+          "name": "Caiming Xiong"
+        },
+        {
+          "authorId": "1741126",
+          "name": "S. Hoi"
+        },
+        {
+          "authorId": "1789499",
+          "name": "E. Weinan"
+        }
+      ],
+      "abstract": "It is not clear yet why ADAM-alike adaptive gradient algorithms suffer from worse generalization performance than SGD despite their faster training speed. This work aims to provide understandings on this generalization gap by analyzing their local convergence behaviors. Specifically, we observe the heavy tails of gradient noise in these algorithms. This motivates us to analyze these algorithms through their Levy-driven stochastic differential equations (SDEs) because of the similar convergence behaviors of an algorithm and its SDE. Then we establish the escaping time of these SDEs from a local basin. The result shows that (1) the escaping time of both SGD and ADAM~depends on the Radon measure of the basin positively and the heaviness of gradient noise negatively; (2) for the same basin, SGD enjoys smaller escaping time than ADAM, mainly because (a) the geometry adaptation in ADAM~via adaptively scaling each gradient coordinate well diminishes the anisotropic structure in gradient noise and results in larger Radon measure of a basin; (b) the exponential gradient average in ADAM~smooths its gradient and leads to lighter gradient noise tails than SGD. So SGD is more locally unstable than ADAM~at sharp minima defined as the minima whose local basins have small Radon measure, and can better escape from them to flatter ones with larger Radon measure. As flat minima here which often refer to the minima at flat or asymmetric basins/valleys often generalize better than sharp ones~\\cite{keskar2016large,he2019asymmetric}, our result explains the better generalization performance of SGD over ADAM. Finally, experimental results confirm our heavy-tailed gradient noise assumption and theoretical affirmation.",
+      "arxiv_id": "2010.05627",
+      "arxiv_primary_category": "cs.LG",
+      "subdomain": "Machine Learning",
+      "year_cohort": "2020",
+      "tier": "good",
+      "citation_percentile": 90.18
+    },
+    {
+      "paperId": "c722ae666b93827de1867c7585530b78979b4c56",
+      "externalIds": {
+        "DBLP": "conf/nips/YueZS020",
+        "MAG": "3102146042",
+        "ArXiv": "2009.13000",
+        "CorpusId": 221970817
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Interventional Few-Shot Learning",
+      "venue": "Neural Information Processing Systems",
+      "year": 2020,
+      "citationCount": 270,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2009.13000, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science"
+      ],
+      "authors": [
+        {
+          "authorId": "2068671905",
+          "name": "Zhongqi Yue"
+        },
+        {
+          "authorId": "5462268",
+          "name": "Hanwang Zhang"
+        },
+        {
+          "authorId": "32222907",
+          "name": "Qianru Sun"
+        },
+        {
+          "authorId": "143863244",
+          "name": "Xiansheng Hua"
+        }
+      ],
+      "abstract": "We uncover an ever-overlooked deficiency in the prevailing Few-Shot Learning (FSL) methods: the pre-trained knowledge is indeed a confounder that limits the performance. This finding is rooted from our causal assumption: a Structural Causal Model (SCM) for the causalities among the pre-trained knowledge, sample features, and labels. Thanks to it, we propose a novel FSL paradigm: Interventional Few-Shot Learning (IFSL). Specifically, we develop three effective IFSL algorithmic implementations based on the backdoor adjustment, which is essentially a causal intervention towards the SCM of many-shot learning: the upper-bound of FSL in a causal view. It is worth noting that the contribution of IFSL is orthogonal to existing fine-tuning and meta-learning based FSL methods, hence IFSL can improve all of them, achieving a new 1-/5-shot state-of-the-art on \\textit{mini}ImageNet, \\textit{tiered}ImageNet, and cross-domain CUB. Code is released at this https URL.",
+      "arxiv_id": "2009.13000",
+      "arxiv_primary_category": "cs.LG",
+      "subdomain": "Machine Learning",
+      "year_cohort": "2020",
+      "tier": "good",
+      "citation_percentile": 89.53
+    },
+    {
+      "paperId": "8465338724f00a1f57a86717e4c898256c522be0",
+      "externalIds": {
+        "MAG": "3014775455",
+        "DBLP": "conf/nips/HuangGFTG20",
+        "ArXiv": "2004.00225",
+        "CorpusId": 214743130
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "MetaPoison: Practical General-purpose Clean-label Data Poisoning",
+      "venue": "Neural Information Processing Systems",
+      "year": 2020,
+      "citationCount": 227,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2004.00225, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "authors": [
+        {
+          "authorId": "2218231201",
+          "name": "W. R. Huang"
+        },
+        {
+          "authorId": "8284185",
+          "name": "Jonas Geiping"
+        },
+        {
+          "authorId": "120165773",
+          "name": "Liam H. Fowl"
+        },
+        {
+          "authorId": "2189083",
+          "name": "Gavin Taylor"
+        },
+        {
+          "authorId": "1962083",
+          "name": "T. Goldstein"
+        }
+      ],
+      "abstract": "Data poisoning--the process by which an attacker takes control of a model by making imperceptible changes to a subset of the training data--is an emerging threat in the context of neural networks. Existing attacks for data poisoning have relied on hand-crafted heuristics. Instead, we pose crafting poisons more generally as a bi-level optimization problem, where the inner level corresponds to training a network on a poisoned dataset and the outer level corresponds to updating those poisons to achieve a desired behavior on the trained model. We then propose MetaPoison, a first-order method to solve this optimization quickly. MetaPoison is effective: it outperforms previous clean-label poisoning methods by a large margin under the same setting. MetaPoison is robust: its poisons transfer to a variety of victims with unknown hyperparameters and architectures. MetaPoison is also general-purpose, working not only in fine-tuning scenarios, but also for end-to-end training from scratch with remarkable success, e.g. causing a target image to be misclassified 90% of the time via manipulating just 1% of the dataset. Additionally, MetaPoison can achieve arbitrary adversary goals not previously possible--like using poisons of one class to make a target image don the label of another arbitrarily chosen class. Finally, MetaPoison works in the real-world. We demonstrate successful data poisoning of models trained on Google Cloud AutoML Vision. Code and premade poisons are provided at this https URL",
+      "arxiv_id": "2004.00225",
+      "arxiv_primary_category": "cs.LG",
+      "subdomain": "Machine Learning",
+      "year_cohort": "2020",
+      "tier": "good",
+      "citation_percentile": 87.32
+    },
+    {
+      "paperId": "59c9ded17008ca35290551fdf8784f240bd808c0",
+      "externalIds": {
+        "ArXiv": "2009.05204",
+        "DBLP": "conf/nips/ZhuYXWZH21",
+        "MAG": "3085479328",
+        "CorpusId": 221640925
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Transfer Learning of Graph Neural Networks with Ego-graph Information Maximization",
+      "venue": "Neural Information Processing Systems",
+      "year": 2020,
+      "citationCount": 134,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2009.05204, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "authors": [
+        {
+          "authorId": "144400492",
+          "name": "Qi Zhu"
+        },
+        {
+          "authorId": "2399908841",
+          "name": "Yidan Xu"
+        },
+        {
+          "authorId": null,
+          "name": "Haonan Wang"
+        },
+        {
+          "authorId": "145657504",
+          "name": "Chao Zhang"
+        },
+        {
+          "authorId": "153034701",
+          "name": "Jiawei Han"
+        },
+        {
+          "authorId": "1390553618",
+          "name": "Carl Yang"
+        }
+      ],
+      "abstract": "Graph neural networks (GNNs) have been shown with superior performance in various applications, but training dedicated GNNs can be costly for large-scale graphs. Some recent work started to study the pre-training of GNNs. However, none of them provide theoretical insights into the design of their frameworks, or clear requirements and guarantees towards the transferability of GNNs. In this work, we establish a theoretically grounded and practically useful framework for the transfer learning of GNNs. Firstly, we propose a novel view towards the essential graph information and advocate the capturing of it as the goal of transferable GNN training, which motivates the design of Ours, a novel GNN framework based on ego-graph information maximization to analytically achieve this goal. Secondly, we specify the requirement of structure-respecting node features as the GNN input, and derive a rigorous bound of GNN transferability based on the difference between the local graph Laplacians of the source and target graphs. Finally, we conduct controlled synthetic experiments to directly justify our theoretical conclusions. Extensive experiments on real-world networks towards role identification show consistent results in the rigorously analyzed setting of direct-transfering, while those towards large-scale relation prediction show promising results in the more generalized and practical setting of transfering with fine-tuning.",
+      "arxiv_id": "2009.05204",
+      "arxiv_primary_category": "cs.LG",
+      "subdomain": "Machine Learning",
+      "year_cohort": "2020",
+      "tier": "good",
+      "citation_percentile": 76.68
+    },
+    {
+      "paperId": "2e5bcdf9c9f6dbd9a1f2e0e1a748da8081b79e87",
+      "externalIds": {
+        "DBLP": "conf/nips/0001DM20",
+        "MAG": "3093525224",
+        "ArXiv": "2006.05057",
+        "CorpusId": 225086593
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Towards More Practical Adversarial Attacks on Graph Neural Networks",
+      "venue": "Neural Information Processing Systems",
+      "year": 2020,
+      "citationCount": 152,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2006.05057, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "authors": [
+        {
+          "authorId": "47793019",
+          "name": "Jiaqi W. Ma"
+        },
+        {
+          "authorId": "1741196907",
+          "name": "Shuangrui Ding"
+        },
+        {
+          "authorId": "1743469",
+          "name": "Qiaozhu Mei"
+        }
+      ],
+      "abstract": "We study the black-box attacks on graph neural networks (GNNs) under a novel and realistic constraint: attackers have access to only a subset of nodes in the network, and they can only attack a small number of them. A node selection step is essential under this setup. We demonstrate that the structural inductive biases of GNN models can be an effective source for this type of attacks. Specifically, by exploiting the connection between the backward propagation of GNNs and random walks, we show that the common gradient-based white-box attacks can be generalized to the black-box setting via the connection between the gradient and an importance score similar to PageRank. In practice, we find attacks based on this importance score indeed increase the classification loss by a large margin, but they fail to significantly increase the mis-classification rate. Our theoretical and empirical analyses suggest that there is a discrepancy between the loss and mis-classification rate, as the latter presents a diminishing-return pattern when the number of attacked nodes increases. Therefore, we propose a greedy procedure to correct the importance score that takes into account of the diminishing-return pattern. Experimental results show that the proposed procedure can significantly increase the mis-classification rate of common GNNs on real-world data without access to model parameters nor predictions.",
+      "arxiv_id": "2006.05057",
+      "arxiv_primary_category": "cs.LG",
+      "subdomain": "Machine Learning",
+      "year_cohort": "2020",
+      "tier": "good",
+      "citation_percentile": 79.95
+    },
+    {
+      "paperId": "62af0ff09c6fc2d72d613acc32ab9d959fd00679",
+      "externalIds": {
+        "DBLP": "conf/nips/WoodworthPS20",
+        "ArXiv": "2006.04735",
+        "MAG": "3033462932",
+        "CorpusId": 219531445
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Minibatch vs Local SGD for Heterogeneous Distributed Learning",
+      "venue": "Neural Information Processing Systems",
+      "year": 2020,
+      "citationCount": 220,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2006.04735, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "authors": [
+        {
+          "authorId": "32373165",
+          "name": "Blake E. Woodworth"
+        },
+        {
+          "authorId": "46518938",
+          "name": "Kumar Kshitij Patel"
+        },
+        {
+          "authorId": "1706280",
+          "name": "N. Srebro"
+        }
+      ],
+      "abstract": "We analyze Local SGD (aka parallel or federated SGD) and Minibatch SGD in the heterogeneous distributed setting, where each machine has access to stochastic gradient estimates for a different, machine-specific, convex objective; the goal is to optimize w.r.t. the average objective; and machines can only communicate intermittently. We argue that, (i) Minibatch SGD (even without acceleration) dominates all existing analysis of Local SGD in this setting, (ii) accelerated Minibatch SGD is optimal when the heterogeneity is high, and (iii) present the first upper bound for Local SGD that improves over Minibatch SGD in a non-homogeneous regime.",
+      "arxiv_id": "2006.04735",
+      "arxiv_primary_category": "cs.LG",
+      "subdomain": "Machine Learning",
+      "year_cohort": "2020",
+      "tier": "good",
+      "citation_percentile": 86.58
+    },
+    {
+      "paperId": "944dded7fcd1bb055cbdf11575e3a2de0ab42886",
+      "externalIds": {
+        "DBLP": "journals/corr/abs-2002-10733",
+        "MAG": "3102748184",
+        "ArXiv": "2002.10733",
+        "CorpusId": 211296730
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "(De)Randomized Smoothing for Certifiable Defense against Patch Attacks",
+      "venue": "Neural Information Processing Systems",
+      "year": 2020,
+      "citationCount": 179,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2002.10733, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "authors": [
+        {
+          "authorId": "39593895",
+          "name": "Alexander Levine"
+        },
+        {
+          "authorId": "34389431",
+          "name": "S. Feizi"
+        }
+      ],
+      "abstract": "Patch adversarial attacks on images, in which the attacker can distort pixels within a region of bounded size, are an important threat model since they provide a quantitative model for physical adversarial attacks. In this paper, we introduce a certifiable defense against patch attacks that guarantees for a given image and patch attack size, no patch adversarial examples exist. Our method is related to the broad class of randomized smoothing robustness schemes which provide high-confidence probabilistic robustness certificates. By exploiting the fact that patch attacks are more constrained than general sparse attacks, we derive meaningfully large robustness certificates. Additionally, the algorithm we propose is de-randomized, providing deterministic certificates. To the best of our knowledge, there exists only one prior method for certifiable defense against patch attacks, which relies on interval bound propagation. While this sole existing method performs well on MNIST, it has several limitations: it requires computationally expensive training, does not scale to ImageNet, and performs poorly on CIFAR-10. In contrast, our proposed method effectively addresses all of these issues: our classifier can be trained quickly, achieves high clean and certified robust accuracy on CIFAR-10, and provides certificates at the ImageNet scale. For example, for a 5*5 patch attack on CIFAR-10, our method achieves up to around 57.8% certified accuracy (with a classifier around 83.9% clean accuracy), compared to at most 30.3% certified accuracy for the existing method (with a classifier with around 47.8% clean accuracy), effectively establishing a new state-of-the-art. Code is available at this https URL.",
+      "arxiv_id": "2002.10733",
+      "arxiv_primary_category": "cs.LG",
+      "subdomain": "Machine Learning",
+      "year_cohort": "2020",
+      "tier": "good",
+      "citation_percentile": 83.63
+    },
+    {
+      "paperId": "3b0fb765716ef6861a84abffcbe40643857c613b",
+      "externalIds": {
+        "DBLP": "journals/corr/abs-2006-05467",
+        "MAG": "3104688113",
+        "ArXiv": "2006.05467",
+        "CorpusId": 219558821
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Pruning neural networks without any data by iteratively conserving synaptic flow",
+      "venue": "Neural Information Processing Systems",
+      "year": 2020,
+      "citationCount": 800,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2006.05467, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science",
+        "Physics",
+        "Biology",
+        "Mathematics"
+      ],
+      "authors": [
+        {
+          "authorId": "1912151014",
+          "name": "Hidenori Tanaka"
+        },
+        {
+          "authorId": "145616412",
+          "name": "D. Kunin"
+        },
+        {
+          "authorId": "40657572",
+          "name": "Daniel L. K. Yamins"
+        },
+        {
+          "authorId": "25769960",
+          "name": "S. Ganguli"
+        }
+      ],
+      "abstract": "Pruning the parameters of deep neural networks has generated intense interest due to potential savings in time, memory and energy both during training and at test time. Recent works have identified, through an expensive sequence of training and pruning cycles, the existence of winning lottery tickets or sparse trainable subnetworks at initialization. This raises a foundational question: can we identify highly sparse trainable subnetworks at initialization, without ever training, or indeed without ever looking at the data? We provide an affirmative answer to this question through theory driven algorithm design. We first mathematically formulate and experimentally verify a conservation law that explains why existing gradient-based pruning algorithms at initialization suffer from layer-collapse, the premature pruning of an entire layer rendering a network untrainable. This theory also elucidates how layer-collapse can be entirely avoided, motivating a novel pruning algorithm Iterative Synaptic Flow Pruning (SynFlow). This algorithm can be interpreted as preserving the total flow of synaptic strengths through the network at initialization subject to a sparsity constraint. Notably, this algorithm makes no reference to the training data and consistently competes with or outperforms existing state-of-the-art pruning algorithms at initialization over a range of models (VGG and ResNet), datasets (CIFAR-10/100 and Tiny ImageNet), and sparsity constraints (up to 99.99 percent). Thus our data-agnostic pruning algorithm challenges the existing paradigm that, at initialization, data must be used to quantify which synapses are important.",
+      "arxiv_id": "2006.05467",
+      "arxiv_primary_category": "cs.LG",
+      "subdomain": "Machine Learning",
+      "year_cohort": "2020",
+      "tier": "good",
+      "citation_percentile": 96.64
+    },
+    {
+      "paperId": "f74cb4f88f0023bbc350786808ba84c1b7833cec",
+      "externalIds": {
+        "ArXiv": "2002.05715",
+        "DBLP": "journals/corr/abs-2002-05715",
+        "MAG": "3006051380",
+        "CorpusId": 211096976
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Self-Distillation Amplifies Regularization in Hilbert Space",
+      "venue": "Neural Information Processing Systems",
+      "year": 2020,
+      "citationCount": 273,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2002.05715, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "authors": [
+        {
+          "authorId": "3232655",
+          "name": "H. Mobahi"
+        },
+        {
+          "authorId": "1682124",
+          "name": "Mehrdad Farajtabar"
+        },
+        {
+          "authorId": "1745169",
+          "name": "P. Bartlett"
+        }
+      ],
+      "abstract": "Knowledge distillation introduced in the deep learning context is a method to transfer knowledge from one architecture to another. In particular, when the architectures are identical, this is called self-distillation. The idea is to feed in predictions of the trained model as new target values for retraining (and iterate this loop possibly a few times). It has been empirically observed that the self-distilled model often achieves higher accuracy on held out data. Why this happens, however, has been a mystery: the self-distillation dynamics does not receive any new information about the task and solely evolves by looping over training. To the best of our knowledge, there is no rigorous understanding of why this happens. This work provides the first theoretical analysis of self-distillation. We focus on fitting a nonlinear function to training data, where the model space is Hilbert space and fitting is subject to L2 regularization in this function space. We show that self-distillation iterations modify regularization by progressively limiting the number of basis functions that can be used to represent the solution. This implies (as we also verify empirically) that while a few rounds of self-distillation may reduce over-fitting, further rounds may lead to under-fitting and thus worse performance.",
+      "arxiv_id": "2002.05715",
+      "arxiv_primary_category": "cs.LG",
+      "subdomain": "Machine Learning",
+      "year_cohort": "2020",
+      "tier": "good",
+      "citation_percentile": 89.69
+    },
+    {
+      "paperId": "009c42dac6316c0f72b14e353b654560906a0e0f",
+      "externalIds": {
+        "DBLP": "journals/corr/abs-2006-12433",
+        "ArXiv": "2006.12433",
+        "MAG": "3100924069",
+        "CorpusId": 219966082
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "What shapes feature representations? Exploring datasets, architectures, and training",
+      "venue": "Neural Information Processing Systems",
+      "year": 2020,
+      "citationCount": 176,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2006.12433, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "authors": [
+        {
+          "authorId": "153883360",
+          "name": "Katherine L. Hermann"
+        },
+        {
+          "authorId": "32322945",
+          "name": "Andrew Kyle Lampinen"
+        }
+      ],
+      "abstract": "In naturalistic learning problems, a model's input contains a wide range of features, some useful for the task at hand, and others not. Of the useful features, which ones does the model use? Of the task-irrelevant features, which ones does the model represent? Answers to these questions are important for understanding the basis of models' decisions, as well as for building models that learn versatile, adaptable representations useful beyond the original training task. We study these questions using synthetic datasets in which the task-relevance of input features can be controlled directly. We find that when two features redundantly predict the labels, the model preferentially represents one, and its preference reflects what was most linearly decodable from the untrained model. Over training, task-relevant features are enhanced, and task-irrelevant features are partially suppressed. Interestingly, in some cases, an easier, weakly predictive feature can suppress a more strongly predictive, but more difficult one. Additionally, models trained to recognize both easy and hard features learn representations most similar to models that use only the easy feature. Further, easy features lead to more consistent representations across model runs than do hard features. Finally, models have greater representational similarity to an untrained model than to models trained on a different task. Our results highlight the complex processes that determine which features a model represents.",
+      "arxiv_id": "2006.12433",
+      "arxiv_primary_category": "cs.LG",
+      "subdomain": "Machine Learning",
+      "year_cohort": "2020",
+      "tier": "good",
+      "citation_percentile": 83.31
+    },
+    {
+      "paperId": "fccdce30ba211ed9d0dc8db6693c3457d467dd14",
+      "externalIds": {
+        "MAG": "3100019421",
+        "ArXiv": "2010.12362",
+        "DBLP": "journals/corr/abs-2010-12362",
+        "CorpusId": 225062346
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Rescuing neural spike train models from bad MLE",
+      "venue": "Neural Information Processing Systems",
+      "year": 2020,
+      "citationCount": 11,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2010.12362, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "authors": [
+        {
+          "authorId": "2001110621",
+          "name": "Diego M. Arribas"
+        },
+        {
+          "authorId": "2110150757",
+          "name": "Yuan Zhao"
+        },
+        {
+          "authorId": "37281027",
+          "name": "Il Memming Park"
+        }
+      ],
+      "abstract": "The standard approach to fitting an autoregressive spike train model is to maximize the likelihood for one-step prediction. This maximum likelihood estimation (MLE) often leads to models that perform poorly when generating samples recursively for more than one time step. Moreover, the generated spike trains can fail to capture important features of the data and even show diverging firing rates. To alleviate this, we propose to directly minimize the divergence between neural recorded and model generated spike trains using spike train kernels. We develop a method that stochastically optimizes the maximum mean discrepancy induced by the kernel. Experiments performed on both real and synthetic neural data validate the proposed approach, showing that it leads to well-behaving models. Using different combinations of spike train kernels, we show that we can control the trade-off between different features which is critical for dealing with model-mismatch.",
+      "arxiv_id": "2010.12362",
+      "arxiv_primary_category": "stat.ML",
+      "subdomain": "Machine Learning",
+      "year_cohort": "2020",
+      "tier": "bad",
+      "citation_percentile": 8.18
+    },
+    {
+      "paperId": "2d6de22922bf5e43dbfde576c84f658effed67e9",
+      "externalIds": {
+        "MAG": "3093923724",
+        "DBLP": "conf/nips/AriuRYP20",
+        "ArXiv": "2010.12363",
+        "CorpusId": 225062038
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Regret in Online Recommendation Systems",
+      "venue": "Neural Information Processing Systems",
+      "year": 2020,
+      "citationCount": 6,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2010.12363, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "authors": [
+        {
+          "authorId": "30584574",
+          "name": "Kaito Ariu"
+        },
+        {
+          "authorId": "3443752",
+          "name": "Narae Ryu"
+        },
+        {
+          "authorId": "145317736",
+          "name": "Seyoung Yun"
+        },
+        {
+          "authorId": "1745481",
+          "name": "A. Prouti\u00e8re"
+        }
+      ],
+      "abstract": "This paper proposes a theoretical analysis of recommendation systems in an online setting, where items are sequentially recommended to users over time. In each round, a user, randomly picked from a population of $m$ users, requests a recommendation. The decision-maker observes the user and selects an item from a catalogue of $n$ items. Importantly, an item cannot be recommended twice to the same user. The probabilities that a user likes each item are unknown. The performance of the recommendation algorithm is captured through its regret, considering as a reference an Oracle algorithm aware of these probabilities. We investigate various structural assumptions on these probabilities: we derive for each structure regret lower bounds, and devise algorithms achieving these limits. Interestingly, our analysis reveals the relative weights of the different components of regret: the component due to the constraint of not presenting the same item twice to the same user, that due to learning the chances users like items, and finally that arising when learning the underlying structure.",
+      "arxiv_id": "2010.12363",
+      "arxiv_primary_category": "stat.ML",
+      "subdomain": "Machine Learning",
+      "year_cohort": "2020",
+      "tier": "bad",
+      "citation_percentile": 1.96
+    },
+    {
+      "paperId": "d6dda3954e6b4787a6b8d3a00eabefa7137488b7",
+      "externalIds": {
+        "DBLP": "conf/nips/MathiasenHJNM20",
+        "MAG": "3090762941",
+        "ArXiv": "2009.13977",
+        "CorpusId": 221995651
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "What if Neural Networks had SVDs?",
+      "venue": "Neural Information Processing Systems",
+      "year": 2020,
+      "citationCount": 12,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2009.13977, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "authors": [
+        {
+          "authorId": "50552702",
+          "name": "Alexander Mathiasen"
+        },
+        {
+          "authorId": "1942962079",
+          "name": "Frederik Hvilshoj"
+        },
+        {
+          "authorId": "1974121841",
+          "name": "Jakob R\u00f8dsgaard J\u00f8rgensen"
+        },
+        {
+          "authorId": "100506648",
+          "name": "Anshul Nasery"
+        },
+        {
+          "authorId": "3094226",
+          "name": "D. Mottin"
+        }
+      ],
+      "abstract": "Various Neural Networks employ time-consuming matrix operations like matrix inversion. Many such matrix operations are faster to compute given the Singular Value Decomposition (SVD). Previous work allows using the SVD in Neural Networks without computing it. In theory, the techniques can speed up matrix operations, however, in practice, they are not fast enough. We present an algorithm that is fast enough to speed up several matrix operations. The algorithm increases the degree of parallelism of an underlying matrix multiplication $H\\cdot X$ where $H$ is an orthogonal matrix represented by a product of Householder matrices. Code is available at this http URL .",
+      "arxiv_id": "2009.13977",
+      "arxiv_primary_category": "cs.LG",
+      "subdomain": "Machine Learning",
+      "year_cohort": "2020",
+      "tier": "bad",
+      "citation_percentile": 9.17
+    },
+    {
+      "paperId": "6f3079b6c6a0d40305a3f5cdcd2386446342f2e0",
+      "externalIds": {
+        "ArXiv": "2007.08448",
+        "MAG": "3105983076",
+        "DBLP": "journals/corr/abs-2007-08448",
+        "CorpusId": 220546378
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Comparator-adaptive Convex Bandits",
+      "venue": "Neural Information Processing Systems",
+      "year": 2020,
+      "citationCount": 10,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2007.08448, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "authors": [
+        {
+          "authorId": "35751056",
+          "name": "Dirk van der Hoeven"
+        },
+        {
+          "authorId": "9407860",
+          "name": "Ashok Cutkosky"
+        },
+        {
+          "authorId": "2131127",
+          "name": "Haipeng Luo"
+        }
+      ],
+      "abstract": "We study bandit convex optimization methods that adapt to the norm of the comparator, a topic that has only been studied before for its full-information counterpart. Specifically, we develop convex bandit algorithms with regret bounds that are small whenever the norm of the comparator is small. We first use techniques from the full-information setting to develop comparator-adaptive algorithms for linear bandits. Then, we extend the ideas to convex bandits with Lipschitz or smooth loss functions, using a new single-point gradient estimator and carefully designed surrogate losses.",
+      "arxiv_id": "2007.08448",
+      "arxiv_primary_category": "cs.LG",
+      "subdomain": "Machine Learning",
+      "year_cohort": "2020",
+      "tier": "bad",
+      "citation_percentile": 6.3
+    },
+    {
+      "paperId": "54bbb85476f9ea1519003e4c5217a1bd17ca083a",
+      "externalIds": {
+        "ArXiv": "2010.04315",
+        "DBLP": "conf/nips/Tompkins0R20",
+        "MAG": "3092240629",
+        "CorpusId": 222272220
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Sparse Spectrum Warped Input Measures for Nonstationary Kernel Learning",
+      "venue": "Neural Information Processing Systems",
+      "year": 2020,
+      "citationCount": 8,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2010.04315, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "authors": [
+        {
+          "authorId": "41037218",
+          "name": "A. Tompkins"
+        },
+        {
+          "authorId": "144880277",
+          "name": "Rafael Oliveira"
+        },
+        {
+          "authorId": "145726167",
+          "name": "F. Ramos"
+        }
+      ],
+      "abstract": "We establish a general form of explicit, input-dependent, measure-valued warpings for learning nonstationary kernels. While stationary kernels are ubiquitous and simple to use, they struggle to adapt to functions that vary in smoothness with respect to the input. The proposed learning algorithm warps inputs as conditional Gaussian measures that control the smoothness of a standard stationary kernel. This construction allows us to capture non-stationary patterns in the data and provides intuitive inductive bias. The resulting method is based on sparse spectrum Gaussian processes, enabling closed-form solutions, and is extensible to a stacked construction to capture more complex patterns. The method is extensively validated alongside related algorithms on synthetic and real world datasets. We demonstrate a remarkable efficiency in the number of parameters of the warping functions in learning problems with both small and large data regimes.",
+      "arxiv_id": "2010.04315",
+      "arxiv_primary_category": "cs.LG",
+      "subdomain": "Machine Learning",
+      "year_cohort": "2020",
+      "tier": "bad",
+      "citation_percentile": 4.09
+    },
+    {
+      "paperId": "493ba6d6d3d8dcd82d6a60fcf2484c4d85d85a97",
+      "externalIds": {
+        "DBLP": "journals/corr/abs-2010-04259",
+        "MAG": "3092441847",
+        "ArXiv": "2010.04259",
+        "CorpusId": 222272290
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Unsupervised Joint k-node Graph Representations with Compositional Energy-Based Models",
+      "venue": "Neural Information Processing Systems",
+      "year": 2020,
+      "citationCount": 10,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2010.04259, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science"
+      ],
+      "authors": [
+        {
+          "authorId": "113902542",
+          "name": "Leonardo Cotta"
+        },
+        {
+          "authorId": "145508122",
+          "name": "Carlos H. C. Teixeira"
+        },
+        {
+          "authorId": "144231976",
+          "name": "A. Swami"
+        },
+        {
+          "authorId": "145617731",
+          "name": "Bruno Ribeiro"
+        }
+      ],
+      "abstract": "Existing Graph Neural Network (GNN) methods that learn inductive unsupervised graph representations focus on learning node and edge representations by predicting observed edges in the graph. Although such approaches have shown advances in downstream node classification tasks, they are ineffective in jointly representing larger $k$-node sets, $k{>}2$. We propose MHM-GNN, an inductive unsupervised graph representation approach that combines joint $k$-node representations with energy-based models (hypergraph Markov networks) and GNNs. To address the intractability of the loss that arises from this combination, we endow our optimization with a loss upper bound using a finite-sample unbiased Markov Chain Monte Carlo estimator. Our experiments show that the unsupervised MHM-GNN representations of MHM-GNN produce better unsupervised representations than existing approaches from the literature.",
+      "arxiv_id": "2010.04259",
+      "arxiv_primary_category": "cs.LG",
+      "subdomain": "Machine Learning",
+      "year_cohort": "2020",
+      "tier": "bad",
+      "citation_percentile": 6.3
+    },
+    {
+      "paperId": "2b9e074d07f5ff3b28b3663f9501cecf9b90d671",
+      "externalIds": {
+        "DBLP": "conf/nips/NguyenMBOW20",
+        "MAG": "3096148216",
+        "ArXiv": "2010.15750",
+        "CorpusId": 225103121
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Gaussian Process Bandit Optimization of theThermodynamic Variational Objective",
+      "venue": "Neural Information Processing Systems",
+      "year": 2020,
+      "citationCount": 5,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2010.15750, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science"
+      ],
+      "authors": [
+        {
+          "authorId": "1405961541",
+          "name": "V. Nguyen"
+        },
+        {
+          "authorId": "10756122",
+          "name": "Vaden Masrani"
+        },
+        {
+          "authorId": "27633668",
+          "name": "Rob Brekelmans"
+        },
+        {
+          "authorId": "144484861",
+          "name": "Michael A. Osborne"
+        },
+        {
+          "authorId": "2347189",
+          "name": "Frank D. Wood"
+        }
+      ],
+      "abstract": "Achieving the full promise of the Thermodynamic Variational Objective (TVO), a recently proposed variational lower bound on the log evidence involving a one-dimensional Riemann integral approximation, requires choosing a \"schedule\" of sorted discretization points. This paper introduces a bespoke Gaussian process bandit optimization method for automatically choosing these points. Our approach not only automates their one-time selection, but also dynamically adapts their positions over the course of optimization, leading to improved model learning and inference. We provide theoretical guarantees that our bandit optimization converges to the regret-minimizing choice of integration points. Empirical validation of our algorithm is provided in terms of improved learning and inference in Variational Autoencoders and Sigmoid Belief Networks.",
+      "arxiv_id": "2010.15750",
+      "arxiv_primary_category": "cs.LG",
+      "subdomain": "Machine Learning",
+      "year_cohort": "2020",
+      "tier": "bad",
+      "citation_percentile": 1.06
+    },
+    {
+      "paperId": "3374e94cf02d76f8f4e2e60d41b8ed99f2b59f1d",
+      "externalIds": {
+        "MAG": "3046305340",
+        "ArXiv": "2007.15821",
+        "DBLP": "conf/nips/WanCZCZ20",
+        "CorpusId": 220919803
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Geometric All-Way Boolean Tensor Decomposition",
+      "venue": "Neural Information Processing Systems",
+      "year": 2020,
+      "citationCount": 5,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2007.15821, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "authors": [
+        {
+          "authorId": "40400896",
+          "name": "Changlin Wan"
+        },
+        {
+          "authorId": "151376282",
+          "name": "Wennan Chang"
+        },
+        {
+          "authorId": "2152225582",
+          "name": "Tong Zhao"
+        },
+        {
+          "authorId": "2302662",
+          "name": "Sha Cao"
+        },
+        {
+          "authorId": "1970080679",
+          "name": "Chi Zhang"
+        }
+      ],
+      "abstract": "Boolean tensor has been broadly utilized in representing high dimensional logical data collected on spatial, temporal and/or other relational domains. Boolean Tensor Decomposition (BTD) factorizes a binary tensor into the Boolean sum of multiple rank-1 tensors, which is an NP-hard problem. Existing BTD methods have been limited by their high computational cost, in applications to large scale or higher order tensors. In this work, we presented a computationally efficient BTD algorithm, namely \\textit{Geometric Expansion for all-order Tensor Factorization} (GETF), that sequentially identifies the rank-1 basis components for a tensor from a geometric perspective. We conducted rigorous theoretical analysis on the validity as well as algorithemic efficiency of GETF in decomposing all-order tensor. Experiments on both synthetic and real-world data demonstrated that GETF has significantly improved performance in reconstruction accuracy, extraction of latent structures and it is an order of magnitude faster than other state-of-the-art methods.",
+      "arxiv_id": "2007.15821",
+      "arxiv_primary_category": "cs.LG",
+      "subdomain": "Machine Learning",
+      "year_cohort": "2020",
+      "tier": "bad",
+      "citation_percentile": 1.06
+    },
+    {
+      "paperId": "1e88cdd6530f8489e7f9367858afe77bab086ba4",
+      "externalIds": {
+        "DBLP": "journals/corr/abs-2006-10529",
+        "ArXiv": "2006.10529",
+        "MAG": "3035987069",
+        "CorpusId": 219792921
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Neural Path Features and Neural Path Kernel : Understanding the role of gates in deep learning",
+      "venue": "Neural Information Processing Systems",
+      "year": 2020,
+      "citationCount": 11,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2006.10529, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "authors": [
+        {
+          "authorId": "2054618",
+          "name": "Chandrashekar Lakshminarayanan"
+        },
+        {
+          "authorId": "2121456592",
+          "name": "Amit Singh"
+        }
+      ],
+      "abstract": "Rectified linear unit (ReLU) activations can also be thought of as \\emph{gates}, which, either pass or stop their pre-activation input when they are \\emph{on} (when the pre-activation input is positive) or \\emph{off} (when the pre-activation input is negative) respectively. A deep neural network (DNN) with ReLU activations has many gates, and the {on/off} status of each gate changes across input examples as well as network weights. For a given input example, only a subset of gates are \\emph{active}, i.e., on, and the sub-network of weights connected to these active gates is responsible for producing the output. At randomised initialisation, the active sub-network corresponding to a given input example is random. During training, as the weights are learnt, the active sub-networks are also learnt, and potentially hold very valuable information. In this paper, we analytically characterise the role of active sub-networks in deep learning. To this end, we encode the {on/off} state of the gates of a given input in a novel \\emph{neural path feature} (NPF), and the weights of the DNN are encoded in a novel \\emph{neural path value} (NPV). Further, we show that the output of network is indeed the inner product of NPF and NPV. The main result of the paper shows that the \\emph{neural path kernel} associated with the NPF is a fundamental quantity that characterises the information stored in the gates of a DNN. We show via experiments (on MNIST and CIFAR-10) that in standard DNNs with ReLU activations NPFs are learnt during training and such learning is key for generalisation. Furthermore, NPFs and NPVs can be learnt in two separate networks and such learning also generalises well in experiments.",
+      "arxiv_id": "2006.10529",
+      "arxiv_primary_category": "cs.LG",
+      "subdomain": "Machine Learning",
+      "year_cohort": "2020",
+      "tier": "bad",
+      "citation_percentile": 8.18
+    },
+    {
+      "paperId": "1de9fb407cb5e6c7e313b069a9f8768670bde7c7",
+      "externalIds": {
+        "ArXiv": "2010.16344",
+        "MAG": "3096690464",
+        "DBLP": "journals/corr/abs-2010-16344",
+        "CorpusId": 226221803
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Marginalised Gaussian Processes with Nested Sampling",
+      "venue": "Neural Information Processing Systems",
+      "year": 2020,
+      "citationCount": 12,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2010.16344, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "authors": [
+        {
+          "authorId": "143941510",
+          "name": "F. Simpson"
+        },
+        {
+          "authorId": "2078423",
+          "name": "Vidhi Lalchand"
+        },
+        {
+          "authorId": "3472959",
+          "name": "C. Rasmussen"
+        }
+      ],
+      "abstract": "Gaussian Process (GPs) models are a rich distribution over functions with inductive biases controlled by a kernel function. Learning occurs through the optimisation of kernel hyperparameters using the marginal likelihood as the objective. This classical approach known as Type-II maximum likelihood (ML-II) yields point estimates of the hyperparameters, and continues to be the default method for training GPs. However, this approach risks underestimating predictive uncertainty and is prone to overfitting especially when there are many hyperparameters. Furthermore, gradient based optimisation makes ML-II point estimates highly susceptible to the presence of local minima. This work presents an alternative learning procedure where the hyperparameters of the kernel function are marginalised using Nested Sampling (NS), a technique that is well suited to sample from complex, multi-modal distributions. We focus on regression tasks with the spectral mixture (SM) class of kernels and find that a principled approach to quantifying model uncertainty leads to substantial gains in predictive performance across a range of synthetic and benchmark data sets. In this context, nested sampling is also found to offer a speed advantage over Hamiltonian Monte Carlo (HMC), widely considered to be the gold-standard in MCMC based inference.",
+      "arxiv_id": "2010.16344",
+      "arxiv_primary_category": "stat.ML",
+      "subdomain": "Machine Learning",
+      "year_cohort": "2020",
+      "tier": "bad",
+      "citation_percentile": 9.17
+    },
+    {
+      "paperId": "77b9dc3991ff0d75d9509c88f70f0ae9763a7535",
+      "externalIds": {
+        "DBLP": "journals/corr/LongZD14",
+        "MAG": "2950124505",
+        "ArXiv": "1411.1091",
+        "CorpusId": 13130188
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Do Convnets Learn Correspondence?",
+      "venue": "Neural Information Processing Systems",
+      "year": 2014,
+      "citationCount": 314,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1411.1091, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science"
+      ],
+      "authors": [
+        {
+          "authorId": "2117314646",
+          "name": "Jonathan Long"
+        },
+        {
+          "authorId": "2152329702",
+          "name": "Ning Zhang"
+        },
+        {
+          "authorId": "1753210",
+          "name": "Trevor Darrell"
+        }
+      ],
+      "abstract": "Convolutional neural nets (convnets) trained from massive labeled datasets [1] have substantially improved the state-of-the-art in image classification [2] and object detection [3]. However, visual understanding requires establishing correspondence on a finer level than object category. Given their large pooling regions and training from whole-image labels, it is not clear that convnets derive their success from an accurate correspondence model which could be used for precise localization. In this paper, we study the effectiveness of convnet activation features for tasks requiring correspondence. We present evidence that convnet features localize at a much finer scale than their receptive field sizes, that they can be used to perform intraclass aligment as well as conventional hand-engineered features, and that they outperform conventional features in keypoint prediction on objects from PASCAL VOC 2011 [4].",
+      "arxiv_id": "1411.1091",
+      "arxiv_primary_category": "cs.CV",
+      "subdomain": "Computer Vision",
+      "year_cohort": "2010-2015",
+      "tier": "good",
+      "citation_percentile": 81.69
+    },
+    {
+      "paperId": "40eac6e6bb54e0da7885989f220f4d3f70249950",
+      "externalIds": {
+        "ArXiv": "1407.5035",
+        "DBLP": "conf/nips/HoffmanGTHDGDS14",
+        "MAG": "2951084305",
+        "CorpusId": 14260314
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "LSDA: Large Scale Detection through Adaptation",
+      "venue": "Neural Information Processing Systems",
+      "year": 2014,
+      "citationCount": 337,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1407.5035, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science"
+      ],
+      "authors": [
+        {
+          "authorId": "50196944",
+          "name": "Judy Hoffman"
+        },
+        {
+          "authorId": "1687120",
+          "name": "S. Guadarrama"
+        },
+        {
+          "authorId": "2368132",
+          "name": "E. Tzeng"
+        },
+        {
+          "authorId": "2874347",
+          "name": "Ronghang Hu"
+        },
+        {
+          "authorId": "7408951",
+          "name": "Jeff Donahue"
+        },
+        {
+          "authorId": "2983898",
+          "name": "Ross B. Girshick"
+        },
+        {
+          "authorId": "1753210",
+          "name": "Trevor Darrell"
+        },
+        {
+          "authorId": "2903226",
+          "name": "Kate Saenko"
+        }
+      ],
+      "abstract": "A major challenge in scaling object detection is the difficulty of obtaining labeled images for large numbers of categories. Recently, deep convolutional neural networks (CNNs) have emerged as clear winners on object classification benchmarks, in part due to training with 1.2M+ labeled classification images. Unfortunately, only a small fraction of those labels are available for the detection task. It is much cheaper and easier to collect large quantities of image-level labels from search engines than it is to collect detection data and label it with precise bounding boxes. In this paper, we propose Large Scale Detection through Adaptation (LSDA), an algorithm which learns the difference between the two tasks and transfers this knowledge to classifiers for categories without bounding box annotated data, turning them into detectors. Our method has the potential to enable detection for the tens of thousands of categories that lack bounding box annotations, yet have plenty of classification data. Evaluation on the ImageNet LSVRC-2013 detection challenge demonstrates the efficacy of our approach. This algorithm enables us to produce a >7.6K detector by using available classification data from leaf nodes in the ImageNet tree. We additionally demonstrate how to modify our architecture to produce a fast detector (running at 2fps for the 7.6K detector). Models and software are available at lsda.berkeleyvision.org.",
+      "arxiv_id": "1407.5035",
+      "arxiv_primary_category": "cs.CV",
+      "subdomain": "Computer Vision",
+      "year_cohort": "2010-2015",
+      "tier": "good",
+      "citation_percentile": 83.3
+    },
+    {
+      "paperId": "755e9f43ce398ae8737366720c5f82685b0c253e",
+      "externalIds": {
+        "DBLP": "conf/nips/SocherGMN13",
+        "MAG": "2927762331",
+        "ArXiv": "1301.3666",
+        "CorpusId": 2808203
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Zero-Shot Learning Through Cross-Modal Transfer",
+      "venue": "Neural Information Processing Systems",
+      "year": 2013,
+      "citationCount": 1525,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1301.3666, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science"
+      ],
+      "authors": [
+        {
+          "authorId": "2166511",
+          "name": "R. Socher"
+        },
+        {
+          "authorId": "2012435",
+          "name": "M. Ganjoo"
+        },
+        {
+          "authorId": "144783904",
+          "name": "Christopher D. Manning"
+        },
+        {
+          "authorId": "34699434",
+          "name": "A. Ng"
+        }
+      ],
+      "abstract": "This work introduces a model that can recognize objects in images even if no training data is available for the object class. The only necessary knowledge about unseen visual categories comes from unsupervised text corpora. Unlike previous zero-shot learning models, which can only differentiate between unseen classes, our model can operate on a mixture of seen and unseen classes, simultaneously obtaining state of the art performance on classes with thousands of training images and reasonable performance on unseen classes. This is achieved by seeing the distributions of words in texts as a semantic space for understanding what objects look like. Our deep learning model does not require any manually defined semantic or visual features for either words or images. Images are mapped to be close to semantic word vectors corresponding to their classes, and the resulting image embeddings can be used to distinguish whether an image is of a seen or unseen class. We then use novelty detection methods to differentiate unseen classes from seen classes. We demonstrate two novelty detection strategies; the first gives high accuracy on unseen classes, while the second is conservative in its prediction of novelty and keeps the seen classes' accuracy high.",
+      "arxiv_id": "1301.3666",
+      "arxiv_primary_category": "cs.CV",
+      "subdomain": "Computer Vision",
+      "year_cohort": "2010-2015",
+      "tier": "good",
+      "citation_percentile": 93.36
+    },
+    {
+      "paperId": "e5ae8ab688051931b4814f6d32b18391f8d1fa8d",
+      "externalIds": {
+        "MAG": "2950248853",
+        "DBLP": "conf/nips/DentonZBLF14",
+        "ArXiv": "1404.0736",
+        "CorpusId": 7340116
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Exploiting Linear Structure Within Convolutional Networks for Efficient Evaluation",
+      "venue": "Neural Information Processing Systems",
+      "year": 2014,
+      "citationCount": 1815,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1404.0736, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science"
+      ],
+      "authors": [
+        {
+          "authorId": "40081727",
+          "name": "Emily L. Denton"
+        },
+        {
+          "authorId": "2563432",
+          "name": "Wojciech Zaremba"
+        },
+        {
+          "authorId": "143627859",
+          "name": "Joan Bruna"
+        },
+        {
+          "authorId": "1688882",
+          "name": "Yann LeCun"
+        },
+        {
+          "authorId": "2276554",
+          "name": "R. Fergus"
+        }
+      ],
+      "abstract": "We present techniques for speeding up the test-time evaluation of large convolutional networks, designed for object recognition tasks. These models deliver impressive accuracy, but each image evaluation requires millions of floating point operations, making their deployment on smartphones and Internet-scale clusters problematic. The computation is dominated by the convolution operations in the lower layers of the model. We exploit the redundancy present within the convolutional filters to derive approximations that significantly reduce the required computation. Using large state-of-the-art models, we demonstrate speedups of convolutional layers on both CPU and GPU by a factor of 2 x, while keeping the accuracy within 1% of the original model.",
+      "arxiv_id": "1404.0736",
+      "arxiv_primary_category": "cs.CV",
+      "subdomain": "Computer Vision",
+      "year_cohort": "2010-2015",
+      "tier": "good",
+      "citation_percentile": 94.51
+    },
+    {
+      "paperId": "6b8d0df903496699e52b4daee5d1815b7b784cf7",
+      "externalIds": {
+        "DBLP": "journals/corr/PinheiroCD15",
+        "MAG": "2953236957",
+        "ArXiv": "1506.06204",
+        "CorpusId": 140529
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Learning to Segment Object Candidates",
+      "venue": "Neural Information Processing Systems",
+      "year": 2015,
+      "citationCount": 816,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1506.06204, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science"
+      ],
+      "authors": [
+        {
+          "authorId": "2708655",
+          "name": "Pedro H. O. Pinheiro"
+        },
+        {
+          "authorId": "2939803",
+          "name": "R. Collobert"
+        },
+        {
+          "authorId": "3127283",
+          "name": "Piotr Doll\u00e1r"
+        }
+      ],
+      "abstract": "Recent object detection systems rely on two critical steps: (1) a set of object proposals is predicted as efficiently as possible, and (2) this set of candidate proposals is then passed to an object classifier. Such approaches have been shown they can be fast, while achieving the state of the art in detection performance. In this paper, we propose a new way to generate object proposals, introducing an approach based on a discriminative convolutional network. Our model is trained jointly with two objectives: given an image patch, the first part of the system outputs a class-agnostic segmentation mask, while the second part of the system outputs the likelihood of the patch being centered on a full object. At test time, the model is efficiently applied on the whole test image and generates a set of segmentation masks, each of them being assigned with a corresponding object likelihood score. We show that our model yields significant improvements over state-of-the-art object proposal algorithms. In particular, compared to previous approaches, our model obtains substantially higher object recall using fewer proposals. We also show that our model is able to generalize to unseen categories it has not seen during training. Unlike all previous approaches for generating object masks, we do not rely on edges, superpixels, or any other form of low-level segmentation.",
+      "arxiv_id": "1506.06204",
+      "arxiv_primary_category": "cs.CV",
+      "subdomain": "Computer Vision",
+      "year_cohort": "2010-2015",
+      "tier": "good",
+      "citation_percentile": 89.93
+    },
+    {
+      "paperId": "82412a40b5c8bae21da2e68efaa2b6a01e9fbd92",
+      "externalIds": {
+        "MAG": "2950067095",
+        "DBLP": "conf/nips/FelzenszwalbO14",
+        "ArXiv": "1406.0924",
+        "CorpusId": 946277
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Multiscale Fields of Patterns",
+      "venue": "Neural Information Processing Systems",
+      "year": 2014,
+      "citationCount": 9,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1406.0924, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "authors": [
+        {
+          "authorId": "1685089",
+          "name": "Pedro F. Felzenszwalb"
+        },
+        {
+          "authorId": "144971987",
+          "name": "John G. Oberlin"
+        }
+      ],
+      "abstract": "We describe a framework for defining high-order image models that can be used in a variety of applications. The approach involves modeling local patterns in a multiscale representation of an image. Local properties of a coarsened image reflect non-local properties of the original image. In the case of binary images local properties are defined by the binary patterns observed over small neighborhoods around each pixel. With the multiscale representation we capture the frequency of patterns observed at different scales of resolution. This framework leads to expressive priors that depend on a relatively small number of parameters. For inference and learning we use an MCMC method for block sampling with very large blocks. We evaluate the approach with two example applications. One involves contour detection. The other involves binary segmentation.",
+      "arxiv_id": "1406.0924",
+      "arxiv_primary_category": "cs.CV",
+      "subdomain": "Computer Vision",
+      "year_cohort": "2010-2015",
+      "tier": "bad",
+      "citation_percentile": 4.81
+    },
+    {
+      "paperId": "ddec0c39d62c778903cf8cac87bf801d068d4073",
+      "externalIds": {
+        "ArXiv": "1511.02705",
+        "MAG": "2190940281",
+        "DBLP": "conf/nips/VacherMPP15",
+        "CorpusId": 12966073
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Biologically Inspired Dynamic Textures for Probing Motion Perception",
+      "venue": "Neural Information Processing Systems",
+      "year": 2015,
+      "citationCount": 10,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1511.02705, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "authors": [
+        {
+          "authorId": "39902370",
+          "name": "Jonathan Vacher"
+        },
+        {
+          "authorId": "2088363",
+          "name": "A. Meso"
+        },
+        {
+          "authorId": "3253101",
+          "name": "Laurent Udo Perrinet"
+        },
+        {
+          "authorId": "145481009",
+          "name": "G. Peyr\u00e9"
+        }
+      ],
+      "abstract": "Perception is often described as a predictive process based on an optimal inference with respect to a generative model. We study here the principled construction of a generative model specifically crafted to probe motion perception. In that context, we first provide an axiomatic, biologically-driven derivation of the model. This model synthesizes random dynamic textures which are defined by stationary Gaussian distributions obtained by the random aggregation of warped patterns. Importantly, we show that this model can equivalently be described as a stochastic partial differential equation. Using this characterization of motion in images, it allows us to recast motion-energy models into a principled Bayesian inference framework. Finally, we apply these textures in order to psychophysically probe speed perception in humans. In this framework, while the likelihood is derived from the generative model, the prior is estimated from the observed results and accounts for the perceptual bias in a principled fashion.",
+      "arxiv_id": "1511.02705",
+      "arxiv_primary_category": "cs.CV",
+      "subdomain": "Computer Vision",
+      "year_cohort": "2010-2015",
+      "tier": "bad",
+      "citation_percentile": 5.49
+    },
+    {
+      "paperId": "e6adc9ce44f267c22dfc12bf8a0051dc92c43695",
+      "externalIds": {
+        "DBLP": "conf/nips/CongZLWC20",
+        "ArXiv": "2006.07543",
+        "MAG": "3105692649",
+        "CorpusId": 219686951
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "GAN Memory with No Forgetting",
+      "venue": "Neural Information Processing Systems",
+      "year": 2020,
+      "citationCount": 147,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2006.07543, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science",
+        "Psychology"
+      ],
+      "authors": [
+        {
+          "authorId": "2147914",
+          "name": "Yulai Cong"
+        },
+        {
+          "authorId": "7202209",
+          "name": "Miaoyun Zhao"
+        },
+        {
+          "authorId": "2108981561",
+          "name": "Jianqiao Li"
+        },
+        {
+          "authorId": "2116421877",
+          "name": "Sijia Wang"
+        },
+        {
+          "authorId": "145006560",
+          "name": "L. Carin"
+        }
+      ],
+      "abstract": "Seeking to address the fundamental issue of memory in lifelong learning, we propose a GAN memory that is capable of realistically remembering a stream of generative processes with \\emph{no} forgetting. Our GAN memory is based on recognizing that one can modulate the ``style'' of a GAN model to form perceptually-distant targeted generation. Accordingly, we propose to do sequential style modulations atop a well-behaved base GAN model, to form sequential targeted generative models, while simultaneously benefiting from the transferred base knowledge. Experiments demonstrate the superiority of our method over existing approaches and its effectiveness in alleviating catastrophic forgetting for lifelong classification problems.",
+      "arxiv_id": "2006.07543",
+      "arxiv_primary_category": "cs.CV",
+      "subdomain": "Computer Vision",
+      "year_cohort": "2020",
+      "tier": "good",
+      "citation_percentile": 79.46
+    },
+    {
+      "paperId": "2f3301984e50aebe52768cd1235c6a92028c8b19",
+      "externalIds": {
+        "ArXiv": "2010.12050",
+        "MAG": "3106310609",
+        "DBLP": "conf/nips/HoN20",
+        "CorpusId": 225062310
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Contrastive Learning with Adversarial Examples",
+      "venue": "Neural Information Processing Systems",
+      "year": 2020,
+      "citationCount": 164,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2010.12050, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science"
+      ],
+      "authors": [
+        {
+          "authorId": "51162868",
+          "name": "Chih-Hui Ho"
+        },
+        {
+          "authorId": "1699559",
+          "name": "N. Vasconcelos"
+        }
+      ],
+      "abstract": "Contrastive learning (CL) is a popular technique for self-supervised learning (SSL) of visual representations. It uses pairs of augmentations of unlabeled training examples to define a classification task for pretext learning of a deep embedding. Despite extensive works in augmentation procedures, prior works do not address the selection of challenging negative pairs, as images within a sampled batch are treated independently. This paper addresses the problem, by introducing a new family of adversarial examples for constrastive learning and using these examples to define a new adversarial training algorithm for SSL, denoted as CLAE. When compared to standard CL, the use of adversarial examples creates more challenging positive pairs and adversarial training produces harder negative pairs by accounting for all images in a batch during the optimization. CLAE is compatible with many CL methods in the literature. Experiments show that it improves the performance of several existing CL baselines on multiple datasets.",
+      "arxiv_id": "2010.12050",
+      "arxiv_primary_category": "cs.CV",
+      "subdomain": "Computer Vision",
+      "year_cohort": "2020",
+      "tier": "good",
+      "citation_percentile": 81.67
+    },
+    {
+      "paperId": "942dac57251ec1b8af129096a5cd417c06362a8a",
+      "externalIds": {
+        "DBLP": "journals/corr/abs-2006-08072",
+        "ArXiv": "2006.08072",
+        "MAG": "3035003225",
+        "CorpusId": 219687707
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Geo-PIFu: Geometry and Pixel Aligned Implicit Functions for Single-view Human Reconstruction",
+      "venue": "Neural Information Processing Systems",
+      "year": 2020,
+      "citationCount": 198,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2006.08072, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science"
+      ],
+      "authors": [
+        {
+          "authorId": "48748557",
+          "name": "Tong He"
+        },
+        {
+          "authorId": "1680236",
+          "name": "J. Collomosse"
+        },
+        {
+          "authorId": "41151701",
+          "name": "Hailin Jin"
+        },
+        {
+          "authorId": "1715959",
+          "name": "Stefano Soatto"
+        }
+      ],
+      "abstract": "We propose Geo-PIFu, a method to recover a 3D mesh from a monocular color image of a clothed person. Our method is based on a deep implicit function-based representation to learn latent voxel features using a structure-aware 3D U-Net, to constrain the model in two ways: first, to resolve feature ambiguities in query point encoding, second, to serve as a coarse human shape proxy to regularize the high-resolution mesh and encourage global shape regularity. We show that, by both encoding query points and constraining global shape using latent voxel features, the reconstruction we obtain for clothed human meshes exhibits less shape distortion and improved surface details compared to competing methods. We evaluate Geo-PIFu on a recent human mesh public dataset that is $10 \\times$ larger than the private commercial dataset used in PIFu and previous derivative work. On average, we exceed the state of the art by $42.7\\%$ reduction in Chamfer and Point-to-Surface Distances, and $19.4\\%$ reduction in normal estimation errors.",
+      "arxiv_id": "2006.08072",
+      "arxiv_primary_category": "cs.CV",
+      "subdomain": "Computer Vision",
+      "year_cohort": "2020",
+      "tier": "good",
+      "citation_percentile": 84.7
+    },
+    {
+      "paperId": "17583773f884b6fe93febaf77d6e1179c4fb92a7",
+      "externalIds": {
+        "DBLP": "journals/corr/abs-2010-16219",
+        "MAG": "3097802466",
+        "ArXiv": "2010.16219",
+        "CorpusId": 226222003
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "HOI Analysis: Integrating and Decomposing Human-Object Interaction",
+      "venue": "Neural Information Processing Systems",
+      "year": 2020,
+      "citationCount": 150,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2010.16219, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science",
+        "Engineering"
+      ],
+      "authors": [
+        {
+          "authorId": "2110436501",
+          "name": "Yong-Lu Li"
+        },
+        {
+          "authorId": "2128016",
+          "name": "Xinpeng Liu"
+        },
+        {
+          "authorId": "2108793708",
+          "name": "Xiaoqian Wu"
+        },
+        {
+          "authorId": "48513370",
+          "name": "Yizhuo Li"
+        },
+        {
+          "authorId": "1830034",
+          "name": "Cewu Lu"
+        }
+      ],
+      "abstract": "Human-Object Interaction (HOI) consists of human, object and implicit interaction/verb. Different from previous methods that directly map pixels to HOI semantics, we propose a novel perspective for HOI learning in an analytical manner. In analogy to Harmonic Analysis, whose goal is to study how to represent the signals with the superposition of basic waves, we propose the HOI Analysis. We argue that coherent HOI can be decomposed into isolated human and object. Meanwhile, isolated human and object can also be integrated into coherent HOI again. Moreover, transformations between human-object pairs with the same HOI can also be easier approached with integration and decomposition. As a result, the implicit verb will be represented in the transformation function space. In light of this, we propose an Integration-Decomposition Network (IDN) to implement the above transformations and achieve state-of-the-art performance on widely-used HOI detection benchmarks. Code is available at this https URL.",
+      "arxiv_id": "2010.16219",
+      "arxiv_primary_category": "cs.CV",
+      "subdomain": "Computer Vision",
+      "year_cohort": "2020",
+      "tier": "good",
+      "citation_percentile": 79.71
+    },
+    {
+      "paperId": "ebae0a96098bb84eee418c76f5b6a2cb87614ac1",
+      "externalIds": {
+        "ArXiv": "2006.09662",
+        "MAG": "3035944497",
+        "DBLP": "conf/nips/SitzmannCTSW20",
+        "CorpusId": 219720969
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "MetaSDF: Meta-learning Signed Distance Functions",
+      "venue": "Neural Information Processing Systems",
+      "year": 2020,
+      "citationCount": 285,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2006.09662, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science"
+      ],
+      "authors": [
+        {
+          "authorId": "5021307",
+          "name": "V. Sitzmann"
+        },
+        {
+          "authorId": "121028414",
+          "name": "Eric Chan"
+        },
+        {
+          "authorId": "2061556403",
+          "name": "Richard Tucker"
+        },
+        {
+          "authorId": "1830653",
+          "name": "Noah Snavely"
+        },
+        {
+          "authorId": "1731170",
+          "name": "Gordon Wetzstein"
+        }
+      ],
+      "abstract": "Neural implicit shape representations are an emerging paradigm that offers many potential benefits over conventional discrete representations, including memory efficiency at a high spatial resolution. Generalizing across shapes with such neural implicit representations amounts to learning priors over the respective function space and enables geometry reconstruction from partial or noisy observations. Existing generalization methods rely on conditioning a neural network on a low-dimensional latent code that is either regressed by an encoder or jointly optimized in the auto-decoder framework. Here, we formalize learning of a shape space as a meta-learning problem and leverage gradient-based meta-learning algorithms to solve this task. We demonstrate that this approach performs on par with auto-decoder based approaches while being an order of magnitude faster at test-time inference. We further demonstrate that the proposed gradient-based method outperforms encoder-decoder based methods that leverage pooling-based set encoders.",
+      "arxiv_id": "2006.09662",
+      "arxiv_primary_category": "cs.CV",
+      "subdomain": "Computer Vision",
+      "year_cohort": "2020",
+      "tier": "good",
+      "citation_percentile": 89.93
+    },
+    {
+      "paperId": "6a4a7de57115012a2c044a0c05df3e3a3208bd5e",
+      "externalIds": {
+        "ArXiv": "2009.08427",
+        "DBLP": "conf/nips/DutaNL21",
+        "CorpusId": 244921149
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Discovering Dynamic Salient Regions for Spatio-Temporal Graph Neural Networks",
+      "venue": "Neural Information Processing Systems",
+      "year": 2020,
+      "citationCount": 7,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2009.08427, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science"
+      ],
+      "authors": [
+        {
+          "authorId": "51011850",
+          "name": "Iulia Duta"
+        },
+        {
+          "authorId": "50986865",
+          "name": "Andrei Liviu Nicolicioiu"
+        },
+        {
+          "authorId": "1749627",
+          "name": "Marius Leordeanu"
+        }
+      ],
+      "abstract": "Graph Neural Networks are perfectly suited to capture latent interactions between various entities in the spatio-temporal domain (e.g. videos). However, when an explicit structure is not available, it is not obvious what atomic elements should be represented as nodes. Current works generally use pre-trained object detectors or fixed, predefined regions to extract graph nodes. Improving upon this, our proposed model learns nodes that dynamically attach to well-delimited salient regions, which are relevant for a higher-level task, without using any object-level supervision. Constructing these localized, adaptive nodes gives our model inductive bias towards object-centric representations and we show that it discovers regions that are well correlated with objects in the video. In extensive ablation studies and experiments on two challenging datasets, we show superior performance to previous graph neural networks models for video classification.",
+      "arxiv_id": "2009.08427",
+      "arxiv_primary_category": "cs.CV",
+      "subdomain": "Computer Vision",
+      "year_cohort": "2020",
+      "tier": "bad",
+      "citation_percentile": 2.95
+    },
+    {
+      "paperId": "86b4878b65e2f9c9ada00bbdae1213edc84f2dba",
+      "externalIds": {
+        "MAG": "3100449196",
+        "DBLP": "journals/corr/abs-2006-10004",
+        "ArXiv": "2006.10004",
+        "CorpusId": 219721390
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Deeply Learned Spectral Total Variation Decomposition",
+      "venue": "Neural Information Processing Systems",
+      "year": 2020,
+      "citationCount": 5,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2006.10004, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science",
+        "Engineering",
+        "Mathematics"
+      ],
+      "authors": [
+        {
+          "authorId": "1751630745",
+          "name": "T. G. Grossmann"
+        },
+        {
+          "authorId": "48034255",
+          "name": "Yury Korolev"
+        },
+        {
+          "authorId": "2368011",
+          "name": "Guy Gilboa"
+        },
+        {
+          "authorId": "1711104",
+          "name": "C. Sch\u00f6nlieb"
+        }
+      ],
+      "abstract": "Non-linear spectral decompositions of images based on one-homogeneous functionals such as total variation have gained considerable attention in the last few years. Due to their ability to extract spectral components corresponding to objects of different size and contrast, such decompositions enable filtering, feature transfer, image fusion and other applications. However, obtaining this decomposition involves solving multiple non-smooth optimisation problems and is therefore computationally highly intensive. In this paper, we present a neural network approximation of a non-linear spectral decomposition. We report up to four orders of magnitude ($\\times 10,000$) speedup in processing of mega-pixel size images, compared to classical GPU implementations. Our proposed network, TVSpecNET, is able to implicitly learn the underlying PDE and, despite being entirely data driven, inherits invariances of the model based transform. To the best of our knowledge, this is the first approach towards learning a non-linear spectral decomposition of images. Not only do we gain a staggering computational advantage, but this approach can also be seen as a step towards studying neural networks that can decompose an image into spectral components defined by a user rather than a handcrafted functional.",
+      "arxiv_id": "2006.10004",
+      "arxiv_primary_category": "cs.CV",
+      "subdomain": "Computer Vision",
+      "year_cohort": "2020",
+      "tier": "bad",
+      "citation_percentile": 1.06
+    },
+    {
+      "paperId": "551e9f628a6e93e977005990d22bd16f6445d79e",
+      "externalIds": {
+        "MAG": "3103970352",
+        "DBLP": "conf/nips/GuillardRF20",
+        "ArXiv": "2006.03817",
+        "CorpusId": 219531091
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "UCLID-Net: Single View Reconstruction in Object Space",
+      "venue": "Neural Information Processing Systems",
+      "year": 2020,
+      "citationCount": 7,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2006.03817, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science"
+      ],
+      "authors": [
+        {
+          "authorId": "98626765",
+          "name": "Beno\u00eet Guillard"
+        },
+        {
+          "authorId": "29370175",
+          "name": "Edoardo Remelli"
+        },
+        {
+          "authorId": "153918727",
+          "name": "P. Fua"
+        }
+      ],
+      "abstract": "Most state-of-the-art deep geometric learning single-view reconstruction approaches rely on encoder-decoder architectures that output either shape parametrizations or implicit representations. However, these representations rarely preserve the Euclidean structure of the 3D space objects exist in. In this paper, we show that building a geometry preserving 3-dimensional latent space helps the network concurrently learn global shape regularities and local reasoning in the object coordinate space and, as a result, boosts performance. We demonstrate both on ShapeNet synthetic images, which are often used for benchmarking purposes, and on real-world images that our approach outperforms state-of-the-art ones. Furthermore, the single-view pipeline naturally extends to multi-view reconstruction, which we also show.",
+      "arxiv_id": "2006.03817",
+      "arxiv_primary_category": "cs.CV",
+      "subdomain": "Computer Vision",
+      "year_cohort": "2020",
+      "tier": "bad",
+      "citation_percentile": 2.95
+    },
+    {
+      "paperId": "b37ddbab1cbbd2f6cad233479907ca9d36c7967f",
+      "externalIds": {
+        "MAG": "3035902555",
+        "DBLP": "conf/nips/0002P20",
+        "ArXiv": "2006.11412",
+        "CorpusId": 219966923
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "High-contrast \"gaudy\" images improve the training of deep neural network models of visual cortex",
+      "venue": "Neural Information Processing Systems",
+      "year": 2020,
+      "citationCount": 11,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2006.11412, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "authors": [
+        {
+          "authorId": "32208493",
+          "name": "Benjamin R. Cowley"
+        },
+        {
+          "authorId": "1791723",
+          "name": "Jonathan W. Pillow"
+        }
+      ],
+      "abstract": "A key challenge in understanding the sensory transformations of the visual system is to obtain a highly predictive model of responses from visual cortical neurons. Deep neural networks (DNNs) provide a promising candidate for such a model. However, DNNs require orders of magnitude more training data than neuroscientists can collect from real neurons because experimental recording time is severely limited. This motivates us to find images that train highly-predictive DNNs with as little training data as possible. We propose gaudy images---high-contrast binarized versions of natural images---to efficiently train DNNs. In extensive simulation experiments, we find that training DNNs with gaudy images substantially reduces the number of training images needed to accurately predict the simulated responses of visual cortical neurons. We also find that gaudy images, chosen before training, outperform images chosen during training by active learning algorithms. Thus, gaudy images overemphasize features of natural images, especially edges, that are the most important for efficiently training DNNs. We believe gaudy images will aid in the modeling of visual cortical neurons, potentially opening new scientific questions about visual processing, as well as aid general practitioners that seek ways to improve the training of DNNs.",
+      "arxiv_id": "2006.11412",
+      "arxiv_primary_category": "cs.CV",
+      "subdomain": "Computer Vision",
+      "year_cohort": "2020",
+      "tier": "bad",
+      "citation_percentile": 8.18
+    },
+    {
+      "paperId": "0fddd9d4da34a64d8c06cf09d8ca9f352b1dd18d",
+      "externalIds": {
+        "ArXiv": "2011.12486",
+        "MAG": "3108506691",
+        "DBLP": "conf/nips/ShimC20",
+        "CorpusId": 227162419
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "CircleGAN: Generative Adversarial Learning across Spherical Circles",
+      "venue": "Neural Information Processing Systems",
+      "year": 2020,
+      "citationCount": 11,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2011.12486, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science"
+      ],
+      "authors": [
+        {
+          "authorId": "71738784",
+          "name": "Woohyeon Shim"
+        },
+        {
+          "authorId": "72643925",
+          "name": "Minsu Cho"
+        }
+      ],
+      "abstract": "We present a novel discriminator for GANs that improves realness and diversity of generated samples by learning a structured hypersphere embedding space using spherical circles. The proposed discriminator learns to populate realistic samples around the longest spherical circle, i.e., a great circle, while pushing unrealistic samples toward the poles perpendicular to the great circle. Since longer circles occupy larger area on the hypersphere, they encourage more diversity in representation learning, and vice versa. Discriminating samples based on their corresponding spherical circles can thus naturally induce diversity to generated samples. We also extend the proposed method for conditional settings with class labels by creating a hypersphere for each category and performing class-wise discrimination and update. In experiments, we validate the effectiveness for both unconditional and conditional generation on standard benchmarks, achieving the state of the art.",
+      "arxiv_id": "2011.12486",
+      "arxiv_primary_category": "cs.CV",
+      "subdomain": "Computer Vision",
+      "year_cohort": "2020",
+      "tier": "bad",
+      "citation_percentile": 8.18
+    },
+    {
+      "paperId": "47570e7f63e296f224a0e7f9a0d08b0de3cbaf40",
+      "externalIds": {
+        "DBLP": "conf/nips/VinyalsKKPSH15",
+        "MAG": "2951648188",
+        "ArXiv": "1412.7449",
+        "CorpusId": 14223
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Grammar as a Foreign Language",
+      "venue": "Neural Information Processing Systems",
+      "year": 2014,
+      "citationCount": 939,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1412.7449, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "authors": [
+        {
+          "authorId": "1689108",
+          "name": "O. Vinyals"
+        },
+        {
+          "authorId": "40527594",
+          "name": "Lukasz Kaiser"
+        },
+        {
+          "authorId": "2060101052",
+          "name": "Terry Koo"
+        },
+        {
+          "authorId": "1754497",
+          "name": "Slav Petrov"
+        },
+        {
+          "authorId": "1701686",
+          "name": "I. Sutskever"
+        },
+        {
+          "authorId": "1695689",
+          "name": "Geoffrey E. Hinton"
+        }
+      ],
+      "abstract": "Syntactic constituency parsing is a fundamental problem in natural language processing and has been the subject of intensive research and engineering for decades. As a result, the most accurate parsers are domain specific, complex, and inefficient. In this paper we show that the domain agnostic attention-enhanced sequence-to-sequence model achieves state-of-the-art results on the most widely used syntactic constituency parsing dataset, when trained on a large synthetic corpus that was annotated using existing parsers. It also matches the performance of standard parsers when trained only on a small human-annotated dataset, which shows that this model is highly data-efficient, in contrast to sequence-to-sequence models without the attention mechanism. Our parser is also fast, processing over a hundred sentences per second with an unoptimized CPU implementation.",
+      "arxiv_id": "1412.7449",
+      "arxiv_primary_category": "cs.CL",
+      "subdomain": "Natural Language Processing",
+      "year_cohort": "2010-2015",
+      "tier": "good",
+      "citation_percentile": 90.62
+    },
+    {
+      "paperId": "6e795c6e9916174ae12349f5dc3f516570c17ce8",
+      "externalIds": {
+        "MAG": "1486649854",
+        "ArXiv": "1506.06726",
+        "DBLP": "conf/nips/KirosZSZUTF15",
+        "CorpusId": 9126867
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Skip-Thought Vectors",
+      "venue": "Neural Information Processing Systems",
+      "year": 2015,
+      "citationCount": 2481,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1506.06726, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science"
+      ],
+      "authors": [
+        {
+          "authorId": "3450996",
+          "name": "Ryan Kiros"
+        },
+        {
+          "authorId": "2334885409",
+          "name": "Yukun Zhu"
+        },
+        {
+          "authorId": "145124475",
+          "name": "R. Salakhutdinov"
+        },
+        {
+          "authorId": "1804104",
+          "name": "R. Zemel"
+        },
+        {
+          "authorId": "2422559",
+          "name": "R. Urtasun"
+        },
+        {
+          "authorId": "143805211",
+          "name": "A. Torralba"
+        },
+        {
+          "authorId": "37895334",
+          "name": "S. Fidler"
+        }
+      ],
+      "abstract": "We describe an approach for unsupervised learning of a generic, distributed sentence encoder. Using the continuity of text from books, we train an encoder-decoder model that tries to reconstruct the surrounding sentences of an encoded passage. Sentences that share semantic and syntactic properties are thus mapped to similar vector representations. We next introduce a simple vocabulary expansion method to encode words that were not seen as part of training, allowing us to expand our vocabulary to a million words. After training our model, we extract and evaluate our vectors with linear models on 8 tasks: semantic relatedness, paraphrase detection, image-sentence ranking, question-type classification and 4 benchmark sentiment and subjectivity datasets. The end result is an off-the-shelf encoder that can produce highly generic sentence representations that are robust and perform well in practice.",
+      "arxiv_id": "1506.06726",
+      "arxiv_primary_category": "cs.CL",
+      "subdomain": "Natural Language Processing",
+      "year_cohort": "2010-2015",
+      "tier": "good",
+      "citation_percentile": 95.88
+    },
+    {
+      "paperId": "70600593f870f460624c56c2a57b9a03b94f94a5",
+      "externalIds": {
+        "MAG": "2950682695",
+        "DBLP": "journals/corr/PLLKRRS14",
+        "ArXiv": "1402.1454",
+        "CorpusId": 217774
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "An Autoencoder Approach to Learning Bilingual Word Representations",
+      "venue": "Neural Information Processing Systems",
+      "year": 2014,
+      "citationCount": 347,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1402.1454, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science",
+        "Mathematics"
+      ],
+      "authors": [
+        {
+          "authorId": "144631588",
+          "name": "A. Chandar"
+        },
+        {
+          "authorId": "2159456",
+          "name": "Stanislas Lauly"
+        },
+        {
+          "authorId": "1777528",
+          "name": "H. Larochelle"
+        },
+        {
+          "authorId": "2361078",
+          "name": "Mitesh M. Khapra"
+        },
+        {
+          "authorId": "1723632",
+          "name": "Balaraman Ravindran"
+        },
+        {
+          "authorId": "145769639",
+          "name": "V. Raykar"
+        },
+        {
+          "authorId": "2909575",
+          "name": "Amrita Saha"
+        }
+      ],
+      "abstract": "Cross-language learning allows one to use training data from one language to build models for a different language. Many approaches to bilingual learning require that we have word-level alignment of sentences from parallel corpora. In this work we explore the use of autoencoder-based methods for cross-language learning of vectorial word representations that are coherent between two languages, while not relying on word-level alignments. We show that by simply learning to reconstruct the bag-of-words representations of aligned sentences, within and between languages, we can in fact learn high-quality representations and do without word alignments. We empirically investigate the success of our approach on the problem of cross-language text classification, where a classifier trained on a given language (e.g., English) must learn to generalize to a different language (e.g., German). In experiments on 3 language pairs, we show that our approach achieves state-of-the-art performance, outperforming a method exploiting word alignments and a strong machine translation baseline.",
+      "arxiv_id": "1402.1454",
+      "arxiv_primary_category": "cs.CL",
+      "subdomain": "Natural Language Processing",
+      "year_cohort": "2010-2015",
+      "tier": "good",
+      "citation_percentile": 83.75
+    },
+    {
+      "paperId": "1c332cfa211400fc6f56983fb01a6692046116dd",
+      "externalIds": {
+        "DBLP": "conf/nips/HouHSJCL20",
+        "MAG": "3101731278",
+        "ArXiv": "2004.04037",
+        "CorpusId": 215415863
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "DynaBERT: Dynamic BERT with Adaptive Width and Depth",
+      "venue": "Neural Information Processing Systems",
+      "year": 2020,
+      "citationCount": 375,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2004.04037, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Geology",
+        "Computer Science"
+      ],
+      "authors": [
+        {
+          "authorId": "48557122",
+          "name": "Lu Hou"
+        },
+        {
+          "authorId": "1490968632",
+          "name": "Zhiqi Huang"
+        },
+        {
+          "authorId": "50812138",
+          "name": "Lifeng Shang"
+        },
+        {
+          "authorId": "145820291",
+          "name": "Xin Jiang"
+        },
+        {
+          "authorId": "1688015",
+          "name": "Qun Liu"
+        }
+      ],
+      "abstract": "The pre-trained language models like BERT and RoBERTa, though powerful in many natural language processing tasks, are both computational and memory expensive. To alleviate this problem, one approach is to compress them for specific tasks before deployment. However, recent works on BERT compression usually reduce the large BERT model to a fixed smaller size, and can not fully satisfy the requirements of different edge devices with various hardware performances. In this paper, we propose a novel dynamic BERT model (abbreviated as DynaBERT), which can run at adaptive width and depth. The training process of DynaBERT includes first training a width-adaptive BERT and then allows both adaptive width and depth, by distilling knowledge from the full-sized model to small sub-networks. Network rewiring is also used to keep the more important attention heads and neurons shared by more sub-networks. Comprehensive experiments under various efficiency constraints demonstrate that our proposed dynamic BERT (or RoBERTa) at its largest size has comparable performance as BERT (or RoBERTa), while at smaller widths and depths consistently outperforms existing BERT compression methods.",
+      "arxiv_id": "2004.04037",
+      "arxiv_primary_category": "cs.CL",
+      "subdomain": "Natural Language Processing",
+      "year_cohort": "2020",
+      "tier": "good",
+      "citation_percentile": 91.73
+    },
+    {
+      "paperId": "2a218786f4615b82389f78472e7ff22e6ce57490",
+      "externalIds": {
+        "MAG": "3101278968",
+        "ArXiv": "2008.02496",
+        "DBLP": "conf/nips/JiangYZCFY20",
+        "CorpusId": 221006090
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "ConvBERT: Improving BERT with Span-based Dynamic Convolution",
+      "venue": "Neural Information Processing Systems",
+      "year": 2020,
+      "citationCount": 205,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2008.02496, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science"
+      ],
+      "authors": [
+        {
+          "authorId": "145062296",
+          "name": "Zihang Jiang"
+        },
+        {
+          "authorId": "23476952",
+          "name": "Weihao Yu"
+        },
+        {
+          "authorId": "18119920",
+          "name": "Daquan Zhou"
+        },
+        {
+          "authorId": "2144861793",
+          "name": "Yunpeng Chen"
+        },
+        {
+          "authorId": "33221685",
+          "name": "Jiashi Feng"
+        },
+        {
+          "authorId": "143653681",
+          "name": "Shuicheng Yan"
+        }
+      ],
+      "abstract": "Pre-trained language models like BERT and its variants have recently achieved impressive performance in various natural language understanding tasks. However, BERT heavily relies on the global self-attention block and thus suffers large memory footprint and computation cost. Although all its attention heads query on the whole input sequence for generating the attention map from a global perspective, we observe some heads only need to learn local dependencies, which means the existence of computation redundancy. We therefore propose a novel span-based dynamic convolution to replace these self-attention heads to directly model local dependencies. The novel convolution heads, together with the rest self-attention heads, form a new mixed attention block that is more efficient at both global and local context learning. We equip BERT with this mixed attention design and build a ConvBERT model. Experiments have shown that ConvBERT significantly outperforms BERT and its variants in various downstream tasks, with lower training cost and fewer model parameters. Remarkably, ConvBERTbase model achieves 86.4 GLUE score, 0.7 higher than ELECTRAbase, while using less than 1/4 training cost. Code and pre-trained models will be released.",
+      "arxiv_id": "2008.02496",
+      "arxiv_primary_category": "cs.CL",
+      "subdomain": "Natural Language Processing",
+      "year_cohort": "2020",
+      "tier": "good",
+      "citation_percentile": 85.27
+    },
+    {
+      "paperId": "66f0f35fc78bdf2af9de46093d49a428970cde2e",
+      "externalIds": {
+        "MAG": "3099715410",
+        "DBLP": "conf/nips/Sanh0R20",
+        "ArXiv": "2005.07683",
+        "CorpusId": 218665313
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Movement Pruning: Adaptive Sparsity by Fine-Tuning",
+      "venue": "Neural Information Processing Systems",
+      "year": 2020,
+      "citationCount": 597,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2005.07683, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science"
+      ],
+      "authors": [
+        {
+          "authorId": "51918868",
+          "name": "Victor Sanh"
+        },
+        {
+          "authorId": "50335211",
+          "name": "Thomas Wolf"
+        },
+        {
+          "authorId": "2531268",
+          "name": "Alexander M. Rush"
+        }
+      ],
+      "abstract": "Magnitude pruning is a widely used strategy for reducing model size in pure supervised learning; however, it is less effective in the transfer learning regime that has become standard for state-of-the-art natural language processing applications. We propose the use of movement pruning, a simple, deterministic first-order weight pruning method that is more adaptive to pretrained model fine-tuning. We give mathematical foundations to the method and compare it to existing zeroth- and first-order pruning methods. Experiments show that when pruning large pretrained language models, movement pruning shows significant improvements in high-sparsity regimes. When combined with distillation, the approach achieves minimal accuracy loss with down to only 3% of the model parameters.",
+      "arxiv_id": "2005.07683",
+      "arxiv_primary_category": "cs.CL",
+      "subdomain": "Natural Language Processing",
+      "year_cohort": "2020",
+      "tier": "good",
+      "citation_percentile": 94.44
+    },
+    {
+      "paperId": "1e82587033047ebb1c62d93d2c092aba674eaacd",
+      "externalIds": {
+        "DBLP": "conf/nips/0001RWF20",
+        "ArXiv": "2012.05983",
+        "MAG": "3111551129",
+        "CorpusId": 227276437
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "Towards Neural Programming Interfaces",
+      "venue": "Neural Information Processing Systems",
+      "year": 2020,
+      "citationCount": 5,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2012.05983, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science"
+      ],
+      "authors": [
+        {
+          "authorId": "1820370231",
+          "name": "Zachary Brown"
+        },
+        {
+          "authorId": "2067645226",
+          "name": "Nathaniel R. Robinson"
+        },
+        {
+          "authorId": "30585164",
+          "name": "David Wingate"
+        },
+        {
+          "authorId": "1834105",
+          "name": "Nancy Fulda"
+        }
+      ],
+      "abstract": "It is notoriously difficult to control the behavior of artificial neural networks such as generative neural language models. We recast the problem of controlling natural language generation as that of learning to interface with a pretrained language model, just as Application Programming Interfaces (APIs) control the behavior of programs by altering hyperparameters. In this new paradigm, a specialized neural network (called a Neural Programming Interface or NPI) learns to interface with a pretrained language model by manipulating the hidden activations of the pretrained model to produce desired outputs. Importantly, no permanent changes are made to the weights of the original model, allowing us to re-purpose pretrained models for new tasks without overwriting any aspect of the language model. We also contribute a new data set construction algorithm and GAN-inspired loss function that allows us to train NPI models to control outputs of autoregressive transformers. In experiments against other state-of-the-art approaches, we demonstrate the efficacy of our methods using OpenAI's GPT-2 model, successfully controlling noun selection, topic aversion, offensive speech filtering, and other aspects of language while largely maintaining the controlled model's fluency under deterministic settings.",
+      "arxiv_id": "2012.05983",
+      "arxiv_primary_category": "cs.CL",
+      "subdomain": "Natural Language Processing",
+      "year_cohort": "2020",
+      "tier": "bad",
+      "citation_percentile": 1.06
+    },
+    {
+      "paperId": "4ca059f9aa3c16dffb2e7239205082aa47072dcf",
+      "externalIds": {
+        "ArXiv": "2011.07605",
+        "MAG": "3107255092",
+        "DBLP": "journals/corr/abs-2011-07605",
+        "CorpusId": 226964650
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "The Challenge of Diacritics in Yoruba Embeddings",
+      "venue": "Neural Information Processing Systems",
+      "year": 2020,
+      "citationCount": 8,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2011.07605, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science"
+      ],
+      "authors": [
+        {
+          "authorId": "51221489",
+          "name": "Tosin P. Adewumi"
+        },
+        {
+          "authorId": "80342407",
+          "name": "F. Liwicki"
+        },
+        {
+          "authorId": "1743758",
+          "name": "M. Liwicki"
+        }
+      ],
+      "abstract": "The major contributions of this work include the empirical establishment of a better performance for Yoruba embeddings from undiacritized (normalized) dataset and provision of new analogy sets for evaluation. The Yoruba language, being a tonal language, utilizes diacritics (tonal marks) in written form. We show that this affects embedding performance by creating embeddings from exactly the same Wikipedia dataset but with the second one normalized to be undiacritized. We further compare average intrinsic performance with two other work (using analogy test set & WordSim) and we obtain the best performance in WordSim and corresponding Spearman correlation.",
+      "arxiv_id": "2011.07605",
+      "arxiv_primary_category": "cs.CL",
+      "subdomain": "Natural Language Processing",
+      "year_cohort": "2020",
+      "tier": "bad",
+      "citation_percentile": 4.09
+    },
+    {
+      "paperId": "66ceae37af0e7ace4755a5e8f41162d0f6cf7677",
+      "externalIds": {
+        "DBLP": "journals/corr/abs-2005-07877",
+        "MAG": "3025572566",
+        "ArXiv": "2005.07877",
+        "CorpusId": 218674536
+      },
+      "publicationVenue": {
+        "id": "d9720b90-d60b-48bc-9df8-87a30b9a60dd",
+        "name": "Neural Information Processing Systems",
+        "type": "conference",
+        "alternate_names": [
+          "Neural Inf Process Syst",
+          "NeurIPS",
+          "NIPS"
+        ],
+        "url": "http://neurips.cc/"
+      },
+      "title": "MicroNet for Efficient Language Modeling",
+      "venue": "Neural Information Processing Systems",
+      "year": 2020,
+      "citationCount": 8,
+      "openAccessPdf": {
+        "url": "",
+        "status": null,
+        "license": null,
+        "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2005.07877, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+      },
+      "fieldsOfStudy": [
+        "Computer Science"
+      ],
+      "authors": [
+        {
+          "authorId": "1390567306",
+          "name": "Zhongxia Yan"
+        },
+        {
+          "authorId": "1477757714",
+          "name": "Hanrui Wang"
+        },
+        {
+          "authorId": "35578711",
+          "name": "Demi Guo"
+        },
+        {
+          "authorId": "143840275",
+          "name": "Song Han"
+        }
+      ],
+      "abstract": "It is important to design compact language models for efficient deployment. We improve upon recent advances in both the language modeling domain and the model-compression domain to construct parameter and computation efficient language models. We use an efficient transformer-based architecture with adaptive embedding and softmax, differentiable non-parametric cache, Hebbian softmax, knowledge distillation, network pruning, and low-bit quantization. In this paper, we provide the winning solution to the NeurIPS 2019 MicroNet Challenge in the language modeling track. Compared to the baseline language model provided by the MicroNet Challenge, our model is 90 times more parameter-efficient and 36 times more computation-efficient while achieving the required test perplexity of 35 on the Wikitext-103 dataset. We hope that this work will aid future research into efficient language models, and we have released our full source code at this https URL.",
+      "arxiv_id": "2005.07877",
+      "arxiv_primary_category": "cs.CL",
+      "subdomain": "Natural Language Processing",
+      "year_cohort": "2020",
+      "tier": "bad",
+      "citation_percentile": 4.09
+    }
+  ]
+}

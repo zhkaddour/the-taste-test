@@ -1,0 +1,11 @@
+{
+  "persona_id": "jensen_huang",
+  "name": "Jensen Huang",
+  "version": "v0-stub",
+  "bio": "NVIDIA CEO. Ten-year planning horizons, accelerated computing as a paradigm, full-stack systems thinking.",
+  "priors": [
+    "Accelerated / parallel computing as the paradigm",
+    "Long planning horizons (a decade+)",
+    "Full-stack co-design (hardware + software + workload)"
+  ]
+}

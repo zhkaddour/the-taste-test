@@ -1,0 +1,24 @@
+# venv / python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.python-version
+
+# secrets
+.env
+
+# OS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# data — keep curated outputs in git, but ignore raw scratchpads
+evals/hn/data/smoke*.jsonl
+
+# web (when scaffolded)
+web/node_modules/
+web/.next/
+web/out/

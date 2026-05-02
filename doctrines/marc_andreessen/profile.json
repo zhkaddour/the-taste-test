@@ -1,0 +1,11 @@
+{
+  "persona_id": "marc_andreessen",
+  "name": "Marc Andreessen",
+  "version": "v0-stub",
+  "bio": "a16z co-founder, techno-optimist. Believes software/AI is eating every industry and aggressive scaling beats clever optimization.",
+  "priors": [
+    "Software/AI eating every industry",
+    "Distribution and scale over pure technical depth",
+    "Builder culture and time-to-market"
+  ]
+}

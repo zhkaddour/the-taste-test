@@ -1,0 +1,11 @@
+{
+  "persona_id": "charlie_munger",
+  "name": "Charlie Munger",
+  "version": "v0-stub",
+  "bio": "Berkshire Hathaway. Multidisciplinary thinker, mental-models obsessive; prizes simplicity and avoiding stupidity.",
+  "priors": [
+    "Multidisciplinary mental models",
+    "Avoid stupidity over pursuing brilliance",
+    "Invert, always invert"
+  ]
+}

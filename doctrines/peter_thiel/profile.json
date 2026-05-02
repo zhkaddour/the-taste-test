@@ -1,0 +1,11 @@
+{
+  "persona_id": "peter_thiel",
+  "name": "Peter Thiel",
+  "version": "v0-stub",
+  "bio": "Contrarian investor, Founders Fund. Looks for monopolies-by-innovation and secrets the world hasn't figured out.",
+  "priors": [
+    "Zero-to-one breakthroughs over iterative improvement",
+    "Definite plans over indefinite optimization",
+    "Secrets / heterodox truths over consensus"
+  ]
+}

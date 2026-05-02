@@ -1,0 +1,335 @@
+{
+  "metadata": {
+    "n_papers": 66,
+    "n_cross_pairs": 20,
+    "n_same_pairs": 1,
+    "n_personas": 19,
+    "n_judgments": 798,
+    "n_errors": 0,
+    "model": "claude-sonnet-4-6",
+    "timestamp": "2026-05-02T09:18:18.408342+00:00",
+    "seed": 42
+  },
+  "leaderboard": [
+    {
+      "persona_id": "elon_musk",
+      "score": 13,
+      "plus_one": 14,
+      "zero": 5,
+      "minus_one": 1,
+      "n_pairs": 20,
+      "persona_name": "Elon Musk"
+    },
+    {
+      "persona_id": "peter_thiel_ourplaybook",
+      "score": 11,
+      "plus_one": 13,
+      "zero": 5,
+      "minus_one": 2,
+      "n_pairs": 20,
+      "persona_name": "Peter Thiel-OurPlaybook"
+    },
+    {
+      "persona_id": "sam_altman",
+      "score": 10,
+      "plus_one": 15,
+      "zero": 0,
+      "minus_one": 5,
+      "n_pairs": 20,
+      "persona_name": "Sam Altman"
+    },
+    {
+      "persona_id": "naval_ravikant",
+      "score": 9,
+      "plus_one": 14,
+      "zero": 1,
+      "minus_one": 5,
+      "n_pairs": 20,
+      "persona_name": "Naval Ravikant"
+    },
+    {
+      "persona_id": "jensen_huang",
+      "score": 8,
+      "plus_one": 10,
+      "zero": 8,
+      "minus_one": 2,
+      "n_pairs": 20,
+      "persona_name": "Jensen Huang"
+    },
+    {
+      "persona_id": "peter_thiel",
+      "score": 8,
+      "plus_one": 11,
+      "zero": 6,
+      "minus_one": 3,
+      "n_pairs": 20,
+      "persona_name": "Peter Thiel"
+    },
+    {
+      "persona_id": "ray_dalio",
+      "score": 6,
+      "plus_one": 11,
+      "zero": 4,
+      "minus_one": 5,
+      "n_pairs": 20,
+      "persona_name": "Ray Dalio"
+    },
+    {
+      "persona_id": "marc_andreessen",
+      "score": 5,
+      "plus_one": 12,
+      "zero": 1,
+      "minus_one": 7,
+      "n_pairs": 20,
+      "persona_name": "Marc Andreessen"
+    },
+    {
+      "persona_id": "richard_hamming",
+      "score": 5,
+      "plus_one": 11,
+      "zero": 3,
+      "minus_one": 6,
+      "n_pairs": 20,
+      "persona_name": "Richard Hamming"
+    },
+    {
+      "persona_id": "marc_andreessen_ourplaybook",
+      "score": 4,
+      "plus_one": 10,
+      "zero": 4,
+      "minus_one": 6,
+      "n_pairs": 20,
+      "persona_name": "Marc Andreessen-OurPlaybook"
+    },
+    {
+      "persona_id": "paul_graham_ourplaybook",
+      "score": 4,
+      "plus_one": 10,
+      "zero": 4,
+      "minus_one": 6,
+      "n_pairs": 20,
+      "persona_name": "Paul Graham-OurPlaybook"
+    },
+    {
+      "persona_id": "balaji_srinivasan",
+      "score": 3,
+      "plus_one": 10,
+      "zero": 3,
+      "minus_one": 7,
+      "n_pairs": 20,
+      "persona_name": "Balaji Srinivasan"
+    },
+    {
+      "persona_id": "charlie_munger",
+      "score": 3,
+      "plus_one": 7,
+      "zero": 9,
+      "minus_one": 4,
+      "n_pairs": 20,
+      "persona_name": "Charlie Munger"
+    },
+    {
+      "persona_id": "george_soros",
+      "score": 2,
+      "plus_one": 10,
+      "zero": 2,
+      "minus_one": 8,
+      "n_pairs": 20,
+      "persona_name": "George Soros"
+    },
+    {
+      "persona_id": "nassim_taleb",
+      "score": 2,
+      "plus_one": 7,
+      "zero": 8,
+      "minus_one": 5,
+      "n_pairs": 20,
+      "persona_name": "Nassim Nicholas Taleb"
+    },
+    {
+      "persona_id": "warren_buffett_ourplaybook",
+      "score": 2,
+      "plus_one": 8,
+      "zero": 6,
+      "minus_one": 6,
+      "n_pairs": 20,
+      "persona_name": "Warren Buffett-OurPlaybook"
+    },
+    {
+      "persona_id": "howard_marks",
+      "score": 1,
+      "plus_one": 9,
+      "zero": 3,
+      "minus_one": 8,
+      "n_pairs": 20,
+      "persona_name": "Howard Marks"
+    },
+    {
+      "persona_id": "paul_graham",
+      "score": 0,
+      "plus_one": 8,
+      "zero": 4,
+      "minus_one": 8,
+      "n_pairs": 20,
+      "persona_name": "Paul Graham"
+    },
+    {
+      "persona_id": "warren_buffett",
+      "score": -1,
+      "plus_one": 8,
+      "zero": 3,
+      "minus_one": 9,
+      "n_pairs": 20,
+      "persona_name": "Warren Buffett"
+    }
+  ],
+  "pair_index": [
+    {
+      "pair_id": "0927c7eba740953117ddf3e35ca65dd446955c65__22d3a528adda633a17a60b76ab2240a62c58e2e4",
+      "kind": "cross",
+      "cohort": "2010-2015",
+      "paper_a_id": "0927c7eba740953117ddf3e35ca65dd446955c65",
+      "paper_b_id": "22d3a528adda633a17a60b76ab2240a62c58e2e4"
+    },
+    {
+      "pair_id": "23ed0248baa4ec1c114354ba495a16d535312054__e5ae8ab688051931b4814f6d32b18391f8d1fa8d",
+      "kind": "cross",
+      "cohort": "2010-2015",
+      "paper_a_id": "e5ae8ab688051931b4814f6d32b18391f8d1fa8d",
+      "paper_b_id": "23ed0248baa4ec1c114354ba495a16d535312054"
+    },
+    {
+      "pair_id": "336097e41c452c53b6f58cd63de6941d093238da__d61d5437db34de612c67fe8fe15da39918cec4e5",
+      "kind": "cross",
+      "cohort": "2010-2015",
+      "paper_a_id": "d61d5437db34de612c67fe8fe15da39918cec4e5",
+      "paper_b_id": "336097e41c452c53b6f58cd63de6941d093238da"
+    },
+    {
+      "pair_id": "3e3af89047beb407c8fceeac78f2fea1daa0ebc5__7bdc0143e92813ea69e61252b4335526bee820ec",
+      "kind": "cross",
+      "cohort": "2010-2015",
+      "paper_a_id": "7bdc0143e92813ea69e61252b4335526bee820ec",
+      "paper_b_id": "3e3af89047beb407c8fceeac78f2fea1daa0ebc5"
+    },
+    {
+      "pair_id": "31e6c52667dc89efcda7840c317c1da8d4425285__40eac6e6bb54e0da7885989f220f4d3f70249950",
+      "kind": "cross",
+      "cohort": "2010-2015",
+      "paper_a_id": "40eac6e6bb54e0da7885989f220f4d3f70249950",
+      "paper_b_id": "31e6c52667dc89efcda7840c317c1da8d4425285"
+    },
+    {
+      "pair_id": "0927c7eba740953117ddf3e35ca65dd446955c65__a2fea25dec39bfec6d71552bd2477cfe85a5d00d",
+      "kind": "cross",
+      "cohort": "2010-2015",
+      "paper_a_id": "a2fea25dec39bfec6d71552bd2477cfe85a5d00d",
+      "paper_b_id": "0927c7eba740953117ddf3e35ca65dd446955c65"
+    },
+    {
+      "pair_id": "31e6c52667dc89efcda7840c317c1da8d4425285__3e3af89047beb407c8fceeac78f2fea1daa0ebc5",
+      "kind": "cross",
+      "cohort": "2010-2015",
+      "paper_a_id": "3e3af89047beb407c8fceeac78f2fea1daa0ebc5",
+      "paper_b_id": "31e6c52667dc89efcda7840c317c1da8d4425285"
+    },
+    {
+      "pair_id": "77b9dc3991ff0d75d9509c88f70f0ae9763a7535__d61d5437db34de612c67fe8fe15da39918cec4e5",
+      "kind": "cross",
+      "cohort": "2010-2015",
+      "paper_a_id": "77b9dc3991ff0d75d9509c88f70f0ae9763a7535",
+      "paper_b_id": "d61d5437db34de612c67fe8fe15da39918cec4e5"
+    },
+    {
+      "pair_id": "65ff64208cc59bfa54681b2d34dd834bf17f6957__789783016fb708abbc061790612ebe91273c05d3",
+      "kind": "cross",
+      "cohort": "2010-2015",
+      "paper_a_id": "789783016fb708abbc061790612ebe91273c05d3",
+      "paper_b_id": "65ff64208cc59bfa54681b2d34dd834bf17f6957"
+    },
+    {
+      "pair_id": "6b8d0df903496699e52b4daee5d1815b7b784cf7__d61d5437db34de612c67fe8fe15da39918cec4e5",
+      "kind": "cross",
+      "cohort": "2010-2015",
+      "paper_a_id": "6b8d0df903496699e52b4daee5d1815b7b784cf7",
+      "paper_b_id": "d61d5437db34de612c67fe8fe15da39918cec4e5"
+    },
+    {
+      "pair_id": "3374e94cf02d76f8f4e2e60d41b8ed99f2b59f1d__ebae0a96098bb84eee418c76f5b6a2cb87614ac1",
+      "kind": "cross",
+      "cohort": "2020",
+      "paper_a_id": "3374e94cf02d76f8f4e2e60d41b8ed99f2b59f1d",
+      "paper_b_id": "ebae0a96098bb84eee418c76f5b6a2cb87614ac1"
+    },
+    {
+      "pair_id": "6a4a7de57115012a2c044a0c05df3e3a3208bd5e__942dac57251ec1b8af129096a5cd417c06362a8a",
+      "kind": "cross",
+      "cohort": "2020",
+      "paper_a_id": "942dac57251ec1b8af129096a5cd417c06362a8a",
+      "paper_b_id": "6a4a7de57115012a2c044a0c05df3e3a3208bd5e"
+    },
+    {
+      "pair_id": "2d6de22922bf5e43dbfde576c84f658effed67e9__2e5bcdf9c9f6dbd9a1f2e0e1a748da8081b79e87",
+      "kind": "cross",
+      "cohort": "2020",
+      "paper_a_id": "2d6de22922bf5e43dbfde576c84f658effed67e9",
+      "paper_b_id": "2e5bcdf9c9f6dbd9a1f2e0e1a748da8081b79e87"
+    },
+    {
+      "pair_id": "4ca059f9aa3c16dffb2e7239205082aa47072dcf__ebae0a96098bb84eee418c76f5b6a2cb87614ac1",
+      "kind": "cross",
+      "cohort": "2020",
+      "paper_a_id": "4ca059f9aa3c16dffb2e7239205082aa47072dcf",
+      "paper_b_id": "ebae0a96098bb84eee418c76f5b6a2cb87614ac1"
+    },
+    {
+      "pair_id": "1e82587033047ebb1c62d93d2c092aba674eaacd__ebae0a96098bb84eee418c76f5b6a2cb87614ac1",
+      "kind": "cross",
+      "cohort": "2020",
+      "paper_a_id": "ebae0a96098bb84eee418c76f5b6a2cb87614ac1",
+      "paper_b_id": "1e82587033047ebb1c62d93d2c092aba674eaacd"
+    },
+    {
+      "pair_id": "3b0fb765716ef6861a84abffcbe40643857c613b__b37ddbab1cbbd2f6cad233479907ca9d36c7967f",
+      "kind": "cross",
+      "cohort": "2020",
+      "paper_a_id": "b37ddbab1cbbd2f6cad233479907ca9d36c7967f",
+      "paper_b_id": "3b0fb765716ef6861a84abffcbe40643857c613b"
+    },
+    {
+      "pair_id": "1de9fb407cb5e6c7e313b069a9f8768670bde7c7__2a218786f4615b82389f78472e7ff22e6ce57490",
+      "kind": "cross",
+      "cohort": "2020",
+      "paper_a_id": "2a218786f4615b82389f78472e7ff22e6ce57490",
+      "paper_b_id": "1de9fb407cb5e6c7e313b069a9f8768670bde7c7"
+    },
+    {
+      "pair_id": "493ba6d6d3d8dcd82d6a60fcf2484c4d85d85a97__944dded7fcd1bb055cbdf11575e3a2de0ab42886",
+      "kind": "cross",
+      "cohort": "2020",
+      "paper_a_id": "944dded7fcd1bb055cbdf11575e3a2de0ab42886",
+      "paper_b_id": "493ba6d6d3d8dcd82d6a60fcf2484c4d85d85a97"
+    },
+    {
+      "pair_id": "009c42dac6316c0f72b14e353b654560906a0e0f__1e82587033047ebb1c62d93d2c092aba674eaacd",
+      "kind": "cross",
+      "cohort": "2020",
+      "paper_a_id": "1e82587033047ebb1c62d93d2c092aba674eaacd",
+      "paper_b_id": "009c42dac6316c0f72b14e353b654560906a0e0f"
+    },
+    {
+      "pair_id": "6a4a7de57115012a2c044a0c05df3e3a3208bd5e__f74cb4f88f0023bbc350786808ba84c1b7833cec",
+      "kind": "cross",
+      "cohort": "2020",
+      "paper_a_id": "f74cb4f88f0023bbc350786808ba84c1b7833cec",
+      "paper_b_id": "6a4a7de57115012a2c044a0c05df3e3a3208bd5e"
+    },
+    {
+      "pair_id": "5f9ce48983b571aa69706cffc7ace33f352ac59a__bd2cb4546fc01074d55a183a68ce0a0f7be43a43",
+      "kind": "same",
+      "cohort": "2010-2015",
+      "paper_a_id": "5f9ce48983b571aa69706cffc7ace33f352ac59a",
+      "paper_b_id": "bd2cb4546fc01074d55a183a68ce0a0f7be43a43"
+    }
+  ]
+}

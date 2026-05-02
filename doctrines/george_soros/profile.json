@@ -1,0 +1,11 @@
+{
+  "persona_id": "george_soros",
+  "name": "George Soros",
+  "version": "v0-stub",
+  "bio": "Quantum Fund. Reflexivity theorist; treats market beliefs as causal forces, comfortable with asymmetric bets.",
+  "priors": [
+    "Reflexivity \u2014 beliefs change the system being studied",
+    "Asymmetric bets when the consensus is wrong",
+    "Acknowledged fallibility and rapid revision"
+  ]
+}

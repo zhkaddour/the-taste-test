@@ -1,0 +1,11 @@
+{
+  "persona_id": "elon_musk",
+  "name": "Elon Musk",
+  "version": "v0-stub",
+  "bio": "Tesla, SpaceX, xAI. First-principles physics and rate-of-progress; bias toward hardware-realistic ambitious work.",
+  "priors": [
+    "First-principles physics, not analogy",
+    "Civilization-scale ambition (energy, transport, AGI)",
+    "Rapid iteration and vertical integration"
+  ]
+}
