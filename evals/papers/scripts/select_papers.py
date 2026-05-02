@@ -1,7 +1,10 @@
-"""Step 3: stratified random sample from each (subdomain × cohort × tier) cell.
+"""Step 3: stratified random sample from each (domain × cohort × tier) cell.
 
-Reads data/filtered_pool.json, samples per quotas below, writes
-data/selected_papers.json.
+Reads data/filtered_pool.json, takes a fixed quota of 'good' and 'bad' papers
+per (domain × cohort), writes data/selected_papers.json.
+
+The quota is uniform across domains by default. If a cell has fewer than the
+target, takes all of it and reports the shortfall.
 """
 from __future__ import annotations
 
@@ -16,13 +19,11 @@ ROOT = Path(__file__).resolve().parent.parent
 IN_PATH = ROOT / "data" / "filtered_pool.json"
 OUT_PATH = ROOT / "data" / "selected_papers.json"
 
-# Per-cell sampling quotas: (subdomain, cohort, tier) -> target count
-QUOTA = {
-    "Machine Learning":            {"good": 10, "bad": 10},
-    "Computer Vision":             {"good": 5,  "bad": 5},
-    "Natural Language Processing": {"good": 3,  "bad": 3},
-}
+# Default per-(domain × cohort × tier) target. Across 7 domains × 2 cohorts × 2
+# tiers = 28 cells, target=30 yields ~840 papers, enough to build ~1k pairs.
+DEFAULT_PER_CELL = 30
 COHORTS = ["2010-2015", "2020"]
+TIERS = ["good", "bad"]
 SAMPLE_SEED = 42
 
 
@@ -30,6 +31,11 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--force", action="store_true")
     parser.add_argument("--seed", type=int, default=SAMPLE_SEED)
+    parser.add_argument(
+        "--per-cell", type=int, default=DEFAULT_PER_CELL,
+        help=f"Target sample size per (domain × cohort × tier) cell "
+             f"(default: {DEFAULT_PER_CELL})",
+    )
     args = parser.parse_args()
 
     if not IN_PATH.exists():
@@ -43,52 +49,70 @@ def main() -> int:
     pool = raw["papers"]
     rng = random.Random(args.seed)
 
-    # bucket by cell
+    # bucket by (domain, cohort, tier)
     buckets: dict[tuple, list[dict]] = defaultdict(list)
+    domains: set[str] = set()
     for p in pool:
-        buckets[(p["subdomain"], p["year_cohort"], p["tier"])].append(p)
+        buckets[(p["domain"], p["year_cohort"], p["tier"])].append(p)
+        domains.add(p["domain"])
 
     selected: list[dict] = []
-    print(f"Sampling per cell (seed={args.seed}):")
-    print(f"  {'subdomain':<32} {'cohort':<12} {'tier':<5} {'target':>6} {'avail':>6} {'taken':>6}")
-    for sub, tiers in QUOTA.items():
+    shortfalls: list[tuple] = []
+    target = args.per_cell
+
+    print(f"Sampling per cell (seed={args.seed}, target={target}/cell):")
+    print(f"  {'domain':<40} {'cohort':<12} {'tier':<5} "
+          f"{'avail':>6} {'taken':>6}")
+    for dom in sorted(domains):
         for coh in COHORTS:
-            for tier, target in tiers.items():
-                avail = buckets.get((sub, coh, tier), [])
+            for tier in TIERS:
+                avail = buckets.get((dom, coh, tier), [])
                 take = min(target, len(avail))
                 chosen = rng.sample(avail, take) if take else []
-                for p in chosen:
-                    selected.append(p)
-                print(f"  {sub:<32} {coh:<12} {tier:<5} {target:>6} {len(avail):>6} {take:>6}")
+                selected.extend(chosen)
+                marker = " (short)" if len(avail) < target else ""
+                print(f"  {dom:<40} {coh:<12} {tier:<5} "
+                      f"{len(avail):>6} {take:>6}{marker}")
+                if len(avail) < target:
+                    shortfalls.append((dom, coh, tier, len(avail), target))
 
     print(f"\nTotal selected: {len(selected)}")
+    if shortfalls:
+        print(f"\n{len(shortfalls)} cell(s) below target ({target}):")
+        for dom, coh, tier, n, t in shortfalls:
+            print(f"  {dom} | {coh} | {tier}: {n} < {t}")
 
     # quick distribution view
-    print("\nCitation counts of selected papers (sorted):")
     cs = sorted([p["citationCount"] for p in selected])
-    print(f"  min={cs[0]} median={cs[len(cs)//2]} max={cs[-1]}")
+    if cs:
+        print(f"\nCitation counts (selected): "
+              f"min={cs[0]} median={cs[len(cs)//2]} max={cs[-1]}")
 
-    # show a snapshot
-    print("\nFirst 3 of each (subdomain × cohort × tier) cell, by citation:")
+    # spot-check: top 3 of each cell
     grouped: dict[tuple, list[dict]] = defaultdict(list)
     for p in selected:
-        grouped[(p["subdomain"], p["year_cohort"], p["tier"])].append(p)
-    for key, items in sorted(grouped.items()):
-        items.sort(key=lambda p: -p["citationCount"])
-        sub, coh, tier = key
-        print(f"\n  [{sub} | {coh} | {tier}] ({len(items)} papers)")
+        grouped[(p["domain"], p["year_cohort"], p["tier"])].append(p)
+    print("\nTop 3 by citation per (domain × cohort × tier):")
+    for key in sorted(grouped.keys()):
+        items = sorted(grouped[key], key=lambda p: -p["citationCount"])
+        dom, coh, tier = key
+        print(f"\n  [{dom} | {coh} | {tier}] ({len(items)})")
         for p in items[:3]:
             title = (p.get("title") or "")[:70]
-            print(f"    {p['citationCount']:>6}  pct={p['citation_percentile']:>5.1f}  {title}")
+            cite = p["citationCount"]
+            pct = p["citation_percentile"]
+            print(f"    cites={cite:>6}  pct={pct:>5.1f}  {title}")
 
     OUT_PATH.write_text(json.dumps({
         "source": IN_PATH.name,
         "seed": args.seed,
-        "quota": QUOTA,
+        "per_cell_target": target,
+        "shortfalls": [{"domain": d, "cohort": c, "tier": t, "available": n,
+                        "target": t_} for d, c, t, n, t_ in shortfalls],
         "papers": selected,
     }, indent=2))
     print(f"\nWrote {len(selected)} papers to {OUT_PATH}")
-    print("\nPaused. Review the distribution above before approving Step 4 (anonymization).")
+    print("\nReview the distribution above before proceeding to anonymization.")
     return 0
 
 

@@ -1,0 +1,1195 @@
+{
+  "metadata": {
+    "domain": "hn",
+    "n_pairs": 100,
+    "n_cross": 100,
+    "n_same": 0,
+    "n_personas": 25,
+    "n_judgments": 5000,
+    "n_errors": 0,
+    "timestamp": "2026-05-02T15:39:44.960736+00:00",
+    "seed": 42,
+    "pair_meta": {
+      "skipped_no_abstract": 0
+    }
+  },
+  "leaderboard": [
+    {
+      "persona_id": "vanilla_sonnet_4_6",
+      "score": 72,
+      "plus_one": 82,
+      "zero": 8,
+      "minus_one": 10,
+      "n_pairs": 100,
+      "persona_name": "Vanilla Sonnet 4.6 (no doctrine)",
+      "model": "claude-sonnet-4-6",
+      "kind": "vanilla"
+    },
+    {
+      "persona_id": "marc-andreessen-distilled",
+      "score": 71,
+      "plus_one": 83,
+      "zero": 5,
+      "minus_one": 12,
+      "n_pairs": 100,
+      "persona_name": "The Andreessen Doctrine (distilled)",
+      "model": "claude-sonnet-4-6",
+      "kind": "doctrine"
+    },
+    {
+      "persona_id": "vanilla_opus_4_7",
+      "score": 66,
+      "plus_one": 81,
+      "zero": 4,
+      "minus_one": 15,
+      "n_pairs": 100,
+      "persona_name": "Vanilla Opus 4.7 (no doctrine)",
+      "model": "claude-opus-4-7",
+      "kind": "vanilla"
+    },
+    {
+      "persona_id": "sam-altman-distilled",
+      "score": 63,
+      "plus_one": 78,
+      "zero": 7,
+      "minus_one": 15,
+      "n_pairs": 100,
+      "persona_name": "The Altman Doctrine (distilled)",
+      "model": "claude-sonnet-4-6",
+      "kind": "doctrine"
+    },
+    {
+      "persona_id": "naval-ravikant-distilled",
+      "score": 62,
+      "plus_one": 77,
+      "zero": 8,
+      "minus_one": 15,
+      "n_pairs": 100,
+      "persona_name": "The Naval Doctrine (distilled)",
+      "model": "claude-sonnet-4-6",
+      "kind": "doctrine"
+    },
+    {
+      "persona_id": "ray-dalio-distilled",
+      "score": 62,
+      "plus_one": 77,
+      "zero": 8,
+      "minus_one": 15,
+      "n_pairs": 100,
+      "persona_name": "The Dalio Doctrine (distilled)",
+      "model": "claude-sonnet-4-6",
+      "kind": "doctrine"
+    },
+    {
+      "persona_id": "george-soros-distilled",
+      "score": 60,
+      "plus_one": 74,
+      "zero": 12,
+      "minus_one": 14,
+      "n_pairs": 100,
+      "persona_name": "The Soros Doctrine (distilled)",
+      "model": "claude-sonnet-4-6",
+      "kind": "doctrine"
+    },
+    {
+      "persona_id": "howard-marks-distilled",
+      "score": 59,
+      "plus_one": 72,
+      "zero": 15,
+      "minus_one": 13,
+      "n_pairs": 100,
+      "persona_name": "The Marks Doctrine (distilled)",
+      "model": "claude-sonnet-4-6",
+      "kind": "doctrine"
+    },
+    {
+      "persona_id": "cathie-wood-distilled",
+      "score": 57,
+      "plus_one": 74,
+      "zero": 9,
+      "minus_one": 17,
+      "n_pairs": 100,
+      "persona_name": "The Wood Doctrine (distilled)",
+      "model": "claude-sonnet-4-6",
+      "kind": "doctrine"
+    },
+    {
+      "persona_id": "elon-musk-distilled",
+      "score": 55,
+      "plus_one": 72,
+      "zero": 11,
+      "minus_one": 17,
+      "n_pairs": 100,
+      "persona_name": "The Musk Doctrine (distilled)",
+      "model": "claude-sonnet-4-6",
+      "kind": "doctrine"
+    },
+    {
+      "persona_id": "warren-buffett-distilled",
+      "score": 54,
+      "plus_one": 71,
+      "zero": 12,
+      "minus_one": 17,
+      "n_pairs": 100,
+      "persona_name": "The Buffett Doctrine (distilled)",
+      "model": "claude-sonnet-4-6",
+      "kind": "doctrine"
+    },
+    {
+      "persona_id": "jensen-huang-distilled",
+      "score": 53,
+      "plus_one": 69,
+      "zero": 15,
+      "minus_one": 16,
+      "n_pairs": 100,
+      "persona_name": "The Jensen Doctrine (distilled)",
+      "model": "claude-sonnet-4-6",
+      "kind": "doctrine"
+    },
+    {
+      "persona_id": "paul-graham-light",
+      "score": 52,
+      "plus_one": 73,
+      "zero": 6,
+      "minus_one": 21,
+      "n_pairs": 100,
+      "persona_name": "Paul Graham (light)",
+      "model": "claude-sonnet-4-6",
+      "kind": "doctrine"
+    },
+    {
+      "persona_id": "paul-graham-distilled",
+      "score": 51,
+      "plus_one": 68,
+      "zero": 15,
+      "minus_one": 17,
+      "n_pairs": 100,
+      "persona_name": "The Graham Doctrine (distilled)",
+      "model": "claude-sonnet-4-6",
+      "kind": "doctrine"
+    },
+    {
+      "persona_id": "charlie-munger-distilled",
+      "score": 47,
+      "plus_one": 65,
+      "zero": 17,
+      "minus_one": 18,
+      "n_pairs": 100,
+      "persona_name": "The Munger Doctrine (distilled)",
+      "model": "claude-sonnet-4-6",
+      "kind": "doctrine"
+    },
+    {
+      "persona_id": "warren-buffett-light",
+      "score": 47,
+      "plus_one": 68,
+      "zero": 11,
+      "minus_one": 21,
+      "n_pairs": 100,
+      "persona_name": "Warren Buffett (light)",
+      "model": "claude-sonnet-4-6",
+      "kind": "doctrine"
+    },
+    {
+      "persona_id": "ayn-rand-distilled",
+      "score": 45,
+      "plus_one": 63,
+      "zero": 19,
+      "minus_one": 18,
+      "n_pairs": 100,
+      "persona_name": "The Rand Doctrine (distilled)",
+      "model": "claude-sonnet-4-6",
+      "kind": "doctrine"
+    },
+    {
+      "persona_id": "balaji-srinivasan-distilled",
+      "score": 42,
+      "plus_one": 66,
+      "zero": 10,
+      "minus_one": 24,
+      "n_pairs": 100,
+      "persona_name": "The Balaji Doctrine (distilled)",
+      "model": "claude-sonnet-4-6",
+      "kind": "doctrine"
+    },
+    {
+      "persona_id": "nassim-taleb-distilled",
+      "score": 41,
+      "plus_one": 60,
+      "zero": 21,
+      "minus_one": 19,
+      "n_pairs": 100,
+      "persona_name": "The Taleb Doctrine (distilled)",
+      "model": "claude-sonnet-4-6",
+      "kind": "doctrine"
+    },
+    {
+      "persona_id": "richard-hamming-light",
+      "score": 41,
+      "plus_one": 64,
+      "zero": 13,
+      "minus_one": 23,
+      "n_pairs": 100,
+      "persona_name": "Richard Hamming (light)",
+      "model": "claude-sonnet-4-6",
+      "kind": "doctrine"
+    },
+    {
+      "persona_id": "andrej-karpathy-distilled",
+      "score": 39,
+      "plus_one": 61,
+      "zero": 17,
+      "minus_one": 22,
+      "n_pairs": 100,
+      "persona_name": "The Karpathy Doctrine (distilled)",
+      "model": "claude-sonnet-4-6",
+      "kind": "doctrine"
+    },
+    {
+      "persona_id": "peter-thiel-light",
+      "score": 38,
+      "plus_one": 64,
+      "zero": 10,
+      "minus_one": 26,
+      "n_pairs": 100,
+      "persona_name": "Peter Thiel (light)",
+      "model": "claude-sonnet-4-6",
+      "kind": "doctrine"
+    },
+    {
+      "persona_id": "richard-hamming-distilled",
+      "score": 37,
+      "plus_one": 63,
+      "zero": 11,
+      "minus_one": 26,
+      "n_pairs": 100,
+      "persona_name": "The Hamming Doctrine (distilled)",
+      "model": "claude-sonnet-4-6",
+      "kind": "doctrine"
+    },
+    {
+      "persona_id": "peter-thiel-distilled",
+      "score": 32,
+      "plus_one": 58,
+      "zero": 16,
+      "minus_one": 26,
+      "n_pairs": 100,
+      "persona_name": "The Thiel Doctrine (distilled)",
+      "model": "claude-sonnet-4-6",
+      "kind": "doctrine"
+    },
+    {
+      "persona_id": "nassim-taleb-light",
+      "score": 18,
+      "plus_one": 48,
+      "zero": 22,
+      "minus_one": 30,
+      "n_pairs": 100,
+      "persona_name": "Nassim Nicholas Taleb (light)",
+      "model": "claude-sonnet-4-6",
+      "kind": "doctrine"
+    }
+  ],
+  "pair_index": [
+    {
+      "pair_id": "2023Q4_TypeScript_009",
+      "kind": "cross",
+      "cohort_key": "2023Q4__TypeScript",
+      "side_a_id": "hseager/nebulis",
+      "side_b_id": "zenstackhq/zenstack",
+      "correct_side": "B",
+      "year": 2023
+    },
+    {
+      "pair_id": "2020Q3_C_000",
+      "kind": "cross",
+      "cohort_key": "2020Q3__C",
+      "side_a_id": "kimbo/aes",
+      "side_b_id": "s-macke/FSHistory",
+      "correct_side": "B",
+      "year": 2020
+    },
+    {
+      "pair_id": "2021Q4_Python_005",
+      "kind": "cross",
+      "cohort_key": "2021Q4__Python",
+      "side_a_id": "Flagsmith/flagsmith",
+      "side_b_id": "ikodotai/bmc",
+      "correct_side": "A",
+      "year": 2021
+    },
+    {
+      "pair_id": "2022Q2_Go_006",
+      "kind": "cross",
+      "cohort_key": "2022Q2__Go",
+      "side_a_id": "micvbang/go-mocky",
+      "side_b_id": "ddosify/ddosify",
+      "correct_side": "B",
+      "year": 2022
+    },
+    {
+      "pair_id": "2020Q2_Go_011",
+      "kind": "cross",
+      "cohort_key": "2020Q2__Go",
+      "side_a_id": "christianscott/print-paths-as-tree",
+      "side_b_id": "pion/dtls",
+      "correct_side": "B",
+      "year": 2020
+    },
+    {
+      "pair_id": "2022Q3_Rust_000",
+      "kind": "cross",
+      "cohort_key": "2022Q3__Rust",
+      "side_a_id": "jcamiel/loop-bin",
+      "side_b_id": "delta-io/delta-rs",
+      "correct_side": "B",
+      "year": 2022
+    },
+    {
+      "pair_id": "2023Q3_Python_001",
+      "kind": "cross",
+      "cohort_key": "2023Q3__Python",
+      "side_a_id": "jackmpcollins/magentic",
+      "side_b_id": "greydoubt/python_linux_subprocess_tutorial",
+      "correct_side": "A",
+      "year": 2023
+    },
+    {
+      "pair_id": "2021Q2_Go_002",
+      "kind": "cross",
+      "cohort_key": "2021Q2__Go",
+      "side_a_id": "RH12503/Triangula",
+      "side_b_id": "mattiasrunge/barf",
+      "correct_side": "A",
+      "year": 2021
+    },
+    {
+      "pair_id": "2021Q3_TypeScript_005",
+      "kind": "cross",
+      "cohort_key": "2021Q3__TypeScript",
+      "side_a_id": "ajbura/cinny",
+      "side_b_id": "aynik/proxy-lens",
+      "correct_side": "A",
+      "year": 2021
+    },
+    {
+      "pair_id": "2023Q4_TypeScript_008",
+      "kind": "cross",
+      "cohort_key": "2023Q4__TypeScript",
+      "side_a_id": "bryanhoulton/lemma-trees",
+      "side_b_id": "featurevisor/featurevisor",
+      "correct_side": "B",
+      "year": 2023
+    },
+    {
+      "pair_id": "2023Q4_Python_016",
+      "kind": "cross",
+      "cohort_key": "2023Q4__Python",
+      "side_a_id": "ericsoderstrom/connectionsGPT",
+      "side_b_id": "turbolytics/sql-flow",
+      "correct_side": "B",
+      "year": 2023
+    },
+    {
+      "pair_id": "2022Q4_JavaScript_005",
+      "kind": "cross",
+      "cohort_key": "2022Q4__JavaScript",
+      "side_a_id": "madprops/Hoff",
+      "side_b_id": "breck7/scroll",
+      "correct_side": "B",
+      "year": 2022
+    },
+    {
+      "pair_id": "2020Q3_Java_000",
+      "kind": "cross",
+      "cohort_key": "2020Q3__Java",
+      "side_a_id": "olwflynn/okrconversation",
+      "side_b_id": "warmuuh/milkman",
+      "correct_side": "B",
+      "year": 2020
+    },
+    {
+      "pair_id": "2022Q3_TypeScript_006",
+      "kind": "cross",
+      "cohort_key": "2022Q3__TypeScript",
+      "side_a_id": "Devzstudio/tailwind_to_css",
+      "side_b_id": "samhuk/ts-pg-orm",
+      "correct_side": "A",
+      "year": 2022
+    },
+    {
+      "pair_id": "2020Q3_Swift_000",
+      "kind": "cross",
+      "cohort_key": "2020Q3__Swift",
+      "side_a_id": "ther0n/UnnaturalScrollWheels",
+      "side_b_id": "RiftValleySoftware/RVS_BlueThoth",
+      "correct_side": "A",
+      "year": 2020
+    },
+    {
+      "pair_id": "2021Q3_JavaScript_001",
+      "kind": "cross",
+      "cohort_key": "2021Q3__JavaScript",
+      "side_a_id": "openfaas/astradb-openfaas",
+      "side_b_id": "actuallyakash/spacers",
+      "correct_side": "B",
+      "year": 2021
+    },
+    {
+      "pair_id": "2020Q2_C++_003",
+      "kind": "cross",
+      "cohort_key": "2020Q2__C++",
+      "side_a_id": "bhauth/multilevel-ternary-hash-table",
+      "side_b_id": "oatpp/oatpp",
+      "correct_side": "B",
+      "year": 2020
+    },
+    {
+      "pair_id": "2020Q2_C++_001",
+      "kind": "cross",
+      "cohort_key": "2020Q2__C++",
+      "side_a_id": "ttalvitie/browservice",
+      "side_b_id": "rkday/cpp-exception-interposer",
+      "correct_side": "A",
+      "year": 2020
+    },
+    {
+      "pair_id": "2022Q4_C_003",
+      "kind": "cross",
+      "cohort_key": "2022Q4__C",
+      "side_a_id": "mickjc750/Spiromorph",
+      "side_b_id": "Luos-io/luos_engine",
+      "correct_side": "B",
+      "year": 2022
+    },
+    {
+      "pair_id": "2023Q3_Python_005",
+      "kind": "cross",
+      "cohort_key": "2023Q3__Python",
+      "side_a_id": "minghaochen/Toy-Code-Interpreter",
+      "side_b_id": "unum-cloud/uform",
+      "correct_side": "B",
+      "year": 2023
+    },
+    {
+      "pair_id": "2022Q1_Go_008",
+      "kind": "cross",
+      "cohort_key": "2022Q1__Go",
+      "side_a_id": "cmars/oniongrok",
+      "side_b_id": "weakphish/goptional",
+      "correct_side": "A",
+      "year": 2022
+    },
+    {
+      "pair_id": "2020Q4_Python_007",
+      "kind": "cross",
+      "cohort_key": "2020Q4__Python",
+      "side_a_id": "joe-gibbs/anchor-spa",
+      "side_b_id": "benedekrozemberczki/pytorch_geometric_temporal",
+      "correct_side": "B",
+      "year": 2020
+    },
+    {
+      "pair_id": "2020Q4_JavaScript_007",
+      "kind": "cross",
+      "cohort_key": "2020Q4__JavaScript",
+      "side_a_id": "c9fe/22120",
+      "side_b_id": "RocktimSaikia/package-outdated",
+      "correct_side": "A",
+      "year": 2020
+    },
+    {
+      "pair_id": "2023Q1_Shell_000",
+      "kind": "cross",
+      "cohort_key": "2023Q1__Shell",
+      "side_a_id": "joelparkerhenderson/plantuml-examples",
+      "side_b_id": "alesr/haiku",
+      "correct_side": "A",
+      "year": 2023
+    },
+    {
+      "pair_id": "2020Q4_Go_004",
+      "kind": "cross",
+      "cohort_key": "2020Q4__Go",
+      "side_a_id": "pion/example-webrtc-applications",
+      "side_b_id": "NightMachinary/ntagcolor",
+      "correct_side": "A",
+      "year": 2020
+    },
+    {
+      "pair_id": "2020Q1_C++_000",
+      "kind": "cross",
+      "cohort_key": "2020Q1__C++",
+      "side_a_id": "rcorcs/SeqALib",
+      "side_b_id": "ammarahm-ed/react-native-mmkv-storage",
+      "correct_side": "B",
+      "year": 2020
+    },
+    {
+      "pair_id": "2022Q3_Python_000",
+      "kind": "cross",
+      "cohort_key": "2022Q3__Python",
+      "side_a_id": "mayahq/flatland",
+      "side_b_id": "chapmanjacobd/lb",
+      "correct_side": "B",
+      "year": 2022
+    },
+    {
+      "pair_id": "2023Q2_Python_014",
+      "kind": "cross",
+      "cohort_key": "2023Q2__Python",
+      "side_a_id": "fpgmaas/deptry",
+      "side_b_id": "iunary/securo",
+      "correct_side": "A",
+      "year": 2023
+    },
+    {
+      "pair_id": "2023Q2_TypeScript_013",
+      "kind": "cross",
+      "cohort_key": "2023Q2__TypeScript",
+      "side_a_id": "arihantparsoya/chatgpt-cloud-service",
+      "side_b_id": "fonoster/routr",
+      "correct_side": "B",
+      "year": 2023
+    },
+    {
+      "pair_id": "2023Q3_Rust_003",
+      "kind": "cross",
+      "cohort_key": "2023Q3__Rust",
+      "side_a_id": "yamafaktory/jql",
+      "side_b_id": "thistletech/thistle-yocto-build",
+      "correct_side": "A",
+      "year": 2023
+    },
+    {
+      "pair_id": "2020Q4_JavaScript_005",
+      "kind": "cross",
+      "cohort_key": "2020Q4__JavaScript",
+      "side_a_id": "mgilangjanuar/restfire-extension",
+      "side_b_id": "revir/dictionaries",
+      "correct_side": "B",
+      "year": 2020
+    },
+    {
+      "pair_id": "2020Q3_Go_001",
+      "kind": "cross",
+      "cohort_key": "2020Q3__Go",
+      "side_a_id": "djmgit/Pexec",
+      "side_b_id": "bnkamalesh/goapp",
+      "correct_side": "B",
+      "year": 2020
+    },
+    {
+      "pair_id": "2020Q4_Python_013",
+      "kind": "cross",
+      "cohort_key": "2020Q4__Python",
+      "side_a_id": "klittlepage/aoctools",
+      "side_b_id": "sdv-dev/SDV",
+      "correct_side": "B",
+      "year": 2020
+    },
+    {
+      "pair_id": "2021Q2_Ruby_000",
+      "kind": "cross",
+      "cohort_key": "2021Q2__Ruby",
+      "side_a_id": "ch1c0t/hobby-rpc",
+      "side_b_id": "artagnon/clayoven",
+      "correct_side": "B",
+      "year": 2021
+    },
+    {
+      "pair_id": "2020Q2_C++_000",
+      "kind": "cross",
+      "cohort_key": "2020Q2__C++",
+      "side_a_id": "snarkai/Hub",
+      "side_b_id": "pkarnakov/ptoy",
+      "correct_side": "A",
+      "year": 2020
+    },
+    {
+      "pair_id": "2022Q1_Go_002",
+      "kind": "cross",
+      "cohort_key": "2022Q1__Go",
+      "side_a_id": "devtron-labs/devtron",
+      "side_b_id": "orishoshan/sqljson",
+      "correct_side": "A",
+      "year": 2022
+    },
+    {
+      "pair_id": "2021Q2_C_000",
+      "kind": "cross",
+      "cohort_key": "2021Q2__C",
+      "side_a_id": "Vrroom/parallel-qo-postgres",
+      "side_b_id": "eduard-permyakov/permafrost-engine",
+      "correct_side": "B",
+      "year": 2021
+    },
+    {
+      "pair_id": "2020Q1_C_000",
+      "kind": "cross",
+      "cohort_key": "2020Q1__C",
+      "side_a_id": "lc-soft/LCUI",
+      "side_b_id": "TurkeyMcMac/piks",
+      "correct_side": "A",
+      "year": 2020
+    },
+    {
+      "pair_id": "2023Q2_Python_008",
+      "kind": "cross",
+      "cohort_key": "2023Q2__Python",
+      "side_a_id": "masa-08/doru",
+      "side_b_id": "zilliztech/GPTCache",
+      "correct_side": "B",
+      "year": 2023
+    },
+    {
+      "pair_id": "2021Q1_JavaScript_003",
+      "kind": "cross",
+      "cohort_key": "2021Q1__JavaScript",
+      "side_a_id": "isaacHagoel/svelte-dnd-action",
+      "side_b_id": "LiveDuo/simple-redux",
+      "correct_side": "A",
+      "year": 2021
+    },
+    {
+      "pair_id": "2023Q4_Shell_000",
+      "kind": "cross",
+      "cohort_key": "2023Q4__Shell",
+      "side_a_id": "hiAndrewQuinn/shell-bling-ubuntu",
+      "side_b_id": "sarusso/SlurmID",
+      "correct_side": "A",
+      "year": 2023
+    },
+    {
+      "pair_id": "2023Q3_Python_014",
+      "kind": "cross",
+      "cohort_key": "2023Q3__Python",
+      "side_a_id": "marqo-ai/marqo",
+      "side_b_id": "Mortal/livespectro",
+      "correct_side": "A",
+      "year": 2023
+    },
+    {
+      "pair_id": "2022Q2_TypeScript_004",
+      "kind": "cross",
+      "cohort_key": "2022Q2__TypeScript",
+      "side_a_id": "JohnBra/vite-web-extension",
+      "side_b_id": "serhii-dolia/roots-of-lisp",
+      "correct_side": "A",
+      "year": 2022
+    },
+    {
+      "pair_id": "2021Q1_TypeScript_003",
+      "kind": "cross",
+      "cohort_key": "2021Q1__TypeScript",
+      "side_a_id": "beenotung/gen-sql-type",
+      "side_b_id": "atlassian-labs/compiled-css-in-js",
+      "correct_side": "B",
+      "year": 2021
+    },
+    {
+      "pair_id": "2022Q2_TypeScript_000",
+      "kind": "cross",
+      "cohort_key": "2022Q2__TypeScript",
+      "side_a_id": "ricokahler/lazy",
+      "side_b_id": "boxyhq/jackson",
+      "correct_side": "B",
+      "year": 2022
+    },
+    {
+      "pair_id": "2023Q1_Go_002",
+      "kind": "cross",
+      "cohort_key": "2023Q1__Go",
+      "side_a_id": "reddec/auto-restic",
+      "side_b_id": "treeverse/lakeFS",
+      "correct_side": "B",
+      "year": 2023
+    },
+    {
+      "pair_id": "2022Q3_TypeScript_002",
+      "kind": "cross",
+      "cohort_key": "2022Q3__TypeScript",
+      "side_a_id": "beenotung/slnpm",
+      "side_b_id": "Escape-Technologies/graphql-armor",
+      "correct_side": "B",
+      "year": 2022
+    },
+    {
+      "pair_id": "2023Q1_Python_008",
+      "kind": "cross",
+      "cohort_key": "2023Q1__Python",
+      "side_a_id": "sansyrox/robyn",
+      "side_b_id": "david-haerer/apparition",
+      "correct_side": "A",
+      "year": 2023
+    },
+    {
+      "pair_id": "2022Q2_Python_004",
+      "kind": "cross",
+      "cohort_key": "2022Q2__Python",
+      "side_a_id": "forhadahmed/refactor",
+      "side_b_id": "Fizzadar/pyinfra",
+      "correct_side": "B",
+      "year": 2022
+    },
+    {
+      "pair_id": "2020Q3_Swift_001",
+      "kind": "cross",
+      "cohort_key": "2020Q3__Swift",
+      "side_a_id": "MaximV88/Aluminum",
+      "side_b_id": "leits/MeetingBar",
+      "correct_side": "B",
+      "year": 2020
+    },
+    {
+      "pair_id": "2021Q2_JavaScript_001",
+      "kind": "cross",
+      "cohort_key": "2021Q2__JavaScript",
+      "side_a_id": "francoismassart/eslint-plugin-tailwindcss",
+      "side_b_id": "neeilan/cute",
+      "correct_side": "A",
+      "year": 2021
+    },
+    {
+      "pair_id": "2020Q2_Ruby_000",
+      "kind": "cross",
+      "cohort_key": "2020Q2__Ruby",
+      "side_a_id": "amalfra/maildir2json",
+      "side_b_id": "matt-harvey/git_curate",
+      "correct_side": "B",
+      "year": 2020
+    },
+    {
+      "pair_id": "2021Q2_Python_011",
+      "kind": "cross",
+      "cohort_key": "2021Q2__Python",
+      "side_a_id": "terror/xbar-hackernews",
+      "side_b_id": "davidlatwe/montydb",
+      "correct_side": "B",
+      "year": 2021
+    },
+    {
+      "pair_id": "2022Q1_Rust_002",
+      "kind": "cross",
+      "cohort_key": "2022Q1__Rust",
+      "side_a_id": "sigoden/windows-switcher",
+      "side_b_id": "imihajlow/emojifuck",
+      "correct_side": "A",
+      "year": 2022
+    },
+    {
+      "pair_id": "2020Q1_C++_002",
+      "kind": "cross",
+      "cohort_key": "2020Q1__C++",
+      "side_a_id": "dvorka/mindforger",
+      "side_b_id": "efojs/rangiano",
+      "correct_side": "A",
+      "year": 2020
+    },
+    {
+      "pair_id": "2020Q1_JavaScript_002",
+      "kind": "cross",
+      "cohort_key": "2020Q1__JavaScript",
+      "side_a_id": "dosyago/22120",
+      "side_b_id": "twosdai/contentGrabber",
+      "correct_side": "A",
+      "year": 2020
+    },
+    {
+      "pair_id": "2021Q3_Python_004",
+      "kind": "cross",
+      "cohort_key": "2021Q3__Python",
+      "side_a_id": "lemon24/reader",
+      "side_b_id": "Keeo/end-of-file",
+      "correct_side": "A",
+      "year": 2021
+    },
+    {
+      "pair_id": "2020Q4_Rust_001",
+      "kind": "cross",
+      "cohort_key": "2020Q4__Rust",
+      "side_a_id": "SuperCuber/dotter",
+      "side_b_id": "fake-industries/fuzzball",
+      "correct_side": "A",
+      "year": 2020
+    },
+    {
+      "pair_id": "2023Q2_Rust_002",
+      "kind": "cross",
+      "cohort_key": "2023Q2__Rust",
+      "side_a_id": "datenlord/Xline",
+      "side_b_id": "eludris/eludris",
+      "correct_side": "A",
+      "year": 2023
+    },
+    {
+      "pair_id": "2023Q4_Rust_003",
+      "kind": "cross",
+      "cohort_key": "2023Q4__Rust",
+      "side_a_id": "anoopelias/wasmrepl",
+      "side_b_id": "ofek/pyapp",
+      "correct_side": "B",
+      "year": 2023
+    },
+    {
+      "pair_id": "2020Q3_Python_006",
+      "kind": "cross",
+      "cohort_key": "2020Q3__Python",
+      "side_a_id": "williamfzc/devcube",
+      "side_b_id": "gaogaotiantian/viztracer",
+      "correct_side": "B",
+      "year": 2020
+    },
+    {
+      "pair_id": "2021Q2_Python_008",
+      "kind": "cross",
+      "cohort_key": "2021Q2__Python",
+      "side_a_id": "benedekrozemberczki/PyTorch_geometric_temporal",
+      "side_b_id": "dznl/fontdozenalizer",
+      "correct_side": "A",
+      "year": 2021
+    },
+    {
+      "pair_id": "2020Q2_Rust_001",
+      "kind": "cross",
+      "cohort_key": "2020Q2__Rust",
+      "side_a_id": "aaronjanse/dns-over-wikipedia",
+      "side_b_id": "gmemstr/whalepod",
+      "correct_side": "A",
+      "year": 2020
+    },
+    {
+      "pair_id": "2022Q4_Go_005",
+      "kind": "cross",
+      "cohort_key": "2022Q4__Go",
+      "side_a_id": "Juice-Labs/Juice-Labs",
+      "side_b_id": "h1xxx/newsfilter",
+      "correct_side": "A",
+      "year": 2022
+    },
+    {
+      "pair_id": "2023Q1_JavaScript_001",
+      "kind": "cross",
+      "cohort_key": "2023Q1__JavaScript",
+      "side_a_id": "rnd7/awsm",
+      "side_b_id": "miroslavpejic85/mirotalkwebrtc",
+      "correct_side": "B",
+      "year": 2023
+    },
+    {
+      "pair_id": "2020Q2_Go_009",
+      "kind": "cross",
+      "cohort_key": "2020Q2__Go",
+      "side_a_id": "FairwindsOps/pluto",
+      "side_b_id": "ofte-auth/dogpark",
+      "correct_side": "A",
+      "year": 2020
+    },
+    {
+      "pair_id": "2020Q1_(none)_000",
+      "kind": "cross",
+      "cohort_key": "2020Q1__(none)",
+      "side_a_id": "anoffvu/codersagainstcovid",
+      "side_b_id": "sindresorhus/Plash",
+      "correct_side": "B",
+      "year": 2020
+    },
+    {
+      "pair_id": "2021Q2_Go_001",
+      "kind": "cross",
+      "cohort_key": "2021Q2__Go",
+      "side_a_id": "StuffJackMakes/Quiet-Audio-Fade",
+      "side_b_id": "RH12503/triangula",
+      "correct_side": "B",
+      "year": 2021
+    },
+    {
+      "pair_id": "2020Q2_Rust_002",
+      "kind": "cross",
+      "cohort_key": "2020Q2__Rust",
+      "side_a_id": "H-M-H/Weylus",
+      "side_b_id": "anfractuosity/synth",
+      "correct_side": "A",
+      "year": 2020
+    },
+    {
+      "pair_id": "2022Q1_TypeScript_000",
+      "kind": "cross",
+      "cohort_key": "2022Q1__TypeScript",
+      "side_a_id": "astashov/liftosaur",
+      "side_b_id": "fitzn/sieve",
+      "correct_side": "A",
+      "year": 2022
+    },
+    {
+      "pair_id": "2020Q4_PHP_001",
+      "kind": "cross",
+      "cohort_key": "2020Q4__PHP",
+      "side_a_id": "ventoviro/windwalker-attributes",
+      "side_b_id": "Volmarg/personal-management-system",
+      "correct_side": "B",
+      "year": 2020
+    },
+    {
+      "pair_id": "2022Q4_TypeScript_007",
+      "kind": "cross",
+      "cohort_key": "2022Q4__TypeScript",
+      "side_a_id": "pankod/superplate",
+      "side_b_id": "TomYeoman/shortcutmon",
+      "correct_side": "A",
+      "year": 2022
+    },
+    {
+      "pair_id": "2023Q2_Rust_008",
+      "kind": "cross",
+      "cohort_key": "2023Q2__Rust",
+      "side_a_id": "kaleidawave/ezno",
+      "side_b_id": "usherlabs/vpc-migration-tools",
+      "correct_side": "A",
+      "year": 2023
+    },
+    {
+      "pair_id": "2023Q2_TypeScript_005",
+      "kind": "cross",
+      "cohort_key": "2023Q2__TypeScript",
+      "side_a_id": "ferdium/ferdium-app",
+      "side_b_id": "kokoro-hart/Paginize",
+      "correct_side": "A",
+      "year": 2023
+    },
+    {
+      "pair_id": "2023Q1_TypeScript_002",
+      "kind": "cross",
+      "cohort_key": "2023Q1__TypeScript",
+      "side_a_id": "netizer/awesome-state",
+      "side_b_id": "step-security/harden-runner",
+      "correct_side": "B",
+      "year": 2023
+    },
+    {
+      "pair_id": "2023Q4_Go_008",
+      "kind": "cross",
+      "cohort_key": "2023Q4__Go",
+      "side_a_id": "adrianbrad/privatebtc",
+      "side_b_id": "Foxboron/sbctl",
+      "correct_side": "B",
+      "year": 2023
+    },
+    {
+      "pair_id": "2020Q1_Go_002",
+      "kind": "cross",
+      "cohort_key": "2020Q1__Go",
+      "side_a_id": "alexellis/arkade",
+      "side_b_id": "mattb2401/parsrus",
+      "correct_side": "A",
+      "year": 2020
+    },
+    {
+      "pair_id": "2023Q3_Go_008",
+      "kind": "cross",
+      "cohort_key": "2023Q3__Go",
+      "side_a_id": "yoshi389111/git-caesar",
+      "side_b_id": "lupinelab/kproximate",
+      "correct_side": "B",
+      "year": 2023
+    },
+    {
+      "pair_id": "2022Q1_Python_002",
+      "kind": "cross",
+      "cohort_key": "2022Q1__Python",
+      "side_a_id": "samuelcolvin/dirty-equals",
+      "side_b_id": "wlad-svennik/memoized_coduals",
+      "correct_side": "A",
+      "year": 2022
+    },
+    {
+      "pair_id": "2021Q1_Python_000",
+      "kind": "cross",
+      "cohort_key": "2021Q1__Python",
+      "side_a_id": "yelluw/pgsql-aws-s3-backup",
+      "side_b_id": "google/tf-quant-finance",
+      "correct_side": "B",
+      "year": 2021
+    },
+    {
+      "pair_id": "2023Q3_C_002",
+      "kind": "cross",
+      "cohort_key": "2023Q3__C",
+      "side_a_id": "qiolol/just-c-things",
+      "side_b_id": "ColleagueRiley/RGFW",
+      "correct_side": "B",
+      "year": 2023
+    },
+    {
+      "pair_id": "2023Q4_HTML_000",
+      "kind": "cross",
+      "cohort_key": "2023Q4__HTML",
+      "side_a_id": "serpapi/awesome-seo-tools",
+      "side_b_id": "xylophanes/PupsP3",
+      "correct_side": "A",
+      "year": 2023
+    },
+    {
+      "pair_id": "2023Q4_Python_003",
+      "kind": "cross",
+      "cohort_key": "2023Q4__Python",
+      "side_a_id": "lightly-ai/lightly",
+      "side_b_id": "aaronsdevera/sigkill",
+      "correct_side": "A",
+      "year": 2023
+    },
+    {
+      "pair_id": "2022Q3_Python_006",
+      "kind": "cross",
+      "cohort_key": "2022Q3__Python",
+      "side_a_id": "ricky0123/vocoder",
+      "side_b_id": "kubeflow/katib",
+      "correct_side": "B",
+      "year": 2022
+    },
+    {
+      "pair_id": "2021Q2_TypeScript_004",
+      "kind": "cross",
+      "cohort_key": "2021Q2__TypeScript",
+      "side_a_id": "lightdash/lightdash",
+      "side_b_id": "id6/id6",
+      "correct_side": "A",
+      "year": 2021
+    },
+    {
+      "pair_id": "2020Q3_(none)_000",
+      "kind": "cross",
+      "cohort_key": "2020Q3__(none)",
+      "side_a_id": "zelon88/CMS-DH_Admin_Login_Bypass",
+      "side_b_id": "p-ranav/awesome-hpp",
+      "correct_side": "B",
+      "year": 2020
+    },
+    {
+      "pair_id": "2023Q3_Jupyter-Notebook_000",
+      "kind": "cross",
+      "cohort_key": "2023Q3__Jupyter Notebook",
+      "side_a_id": "roboflow/notebooks",
+      "side_b_id": "jawerty/10x-Git-Buddy",
+      "correct_side": "A",
+      "year": 2023
+    },
+    {
+      "pair_id": "2020Q3_JavaScript_003",
+      "kind": "cross",
+      "cohort_key": "2020Q3__JavaScript",
+      "side_a_id": "dinubs/magmarath",
+      "side_b_id": "transitive-bullshit/lqip-modern",
+      "correct_side": "B",
+      "year": 2020
+    },
+    {
+      "pair_id": "2022Q1_Go_007",
+      "kind": "cross",
+      "cohort_key": "2022Q1__Go",
+      "side_a_id": "freemyipod/wInd3x",
+      "side_b_id": "rednaks/goatmo",
+      "correct_side": "A",
+      "year": 2022
+    },
+    {
+      "pair_id": "2022Q3_TypeScript_004",
+      "kind": "cross",
+      "cohort_key": "2022Q3__TypeScript",
+      "side_a_id": "jeswin/mac2linux",
+      "side_b_id": "whitphx/stlite",
+      "correct_side": "B",
+      "year": 2022
+    },
+    {
+      "pair_id": "2022Q4_Go_004",
+      "kind": "cross",
+      "cohort_key": "2022Q4__Go",
+      "side_a_id": "midzer/go-cli-template",
+      "side_b_id": "piqoni/matcha",
+      "correct_side": "B",
+      "year": 2022
+    },
+    {
+      "pair_id": "2020Q4_Go_008",
+      "kind": "cross",
+      "cohort_key": "2020Q4__Go",
+      "side_a_id": "mr-karan/doggo",
+      "side_b_id": "borud/broker",
+      "correct_side": "A",
+      "year": 2020
+    },
+    {
+      "pair_id": "2022Q2_(none)_000",
+      "kind": "cross",
+      "cohort_key": "2022Q2__(none)",
+      "side_a_id": "Karthikeshwar1/Puzzle",
+      "side_b_id": "maguowei/awesome-stars",
+      "correct_side": "B",
+      "year": 2022
+    },
+    {
+      "pair_id": "2020Q3_JavaScript_007",
+      "kind": "cross",
+      "cohort_key": "2020Q3__JavaScript",
+      "side_a_id": "maelswarm/doppel",
+      "side_b_id": "zalo/CascadeStudio",
+      "correct_side": "B",
+      "year": 2020
+    },
+    {
+      "pair_id": "2023Q1_Rust_004",
+      "kind": "cross",
+      "cohort_key": "2023Q1__Rust",
+      "side_a_id": "shellfly/haro",
+      "side_b_id": "LGUG2Z/whkd",
+      "correct_side": "B",
+      "year": 2023
+    },
+    {
+      "pair_id": "2020Q1_Go_008",
+      "kind": "cross",
+      "cohort_key": "2020Q1__Go",
+      "side_a_id": "robdelacruz/ted",
+      "side_b_id": "alitto/pond",
+      "correct_side": "B",
+      "year": 2020
+    },
+    {
+      "pair_id": "2023Q3_TypeScript_004",
+      "kind": "cross",
+      "cohort_key": "2023Q3__TypeScript",
+      "side_a_id": "jqphu/shadow-traffic",
+      "side_b_id": "RicardoValdovinos/vite-react-boilerplate",
+      "correct_side": "B",
+      "year": 2023
+    },
+    {
+      "pair_id": "2022Q1_JavaScript_000",
+      "kind": "cross",
+      "cohort_key": "2022Q1__JavaScript",
+      "side_a_id": "prateeknischal/quicksearch",
+      "side_b_id": "KaliedaRik/Scrawl-canvas",
+      "correct_side": "B",
+      "year": 2022
+    },
+    {
+      "pair_id": "2021Q2_JavaScript_000",
+      "kind": "cross",
+      "cohort_key": "2021Q2__JavaScript",
+      "side_a_id": "sharat87/docjump",
+      "side_b_id": "statsig-io/statuspage",
+      "correct_side": "B",
+      "year": 2021
+    },
+    {
+      "pair_id": "2023Q2_Go_003",
+      "kind": "cross",
+      "cohort_key": "2023Q2__Go",
+      "side_a_id": "bodaay/HuggingFaceModelDownloader",
+      "side_b_id": "mesosoftware/blockchain-difficulty",
+      "correct_side": "A",
+      "year": 2023
+    }
+  ]
+}

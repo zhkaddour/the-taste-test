@@ -82,52 +82,61 @@ PROMPT_VANILLA = (
 
 # ----------------------------- persona loading -----------------------------
 
+# Persona-loading policy:
+#   - Default per persona: distilled if present, else fall back to light.
+#   - For the 5 personas in LIGHT_VS_DISTILLED_COMPARISON: load BOTH variants
+#     so the leaderboard directly compares light vs distilled within the same
+#     person (the experimental control for "is the richer doctrine worth it?").
+LIGHT_VS_DISTILLED_COMPARISON: set[str] = {
+    "richard-hamming",     # scientist / "You and Your Research"
+    "nassim-taleb",        # probabilistic philosopher
+    "peter-thiel",         # contrarian VC
+    "paul-graham",         # founder/essayist
+    "warren-buffett",      # classic value investor
+}
+
+
 def _humanize(person_slug: str) -> str:
     return " ".join(p.capitalize() for p in person_slug.split("-") if p)
 
 
 def load_personas() -> dict[str, dict]:
-    """Load both light and distilled doctrines from per-persona dirs.
-
-    For each `doctrines/<persona-id>/` directory:
-      - if doctrine-light.md exists → emit `<persona-id>-light`
-      - if doctrine-distilled.md exists → emit `<persona-id>-distilled`
-
-    Each persona record:
-      - persona_id: e.g. "peter-thiel-light"
-      - name: H1 of the markdown file (display name) + tier suffix
-      - tier: "light" | "distilled"
-      - profile_text: full markdown file contents
-    """
+    """Load doctrines from per-persona dirs (see LIGHT_VS_DISTILLED_COMPARISON)."""
     out: dict[str, dict] = {}
     if not PERSONAS_DIR.exists():
         return out
 
+    def add(pdir: Path, tier: str):
+        fpath = pdir / f"doctrine-{tier}.md"
+        if not fpath.exists():
+            return
+        text = fpath.read_text()
+        first_line = text.splitlines()[0] if text else ""
+        name = first_line.lstrip("# ").split("—")[0].strip() or pdir.name
+        persona_key = f"{pdir.name}-{tier}"
+        out[persona_key] = {
+            "persona_id": persona_key,
+            "name": f"{name} ({tier})",
+            "tier": tier,
+            "kind": "doctrine",
+            "profile_text": text,
+            "model": DEFAULT_MODEL,
+        }
+
     for pdir in sorted(PERSONAS_DIR.iterdir()):
-        if not pdir.is_dir():
-            continue
-        if pdir.name.startswith("_") or pdir.name.startswith("."):
+        if not pdir.is_dir() or pdir.name.startswith(("_", ".")):
             continue
 
-        for tier, filename in [("light", "doctrine-light.md"),
-                               ("distilled", "doctrine-distilled.md")]:
-            fpath = pdir / filename
-            if not fpath.exists():
-                continue
-            text = fpath.read_text()
-            # Display name: H1 of the file, stripping trailing " — Light Doctrine"
-            # or "— Three Evaluation Layers" cruft to keep the leaderboard clean.
-            first_line = text.splitlines()[0] if text else ""
-            name = first_line.lstrip("# ").split("—")[0].strip() or pdir.name
-            persona_key = f"{pdir.name}-{tier}"
-            out[persona_key] = {
-                "persona_id": persona_key,
-                "name": f"{name} ({tier})",
-                "tier": tier,
-                "kind": "doctrine",
-                "profile_text": text,
-                "model": DEFAULT_MODEL,
-            }
+        if pdir.name in LIGHT_VS_DISTILLED_COMPARISON:
+            # Comparison set: load both tiers for direct A/B.
+            add(pdir, "light")
+            add(pdir, "distilled")
+        else:
+            # Default: distilled if available, else fall back to light.
+            if (pdir / "doctrine-distilled.md").exists():
+                add(pdir, "distilled")
+            elif (pdir / "doctrine-light.md").exists():
+                add(pdir, "light")
 
     # Vanilla baselines (no doctrine, just the model)
     out["vanilla_sonnet_4_6"] = {
