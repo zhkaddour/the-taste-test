@@ -83,13 +83,13 @@
     ══════════════════════════════════════════════════ */
     .doctrine-grid {
       display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-      gap: 2px; background: var(--rule);
+      gap: 1px; background: var(--rule);
       border-radius: 6px; overflow: hidden;
     }
     .doctrine-card {
       padding: 24px 26px; background: var(--paper);
       cursor: pointer; transition: background 80ms, color 80ms;
-      border-left: 3px solid transparent;
+      border-left: 1px solid transparent;
     }
     .doctrine-card:hover { background: var(--mint); border-left-color: var(--sage); }
     .doctrine-card:hover .dc-name { color: var(--sage); }
@@ -274,7 +274,7 @@
 
     /* Results */
     .tt-results { margin-top: 48px; }
-    .tt-results-header { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 28px; padding-bottom: 14px; border-bottom: 1px solid var(--ink); }
+    .tt-results-header { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-top: 56px; margin-bottom: 28px; padding-bottom: 14px; border-bottom: 1px solid var(--ink); }
     .tt-group + .tt-group { margin-top: 36px; }
     .tt-group-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--rule); }
     .tt-group-label.bullish { color: var(--green); }
@@ -427,9 +427,9 @@
       padding: 16px; text-align: center; border-right: 1px solid var(--rule);
       align-self: stretch; display: flex; align-items: center; justify-content: center;
     }
-    .cmp-tally-badge.rank-1 { background: var(--mint); color: var(--sage); }
-    .cmp-tally-badge.rank-2 { background: var(--cream); color: var(--ox); }
-    .cmp-tally-badge.rank-other { background: var(--surf); color: var(--muted); }
+    .cmp-tally-badge.rank-1 { background: #f0f7f1; color: var(--green); font-size: 16px; }
+    .cmp-tally-badge.rank-2 { background: var(--cream); color: var(--wrong); font-size: 16px; }
+    .cmp-tally-badge.rank-other { background: var(--surf); color: var(--muted); font-size: 16px; }
     .cmp-tally-body { padding: 14px 16px; }
     .cmp-tally-idea-text { font-size: 15px; color: var(--ink); line-height: 1.4; margin-bottom: 4px; }
     .cmp-tally-voters { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 0.04em; }
@@ -437,12 +437,12 @@
     .cmp-tally-count {
       font-family: 'JetBrains Mono', monospace; font-size: 24px; font-weight: 500;
       padding: 16px 20px; text-align: right; white-space: nowrap; border-left: 1px solid var(--rule);
-      align-self: stretch; display: flex; align-items: center;
+      align-self: stretch; display: flex; align-items: center; flex-direction: column; justify-content: center;
     }
     .cmp-tally-count .count-num { display: block; }
     .cmp-tally-count .count-label { font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--dim); display: block; }
-    .cmp-tally-count.winner { color: var(--sage); }
-    .cmp-tally-count.runner-up { color: var(--ox); }
+    .cmp-tally-count.winner { color: var(--green); }
+    .cmp-tally-count.runner-up { color: var(--wrong); }
 
     .cmp-breakdown-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 16px; }
     .cmp-breakdown { display: flex; flex-direction: column; }
@@ -547,16 +547,20 @@
     }
     .dp-about p { font-size: 15px; line-height: 1.7; color: #444; }
 
-    .dp-layer { margin-bottom: 64px; }
+    .dp-layer { margin-bottom: 28px; }
+    .dp-layer--collapsed { margin-bottom: 8px; }
     .dp-layer-header {
-      display: flex; align-items: baseline; gap: 16px; margin-bottom: 32px;
-      padding-bottom: 12px; border-bottom: 2px solid var(--ink);
-      cursor: pointer; user-select: none;
+      display: flex; align-items: center; gap: 16px; margin-bottom: 24px;
+      padding: 14px 20px;
+      background: var(--surf); border: 1px solid var(--rule); border-radius: 7px;
+      cursor: pointer; user-select: none; transition: background 100ms, border-color 100ms;
     }
+    .dp-layer--collapsed .dp-layer-header { margin-bottom: 0; }
+    .dp-layer-header:hover { background: var(--cream); border-color: #ccc; }
     .dp-layer-header:hover .dp-layer-chevron { color: var(--ink); }
     .dp-layer-chevron {
       margin-left: auto; font-family: 'JetBrains Mono', monospace;
-      font-size: 11px; color: var(--dim);
+      font-size: 13px; color: var(--muted);
       transition: transform 200ms ease; display: inline-block;
     }
     .dp-layer--collapsed .dp-layer-chevron { transform: rotate(-90deg); }
@@ -683,7 +687,7 @@
       display: block; font-family: 'JetBrains Mono', monospace;
       font-size: 26px; font-weight: 400; font-style: normal;
       letter-spacing: 0.45em; text-transform: uppercase; color: var(--sage);
-      margin-top: 18px;
+      margin-top: 30px;
       opacity: 0; transform: translateY(8px);
       animation: heroFadeUp 0.6s ease forwards; animation-delay: 2.8s;
     }
@@ -743,15 +747,12 @@
     <span class="hero-test">test</span>
   </div>
   <p class="hero-tagline">Distilling the taste of great problem-pickers into something measurable.</p>
-  <a class="hero-scroll" href="#main-content" onclick="event.preventDefault();document.getElementById('main-content').scrollIntoView({behavior:'smooth'})">
-    <div class="hero-scroll-line"></div>
-    <span class="hero-scroll-text">scroll</span>
-  </a>
 </section>
 <div class="page" id="main-content">
 
   <header class="site-header">
     <h1>The Taste Test</h1>
+    <p class="tagline">Benchmarks the judgment of great problem-pickers — investors, advisors, and contrarians with strong opinions about what's worth building. It pits their doctrines against each other on real paper pairs and HN-style ideas, scoring who can actually tell signal from noise. Think of it as a leaderboard for taste: measurable, comparable, and increasingly uncomfortable for anyone with strong priors.</p>
   </header>
 
   <nav class="tab-bar">
@@ -1612,67 +1613,73 @@ function renderTTCompareResults(container, data, ideas, titles = []) {
   const n = results.length;
   const winnerLabel = tally.length ? tally[0].label : null;
 
-  // Build per-idea vote counts from tally
-  const voteCounts = {};
-  tally.forEach(item => { voteCounts[item.label] = item.first_place; });
-
   container.appendChild(el('div', { className: 'tt-results-header' },
     `${n} thinker${n !== 1 ? 's' : ''} compared ${ideas.length} ideas`
   ));
 
-  const tabBar = el('div', { className: 'cmp-idea-tabs' });
-  const panelWrap = el('div', { className: 'cmp-idea-panels' });
-  const tabs = [];
-  const panels = [];
+  // ── Total decision panel ──
+  container.appendChild(el('p', { className: 'cmp-breakdown-label' }, 'Total decision'));
+  const tallyGrid = el('div', { className: 'cmp-tally' });
+  tally.forEach((item, rank) => {
+    const isWinner = rank === 0;
+    const row = el('div', { className: 'cmp-tally-row' });
 
-  ideas.forEach((ideaText, i) => {
-    const label = IDEA_LABELS[i];
-    const isWinner = label === winnerLabel;
-    const titleText = (titles[i] && titles[i].trim()) || `Idea ${label}`;
-    const votes = voteCounts[label] || 0;
+    row.appendChild(el('div', {
+      className: `cmp-tally-badge ${rank === 0 ? 'rank-1' : rank === 1 ? 'rank-2' : 'rank-other'}`,
+      text: isWinner ? '↑' : '↓',
+    }));
 
-    // Tab
-    const tab = el('div', { className: `cmp-idea-tab${isWinner ? ' winner' : ''}` });
-    tab.appendChild(el('div', {}, (isWinner ? '↑ ' : '') + titleText));
-    tab.appendChild(el('div', { className: 'tab-votes' }, `${votes} first pick${votes !== 1 ? 's' : ''}`));
-    tabs.push(tab);
-    tabBar.appendChild(tab);
+    const body = el('div', { className: 'cmp-tally-body' });
+    const ideaIdx = IDEA_LABELS.indexOf(item.label);
+    const titleText = (titles[ideaIdx] && titles[ideaIdx].trim()) || `Idea ${item.label}`;
+    body.appendChild(el('div', { className: 'cmp-tally-idea-text' }, titleText));
+    const votersEl = el('div', { className: 'cmp-tally-voters' });
+    (item.voters || []).forEach(v => votersEl.appendChild(el('span', { className: 'voter-name' }, v)));
+    body.appendChild(votersEl);
+    row.appendChild(body);
 
-    // Panel
-    const panel = el('div', { className: `cmp-idea-panel${isWinner ? ' winner' : ''}` });
+    const countEl = el('div', { className: `cmp-tally-count${isWinner ? ' winner' : rank === 1 ? ' runner-up' : ''}` });
+    countEl.appendChild(el('span', { className: 'count-num' }, String(item.first_place)));
+    countEl.appendChild(el('span', { className: 'count-label' }, `first pick${item.first_place !== 1 ? 's' : ''}`));
+    row.appendChild(countEl);
 
-    if (isWinner) {
-      panel.appendChild(el('div', { className: 'cmp-panel-winner-label' }, 'The panel would back this'));
-    }
+    tallyGrid.appendChild(row);
+  });
+  container.appendChild(tallyGrid);
 
-    const reasonsEl = el('div', { className: 'cmp-panel-reasons' });
-    results.forEach(r => {
-      const text = r.verdicts && r.verdicts[label];
-      if (!text) return;
-      const row = el('div', { className: 'cmp-panel-reason' });
-      row.appendChild(el('div', { className: `cmp-panel-reason-name${r.winner === label ? ' picked' : ''}` },
-        r.persona_name + (r.winner === label ? ' ↑' : '')
-      ));
-      row.appendChild(el('div', { className: 'cmp-panel-reason-text' }, text));
-      reasonsEl.appendChild(row);
-    });
-    panel.appendChild(reasonsEl);
+  // ── Per-persona breakdown ──
+  container.appendChild(el('p', { className: 'cmp-breakdown-label' }, 'By thinker'));
+  const breakdown = el('div', { className: 'cmp-breakdown' });
 
-    panels.push(panel);
-    panelWrap.appendChild(panel);
+  const sorted = [...results].sort((a, b) => {
+    if (a.winner === winnerLabel && b.winner !== winnerLabel) return -1;
+    if (b.winner === winnerLabel && a.winner !== winnerLabel) return 1;
+    return 0;
   });
 
-  // Activate winner tab (or first tab) by default
-  const defaultIdx = winnerLabel ? IDEA_LABELS.indexOf(winnerLabel) : 0;
-  function activate(idx) {
-    tabs.forEach((t, i) => t.classList.toggle('active', i === idx));
-    panels.forEach((p, i) => p.classList.toggle('active', i === idx));
-  }
-  tabs.forEach((tab, i) => tab.addEventListener('click', () => activate(i)));
-  activate(defaultIdx >= 0 ? defaultIdx : 0);
+  sorted.forEach(r => {
+    const row = el('div', { className: 'cmp-breakdown-row' });
+    row.appendChild(el('div', { className: 'cmp-bd-name' }, r.persona_name));
+    row.appendChild(el('div', { className: `cmp-bd-pick pick-${(r.winner || 'a').toLowerCase()}` }, r.winner || '?'));
 
-  container.appendChild(tabBar);
-  container.appendChild(panelWrap);
+    const verdictsEl = el('div', { className: 'cmp-bd-verdicts' });
+    ideas.forEach((_, i) => {
+      const label = IDEA_LABELS[i];
+      const text = r.verdicts && r.verdicts[label];
+      if (!text) return;
+      const isPicked = r.winner === label;
+      const vDiv = el('div', { className: 'cmp-bd-verdict' });
+      vDiv.appendChild(el('span', {
+        className: 'cmp-bd-verdict-label',
+        style: `color: ${isPicked ? 'var(--green)' : 'var(--dim)'}`,
+      }, isPicked ? '↑' : '→'));
+      vDiv.appendChild(document.createTextNode(text));
+      verdictsEl.appendChild(vDiv);
+    });
+    row.appendChild(verdictsEl);
+    breakdown.appendChild(row);
+  });
+  container.appendChild(breakdown);
 }
 
 const IDEA_LABELS = ['A', 'B', 'C', 'D', 'E'];
