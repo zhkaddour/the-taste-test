@@ -1,18 +1,18 @@
 # The Andreessen Doctrine
-### A Doctrine of Marc Andreessen
+**Subject:** Marc Andreessen
+**Created:** 2026-05-02
 
-> *"The only thing that matters is getting to product/market fit."*
-
-**Created:** 2026-05-02 · **Layers:** 3 · **Doctrines:** 120
-
----
-
-**About this playbook:** A three-layer filter for evaluating startup ideas distilled from Marc Andreessen's revealed taste: the Pmarchive guide-to-startups corpus, 'Why Software Is Eating the World' (2011), 'It's Time to Build' (2020), 'The Techno-Optimist Manifesto' (2023), the Little Tech and American Dynamism agendas, the a16z portfolio shape, his operating record at Netscape / Loudcloud-Opsware / Ning, and the long-form spoken corpus with Cowen, Fridman, Rogan, Bari Weiss and the a16z podcast through 2026. Where Thiel hunts for monopolies and concentrates a fund, Andreessen hunts for waves, technical founders, and ratable PMF — the playbook is portfolio-shaped, growth-shaped, and operator-shaped.
+> The only thing that matters is getting to product/market fit.
 
 ---
 
-## Layer 01 — PROBLEM
-### Problem-Selection Taste
+## Summary
+
+A three-layer filter for evaluating startup ideas distilled from Marc Andreessen's revealed taste: the Pmarchive guide-to-startups corpus, 'Why Software Is Eating the World' (2011), 'It's Time to Build' (2020), 'The Techno-Optimist Manifesto' (2023), the Little Tech and American Dynamism agendas, the a16z portfolio shape, his operating record at Netscape / Loudcloud-Opsware / Ning, and the long-form spoken corpus with Cowen, Fridman, Rogan, Bari Weiss and the a16z podcast through 2026. Where Thiel hunts for monopolies and concentrates a fund, Andreessen hunts for waves, technical founders, and ratable PMF — the playbook is portfolio-shaped, growth-shaped, and operator-shaped.
+
+---
+
+## Layer 01 · Problem-Selection Taste
 *What is worth working on at all*
 
 The filter is built around technology waves and product/market fit. Andreessen rejects the consensus that markets are saturated; the right question is which industry is being eaten by software next, and whether you are the technical founder positioned to ride that wave. The trap is whining about decline instead of building; the alpha is finding the demand a real user is already trying to satisfy with worse tools.
@@ -489,8 +489,7 @@ The filter is built around technology waves and product/market fit. Andreessen r
 
 ---
 
-## Layer 02 — APPROACH
-### Approach Taste
+## Layer 02 · Approach Taste
 *Given the problem, which angle to attack from*
 
 Once the wave is right, the playbook is operational: technical founder shipping fast, instrument PMF, recruit conspirators, capitalize ahead of the curve, and hire/fire ruthlessly. Andreessen's mechanism is iteration speed plus distribution intensity — not Thiel's secrecy and patience. The conviction comes from data, not from a master plan.
@@ -927,8 +926,7 @@ Once the wave is right, the playbook is operational: technical founder shipping 
 
 ---
 
-## Layer 03 — STOPPING
-### Stopping Taste
+## Layer 03 · Stopping Taste
 *When to abandon, when to push, when done enough*
 
 Andreessen's stopping rules are growth-shaped and cohort-shaped — not narrative-shaped. Hold winners aggressively, follow on into the power-law outcomes, kill the indeterminate ones early, and never let a board fight ride past the point of marginal influence. Where Thiel exits rarely and concentrates, Andreessen plays the portfolio at scale.
@@ -1237,7 +1235,8 @@ Andreessen's stopping rules are growth-shaped and cohort-shaped — not narrativ
 
 ## 2026 Overlay
 
-### Where the Alpha Is
+### Alpha — Where to Push Hard
+
 - American Dynamism — defense, energy, manufacturing, public-safety with software-native incumbents
 - AI infrastructure (training compute, inference, model evals, agents) at the platform layer
 - Vertical AI applied to atoms-heavy industries (legal, healthcare, construction, logistics, biology)
@@ -1247,7 +1246,8 @@ Andreessen's stopping rules are growth-shaped and cohort-shaped — not narrativ
 - Little Tech regulatory wins (state-level pre-emption, federal Little Tech carve-outs)
 - Augmented-intelligence tooling that compounds human productivity rather than displacing it
 
-### Auto-Reject
+### Auto-Reject — What to Avoid
+
 - Centralized AI safety / global AI governance plays — 'existential risk' framing as product
 - Sustainability / ESG / Sustainable Development Goals as the core moat
 - Stakeholder capitalism / 'social responsibility' / 'tech ethics' / 'trust and safety' as the product wedge
@@ -1262,7 +1262,3 @@ Andreessen's stopping rules are growth-shaped and cohort-shaped — not narrativ
 - Depopulation / austerity / managed-decline theses (anti-Julian-Simon posture)
 - Vetocracy/regulatory-capture rent extractors — paid moats with no real-economy output
 - Last-Man founders: comfort-seeking, risk-averse, no public conviction in 12+ months
-
----
-
-*The Doctrine Index · Vol. I · 2026-05-02*

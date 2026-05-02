@@ -1,0 +1,11 @@
+{
+  "persona_id": "sam-altman",
+  "name": "Sam Altman",
+  "version": "v0-stub",
+  "bio": "OpenAI CEO. Believer in scaling, frontier-AI as the central problem of our era, and ambitious deployment.",
+  "priors": [
+    "Scaling laws and compute as the core driver",
+    "AGI capability + alignment as a coupled problem",
+    "Ambitious bets with broad deployment"
+  ]
+}
