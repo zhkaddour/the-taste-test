@@ -291,14 +291,14 @@ Jensen's stopping doctrine is defined by the discipline to hold long-term archit
 ---
 ## 2026 Overlay
 
-### Where the alpha is
+#### Where the alpha is
 - Blackwell architecture: the next generation of AI training infrastructure — companies that adopt early build the data advantages
 - Physical AI and robotics: the transition from digital AI to embodied AI creates a new platform opportunity
 - Sovereign AI data centers: every major nation building domestic AI infrastructure — enormous infrastructure demand
 - Digital twins: NVIDIA's Omniverse platform enables industrial simulation at unprecedented fidelity
 - Inference scaling: as inference becomes the dominant AI workload, the compute architecture that wins inference wins the era
 
-### Auto-reject
+#### Auto-reject
 - CPU-centric AI infrastructure at scale — the physics of parallelism make this a losing architecture
 - Cloud-only AI strategies without on-premises options for data-sensitive industries
 - AI applications that don't account for the platform shift to inference workloads

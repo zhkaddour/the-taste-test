@@ -564,14 +564,14 @@ Hamming had precise views on when to stop. The core insight: stopping is a probl
 ---
 ## 2026 Overlay
 
-### Where the alpha is
+#### Where the alpha is
 - AI-assisted scientific discovery: problems that were computationally intractable are now tractable — high-value targets
 - Biology and materials science: the 'atoms' equivalent of the software revolution, now accessible
 - Fundamental mathematics with real-world consequences: the Hamming-Shannon legacy suggests underinvestment here
 - Tools for science: better research infrastructure compounds for the entire field
 - Cross-disciplinary problems at the intersection of ML and physical science
 
-### Auto-reject
+#### Auto-reject
 - Research that optimizes for publication count over importance
 - Fields where the primary innovation is in applying existing ML methods rather than in the science itself
 - Problems that require regulatory capture or political consensus to matter

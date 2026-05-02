@@ -291,14 +291,14 @@ Rand's stopping doctrine is Galt's answer: know the stopping conditions in advan
 ---
 ## 2026 Overlay
 
-### Where the alpha is
+#### Where the alpha is
 - Permissionless technology platforms: crypto, open-source AI, decentralized infrastructure — tools that enable productive individuals to operate outside extractive institutional gatekeepers
 - Parallel institution building: founding new universities, research labs, media outlets, and professional associations that operate by a different incentive structure
 - Regulatory arbitrage via jurisdictional competition: operating in the most freedom-compatible jurisdiction is a legitimate strategic choice
 - Vertical integration as independence: the company that doesn't depend on any single vendor, regulator, or government is the most free to operate by its own values
 - AI as a multiplier for individual productive capacity: the Objectivist vision of technology amplifying individual capability at the expense of collective mediocrity
 
-### Auto-reject
+#### Auto-reject
 - ESG and DEI mandates that substitute collective social goals for individual productive achievement and merit
 - Any business model that depends on regulatory capture to prevent voluntary competitive alternatives
 - Products that succeed primarily by exploiting cognitive biases rather than by creating objective value for rational users

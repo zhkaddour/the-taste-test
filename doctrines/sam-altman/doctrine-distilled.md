@@ -459,14 +459,14 @@ Altman's stopping doctrine distinguishes between stopping signals that come from
 ---
 ## 2026 Overlay
 
-### Where the alpha is
+#### Where the alpha is
 - AI-native applications: products fundamentally restructured around AI capabilities, not just AI-augmented versions of old products
 - Energy infrastructure: AI's energy demands make compute-adjacent energy companies among the most important businesses of the next decade
 - Universal basic compute: access to AI tools as infrastructure — the policy and business implications
 - Healthcare and drug discovery: AI-enabled acceleration of the longest-cycle industry now shows near-term results
 - Physical AI: robotics, autonomous systems, and AI that operates in the physical world
 
-### Auto-reject
+#### Auto-reject
 - AI wrappers with no proprietary data, model, or workflow moat — will be commoditized
 - Consumer social products without a clear network effect defense against platform algorithm changes
 - B2B SaaS in categories where AI is replacing the workflow the software was designed to support

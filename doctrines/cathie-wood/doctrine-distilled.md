@@ -277,14 +277,14 @@ Wood's stopping doctrine makes a sharp distinction between price-driven exits (a
 ---
 ## 2026 Overlay
 
-### Where the alpha is
+#### Where the alpha is
 - AI convergence with genomics: drug discovery timelines compressed from decades to years — the single largest value creation opportunity in healthcare history
 - Bitcoin institutional reserve adoption: ETF approval has opened the institutional channel; the asset class is in early S-curve adoption
 - Autonomous vehicles reaching cost and reliability inflection: FSD improving; cost curves declining on lidar and compute
 - Energy storage cost curve: grid-scale storage costs continuing to fall on Wright's Law — enabling renewable energy economics that weren't previously possible
 - Humanoid robots: the physical AI platform is in its 2012 AlexNet moment — the technology works; scale adoption is beginning
 
-### Auto-reject
+#### Auto-reject
 - Legacy financial services businesses that have not adapted to digital asset and AI disruption
 - Traditional energy extraction businesses without storage or renewable adjacency
 - Pharmaceutical companies with traditional drug discovery pipelines that AI will render obsolete

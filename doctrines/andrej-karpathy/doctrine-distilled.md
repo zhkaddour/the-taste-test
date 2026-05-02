@@ -305,14 +305,14 @@ Karpathy's stopping doctrine is empirical: stop when the data says stop, not whe
 ---
 ## 2026 Overlay
 
-### Where the alpha is
+#### Where the alpha is
 - LLM infrastructure at the systems level: llm.c and CUDA kernels — the performance-critical layer that determines inference cost
 - Physical AI and autonomous systems: perception + planning + action in the real world, the hardest Software 2.0 problem
 - AI-native education: teaching that leverages LLMs to create personalized, interactive learning at scale
 - Interpretability and mechanistic understanding of neural networks: the field's deepest open problem, with enormous practical implications
 - Open-weight models as infrastructure: the ecosystem around open models is the platform opportunity of the current era
 
-### Auto-reject
+#### Auto-reject
 - Pure LSTM/RNN architectures for sequence modeling — Transformers have definitively won this comparison
 - Hand-crafted feature engineering pipelines in domains where end-to-end learned representations work better
 - Model complexity for its own sake — the simplest model that achieves the task is almost always the right model

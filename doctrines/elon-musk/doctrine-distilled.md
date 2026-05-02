@@ -354,14 +354,14 @@ Musk almost never stops at the mission level. His stopping doctrine is more prec
 ---
 ## 2026 Overlay
 
-### Where the alpha is
+#### Where the alpha is
 - Starship orbital: if achieved, changes economics of everything from satellite deployment to point-to-point Earth transport to Mars
 - Tesla FSD and autonomous vehicles: the safety and economic case is physics-confirmed; only the software timeline is uncertain
 - xAI / Grok: open-weight competition in the AGI race; transparency as a strategic differentiator
 - Physical AI / humanoid robots (Optimus): the manufacturing labor problem solved at the hardware layer
 - DoGE efficiency findings: government procurement as a market shaped by Musk-doctrine inefficiencies — massive opportunity for private competitors
 
-### Auto-reject
+#### Auto-reject
 - Any aerospace approach that doesn't account for reusability as the primary cost driver
 - EV companies without vertical integration in battery manufacturing
 - AI systems that increase opacity rather than human understanding of AI decisions

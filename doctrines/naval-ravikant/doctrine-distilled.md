@@ -564,14 +564,14 @@ Naval's stopping doctrine is surprisingly clear-cut: stop when you've lost genui
 ---
 ## 2026 Overlay
 
-### Where the alpha is
+#### Where the alpha is
 - AI-enabled specific knowledge businesses: individuals with deep domain expertise + AI leverage = individual unicorns
 - Permissionless media at scale: the individual brand is now more valuable than the institutional brand in many verticals
 - Crypto/decentralized finance: permissionless wealth-building mechanisms that disintermediate traditional gatekeepers
 - Physical world applications of software leverage: robotics, bio, energy — sectors where software leverage is newly applicable
 - Individual-to-individual trust networks replacing institutional trust as AI makes institutional trust more fragile
 
-### Auto-reject
+#### Auto-reject
 - Credential-optimizing career paths where the credential is the moat
 - Any business where the primary leverage is regulatory capture
 - Zero-sum competitive markets where winning requires someone else to lose rather than new value created

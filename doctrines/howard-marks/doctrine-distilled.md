@@ -312,14 +312,14 @@ Marks's stopping doctrine is thesis-driven: exit when the investment thesis has 
 ---
 ## 2026 Overlay
 
-### Where the alpha is
+#### Where the alpha is
 - Private credit in the new rate environment: with banks retreating, private lenders with strong underwriting earn historical premium plus structural supply/demand advantage
 - Distressed debt opportunities as rate cycle casualties: companies levered during ZIRP era face restructuring at higher rates — creating the classic Oaktree opportunity
 - Infrastructure credit: the AI energy demand and physical AI buildout requires massive private financing not available through public markets
 - Emerging market credit: structural inefficiency + illiquidity premium + information asymmetry = classic Oaktree hunting ground
 - Real assets: inflation protection + illiquidity premium + energy transition tailwinds
 
-### Auto-reject
+#### Auto-reject
 - Long-duration fixed income at historically tight spreads — the asymmetry has inverted in the new rate regime
 - Levered equity strategies that assume the ZIRP cost-of-capital environment
 - VC-style investments where the cash flow horizon is 7-10 years and the rate environment has fundamentally changed the discount rate
