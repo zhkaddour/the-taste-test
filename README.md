@@ -8,14 +8,23 @@
 
 ```
 taste-test/
-├── doctrines/           # Distilled "doctrines" (15 personas + 4 richer playbooks)
+├── doctrines/                    # 18 personas, two tiers each
+│   ├── README.md                 # library docs + canonical format
+│   ├── SKILL.md                  # frontmatter + wrapper for any LLM agent
+│   └── <persona-id>/             # kebab-case (peter-thiel, richard-hamming, …)
+│       ├── doctrine-light.md     # AI-generated baseline (always present)
+│       └── doctrine-distilled.md # 3-layer Rule/Test/Source (when available)
 ├── evals/
-│   ├── hn/              # Show HN → GitHub-stars eval (this team's pipeline)
-│   └── papers/          # arXiv papers → citations eval (papers-team pipeline)
-└── web/                 # Presentation site (Next.js, TBD)
+│   ├── hn/                       # Show HN → GitHub-stars eval (this team's pipeline)
+│   └── papers/                   # arXiv papers → citations eval (papers-team pipeline)
+├── scripts/
+│   └── validate_doctrines.py     # canonical-layout check; run after any doctrines/ change
+└── web/                          # Presentation site (Next.js, TBD)
 ```
 
 Each eval follows the same methodology: build forced-choice pairs of problems where one had the better outcome (more stars / more citations), present each persona with both problems anonymized, and score consistency-weighted accuracy across 1000+ pairs.
+
+Each persona ships with **two tiers**: a short AI-generated `doctrine-light.md` (the experimental baseline) and a longer `doctrine-distilled.md` derived from the persona's actual writings. The eval runs both as separate leaderboard entries (`<id>-light` vs `<id>-distilled`) so we can measure whether careful distillation actually outperforms the AI-generated stub.
 
 ## Setup
 
@@ -31,7 +40,8 @@ cp .env.example .env
 
 - **HN eval data prep**: see [`evals/hn/README.md`](evals/hn/README.md)
 - **Papers eval data prep**: see [`evals/papers/README.md`](evals/papers/README.md)
-- **Persona eval (both)**: TODO — shared runner not yet built; for now use `evals/papers/scripts/run_eval.py`
+- **Persona eval**: `python evals/papers/scripts/run_eval.py --smoke` (papers domain only — shared runner across HN+papers is TODO)
+- **Validate the doctrines library**: `python scripts/validate_doctrines.py`
 
 ## Methodology in one paragraph
 
